@@ -1,0 +1,112 @@
+/*Hides all HTML blocks on the page where this is linked*/
+.block_html {
+display: none !important;
+}
+/*Changes the width of the element that contains Lesson Navigation buttons to 75% and centres them on the page*/
+.branchbuttoncontainer
+{
+width: 75% !important;
+margin: auto !important;
+}
+
+/*Makes Next button float to the right of the page*/
+.singlebutton:nth-child(2){
+  float:right;
+}
+
+/***End of Lesson Page****/
+
+.generalbox {
+  border-color: #bee5eb;
+  position: relative;
+  padding: 50px !important;
+  margin: 0px !important;
+  border: 1px solid grey;
+  border-radius: 5px !important;
+  width:75%;
+  overflow:hidden;
+}
+
+
+/**TEXT INSTRUCTIONS FOR END-OF-LESSON PAGE**/
+.generalbox p {
+  color:white;
+}
+.generalbox p::after {
+  display:block;
+  line-height: 1.5rem;
+  max-width:100%;
+  color:black;
+  font-weight:normal;
+  white-space:pre-wrap;
+  content:"✱ You can now to continue onto the next activity 👉. \00000A ✱ 👈 Or review this lesson material again before continuing.";
+}
+.generalbox p::before{
+  color:black;
+  content:'👍 \00000A You completed the activity. Where to next?';
+  font-size:1.5em;
+  margin-bottom: 1rem;
+}
+
+/***END-OF-LESSON LINKS APPEAR AS BUTTONS***/
+.generalbox a.lessonbutton {
+  font-weight:500; 
+  background: #ced4da; 
+  padding: 10px; 
+  box-shadow: 3px 3px 3px grey; 
+  border-radius: 5px; 
+  margin-top:50px; 
+  margin-right:10px; 
+  color: black; 
+  display:inline-flex;
+  position:relative;
+}
+
+a.lessonbutton:hover {
+  background:#b8c1ca; 
+  text-decoration:none;
+}
+/**SETTINGS if REVIEW LESSON is ENABLED & NEXT ACTIVITY (ie assessment item) IS SELECTED***/
+
+/**BUTTON 3 - REVIEW**/
+.generalbox a.lessonbutton:nth-child(3) {
+  display:inline-flex;
+}
+.generalbox a.lessonbutton:nth-child(3)::before {
+  content:'👈 \00a0';
+}
+
+/**BUTTON 4 - GO TO QUIZ**/
+.generalbox a.lessonbutton:nth-child(4) {
+  display:inline-flex;
+  float:right;
+}
+.generalbox a.lessonbutton:nth-child(4)::after {
+  content:'\00a0 👉';
+}
+
+/**BUTTON 5 - RETURN TO UNIT**/
+.generalbox a.lessonbutton:nth-child(5) {
+  display:none;
+}
+
+/**BUTTON 6 - VIEW GRADES**/
+.generalbox a.lessonbutton:nth-child(6) {
+  display:none;
+}
+
+/**STYLE FOR PROGRESS BAR**/
+.progress-bar {
+  background-color: #5cb85c;
+  border:1px solid black;
+  border-radius: 5px !important;
+  font-size: 1.2rem !important;
+  display: inline-block !important;
+}
+.progress-bar::after {
+  content: ' Complete! 🎉'
+}
+.progress {
+  height: 2.5rem !important;
+  line-height: 2.3rem !important;
+}
