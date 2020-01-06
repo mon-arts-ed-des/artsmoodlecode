@@ -77,6 +77,9 @@ a.lessonbutton:hover {
 .generalbox a.lessonbutton:nth-child(4)::after {
   content:'\00a0 👉';
 }
+.generalbox a.lessonbutton:nth-child(5)::after {
+  content:'\00a0 🗓️';
+}
 
 /**STYLE FOR PROGRESS BAR**/
 .progress-bar {
