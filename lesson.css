@@ -39,7 +39,7 @@ margin: auto !important;
   color:black;
   font-weight:normal;
   white-space:pre-wrap;
-  content:"✱ You can now to continue onto the next activity 👉. \00000A ✱ 👈 Or review this lesson material again before continuing.";
+  content:"✱ You can now to continue onto the next activity 👉. \00000A ✱ 👈 Or review this lesson material again before continuing. \00000A ✱ Or return to the week this lesson is part of 🗓️.";
 }
 .generalbox p::before{
   color:black;
