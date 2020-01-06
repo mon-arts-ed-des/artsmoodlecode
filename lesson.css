@@ -55,11 +55,12 @@ margin: auto !important;
   padding: 10px; 
   box-shadow: 3px 3px 3px grey; 
   border-radius: 5px; 
-  margin-top:50px; 
-  margin-right:10px; 
+  margin: 50px auto 10px auto !important;
   color: black; 
-  display:inline-flex;
+  display: block;
   position:relative;
+  width: 100%;
+  text-align: center !important;
 }
 
 a.lessonbutton:hover {
@@ -69,30 +70,12 @@ a.lessonbutton:hover {
 /**SETTINGS if REVIEW LESSON is ENABLED & NEXT ACTIVITY (ie assessment item) IS SELECTED***/
 
 /**BUTTON 3 - REVIEW**/
-.generalbox a.lessonbutton:nth-child(3) {
-  display:inline-flex;
-}
+
 .generalbox a.lessonbutton:nth-child(3)::before {
   content:'👈 \00a0';
 }
-
-/**BUTTON 4 - GO TO QUIZ**/
-.generalbox a.lessonbutton:nth-child(4) {
-  display:inline-flex;
-  float:right;
-}
 .generalbox a.lessonbutton:nth-child(4)::after {
   content:'\00a0 👉';
-}
-
-/**BUTTON 5 - RETURN TO UNIT**/
-.generalbox a.lessonbutton:nth-child(5) {
-  display:none;
-}
-
-/**BUTTON 6 - VIEW GRADES**/
-.generalbox a.lessonbutton:nth-child(6) {
-  display:none;
 }
 
 /**STYLE FOR PROGRESS BAR**/
