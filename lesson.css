@@ -23,7 +23,7 @@ display: flex !important;
 justify-content: space-between;
 }
 /*Space the footer so the block doesn't show*/
-.footer#page-footer {
+footer {
 margin-top: 50px;
 }
 
