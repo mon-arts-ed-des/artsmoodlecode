@@ -22,6 +22,10 @@ margin: auto !important;
 display: flex !important;
 justify-content: space-between;
 }
+/*Space the footer so the block doesn't show*/
+.footer#page-footer {
+margin-top: 50px;
+}
 
 /***End of Lesson Page****/
 
