@@ -65,15 +65,17 @@ margin-top: 50px;
 .generalbox a.lessonbutton {
   font-weight:500; 
   background: #ced4da; 
-  padding: 10px; 
-  box-shadow: 3px 3px 3px grey; 
-  border-radius: 5px; 
+  padding: .375rem .75rem; 
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.5); 
+  border-radius: 2px; 
   margin: 20px auto 0px auto !important;
-  color: black; 
+  color: #212529; 
   display: block;
   position:relative;
   width: 100%;
   text-align: center !important;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 a.lessonbutton:hover {
