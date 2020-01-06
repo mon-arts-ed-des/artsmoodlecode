@@ -19,11 +19,8 @@ background: #fff !important;
 {
 width: 50% !important;
 margin: auto !important;
-}
-
-/*Makes Next button float to the right of the page*/
-.singlebutton:nth-child(2){
-  float:right;
+display: flex !important;
+justify-content: space-between;
 }
 
 /***End of Lesson Page****/
