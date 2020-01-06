@@ -95,4 +95,5 @@ a.lessonbutton:hover {
 .progress {
   height: 2.5rem !important;
   line-height: 2.3rem !important;
+  border-radius: 5px;
 }
