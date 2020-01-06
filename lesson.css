@@ -84,6 +84,9 @@ a.lessonbutton:hover {
   background:#b8c1ca; 
   text-decoration:none;
 }
+a.lessonbutton:active {
+  box-shadow: none;
+}
 /**SETTINGS if REVIEW LESSON is ENABLED & NEXT ACTIVITY (ie assessment item) IS SELECTED***/
 
 /**BUTTON 3 - REVIEW**/
