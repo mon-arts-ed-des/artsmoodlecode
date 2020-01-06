@@ -5,7 +5,7 @@ display: none !important;
 /*Changes the width of the element that contains Lesson Navigation buttons to 75% and centres them on the page*/
 .branchbuttoncontainer
 {
-width: 75% !important;
+width: 50% !important;
 margin: auto !important;
 }
 
