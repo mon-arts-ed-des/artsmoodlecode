@@ -1,6 +1,8 @@
 /*Hides all HTML blocks on the page where this is linked*/
 .block_html {
-display: none !important;
+box-shadow: none !important;
+height: 0px !important;
+margin: 0px !important;
 }
 /*Changes the width of the element that contains Lesson Navigation buttons to 75% and centres them on the page*/
 .branchbuttoncontainer
