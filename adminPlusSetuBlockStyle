@@ -1,0 +1,76 @@
+/*inst2243495 is the Administrion Menu all references affect the design of the Admin Block*/
+/*Changes the colour of the text and controls of the Admin Block to white*/
+#inst2243495 .action-menu, #inst2243495 .dropdown-toggle, #inst2243495 .moodle-core-dragdrop-draghandle, #inst484478 .action-menu,#inst484478 .dropdown-toggle, #inst484478 .moodle-core-dragdrop-handle {
+color: #fff !important;
+}
+/*Changes the margin of the links within the block to 0, reducing space*/
+#inst2243495 .card-text{
+margin: 0 !important;
+}
+/*Changes the colour and size of the links within the block while also removing the underline of the links*/
+#inst2243495 li a {
+color: #006DAE !important;
+text-decoration: none !important;
+font-size: 1.1rem !important;
+}
+/*Changes the colour of the links within the block on hover to be slightly lighter, so people can see which link they're about to click*/
+#inst2243495 li a:hover {
+color: #3D90C2 !important;
+text-decoration: none !important;
+}
+/*Changes the size and colour of the text in the sub menus of the block to match other links*/
+#inst2243495 span {
+font-size: 1.1rem !important;
+color: #006DAE !important;
+}
+/*Changes the size and colour of the text on hover in the sub menus of the block to match other links*/
+#inst2243495 span:hover {
+color: #3D90C2 !important;
+text-decoration: none !important;
+}
+/*Changes the colour of the background of the block header*/
+#instance-2243495-header {
+background: #006DAE !important;
+color: #fff !important;
+text-align: center !important;
+}
+
+/*This adds a border the same colour as the header around the links*/
+div#settingsnav {
+border: 2px solid #006DAE !important;
+border-radius: 5px !important;
+padding: 5px 0px 5px 0px !important;
+}
+/*the following three sets of styling hide this block that contains styling for the Admin block so that it isn't visible unless altered in the browser's inspector. Block instance-2373107*/
+#inst2373107 {
+box-shadow: none !important;
+height: 0px !important;
+margin: 0px !important;
+}
+#inst2373107 .action-menu, #inst2373107 .dropdown-toggle, #inst2373107 i {
+background: #fff !important;
+color: #fff !important;
+}
+#inst2373107 .card-title {
+background: #fff !important;
+}
+
+/*instance-484478 refers to the SETU block*/
+
+/*This changes the colour of the SETU block header and text*/
+#instance-484478-header {
+background: #5a6268 !important;
+color: #fff !important;
+text-align: center !important;
+}
+/*This adds a border the same colour as the header*/
+#inst484478 .card-text {
+border: 2px solid #5a6268 !important;
+border-radius: 5px !important;
+padding: 5px 0px 5px 0px !important;
+margin: 0.7rem !important;
+}
+/*This hides the navigation auto generated in Moodle to jump between sections to stop the space at the top and bottom or the screen getting cluttered. It also removes the navigation between activites to achieve the same purpose in activites*/
+.section-navigation, .activity-navigation {
+display: none !important;
+}
