@@ -74,7 +74,7 @@ margin: 0.7rem !important;
 .addresourcemodchooser {
 display: block !important;
 }
-#section-0 .section-modchooser-link, .section-navigation span a, .mdl-bottom, .jumpmenu, .activity-navigation, .addresourcedropdown {
+.section-navigation .mdl-right, .section-navigation .mdl-left, .addresourcedropdown, .jumpmenu, #section-0 .section-modchooser-link {
 display: none !important;
   color: #fff !important;
 }
