@@ -72,9 +72,9 @@ margin: 0.7rem !important;
 }
 /*This hides the navigation auto generated in Moodle to jump between sections to stop the space at the top and bottom or the screen getting cluttered. It also removes the navigation between activites to achieve the same purpose in activites*/
 .addresourcemodchooser {
-display: block !important;
+display: flex !important;
 background: #006DAE;
-color: white;
+color: white !important;
 font-size: 1rem;
 line-height: 1.5;
 padding: .375rem .75rem;
@@ -86,6 +86,10 @@ font-weight: 500;
 border: 2px solid transparent;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
 text-decoration: none;
+}
+.addresourcemodchooser a {
+color: white !important;
+text-decoration: none !important;
 }
 .addresourcemodchooser:hover {
 background: #3d90c2;
