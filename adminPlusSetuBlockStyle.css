@@ -74,6 +74,7 @@ margin: 0.7rem !important;
 .addresourcemodchooser {
 display: inline-flex !important;
 float: right !important;
+font-size: 1.3rem;
 background: #006DAE;
 color: white !important;
 font-size: 1rem;
