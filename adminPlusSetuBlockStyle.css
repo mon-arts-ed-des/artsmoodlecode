@@ -73,6 +73,8 @@ margin: 0.7rem !important;
 /*This hides the navigation auto generated in Moodle to jump between sections to stop the space at the top and bottom or the screen getting cluttered. It also removes the navigation between activites to achieve the same purpose in activites*/
 #section-0 .section-modchooser-link a {
 display: none !important;
+box-shadow: none !important;
+background: none !important;
 }
 .addresourcemodchooser {
 display: inline-flex !important;
