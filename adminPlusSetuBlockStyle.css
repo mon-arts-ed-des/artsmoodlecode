@@ -71,6 +71,9 @@ padding: 5px 0px 5px 0px !important;
 margin: 0.7rem !important;
 }
 /*This hides the navigation auto generated in Moodle to jump between sections to stop the space at the top and bottom or the screen getting cluttered. It also removes the navigation between activites to achieve the same purpose in activites*/
+#section-0 .section-modchooser-link {
+display: none !important;
+}
 .addresourcemodchooser {
 display: inline-flex !important;
 float: right !important;
@@ -112,9 +115,9 @@ box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
 border: 2px solid #3d90c2 !important;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.section-navigation .mdl-right, .section-navigation .mdl-left, .addresourcedropdown, .jumpmenu, #section-0 .section-modchooser-link {
+.section-navigation .mdl-right, .section-navigation .mdl-left, .addresourcedropdown, .jumpmenu, {
 display: none !important;
-  color: #fff !important;
+color: #fff !important;
 }
 .list-group-item:nth-child(3) {
 display: none !important;
