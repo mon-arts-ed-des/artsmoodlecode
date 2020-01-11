@@ -73,6 +73,38 @@ margin: 0.7rem !important;
 /*This hides the navigation auto generated in Moodle to jump between sections to stop the space at the top and bottom or the screen getting cluttered. It also removes the navigation between activites to achieve the same purpose in activites*/
 .addresourcemodchooser {
 display: block !important;
+background: #006DAE;
+color: white;
+font-size: 1rem;
+line-height: 1.5;
+padding: .375rem .75rem;
+vertical-align: middle;
+text-align: center;
+white-space: nowrap;
+border-radius: 2px;
+font-weight: 500;
+border: 2px solid transparent;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+text-decoration: none;
+}
+.addresourcemodchooser:hover {
+background: #3d90c2;
+color: white;
+cursor: pointer;
+}
+.addresourcemodchooser:focus {
+background: #3d90c2 !important;
+color: white !important;
+border-color: #3d90c2 !important;
+box-shadow: none;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.addresourcemodchooser:active {
+background: #3d90c2 !important;
+color: white !important;
+box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
+border: 2px solid #3d90c2 !important;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 .section-navigation .mdl-right, .section-navigation .mdl-left, .addresourcedropdown, .jumpmenu, #section-0 .section-modchooser-link {
 display: none !important;
@@ -80,4 +112,39 @@ display: none !important;
 }
 .list-group-item:nth-child(3) {
 display: none !important;
+}
+/*This is the styling for a Bootstrap button that contains the colours used in the Arts Navigation Banner. It should be used in conjunction with the classes .btn and .btn-default to work similarly to Bootstrap buttons.*/
+.btn-arts {
+background: #006DAE;
+color: white;
+font-size: 1rem;
+line-height: 1.5;
+padding: .375rem .75rem;
+vertical-align: middle;
+text-align: center;
+white-space: nowrap;
+border-radius: 2px;
+font-weight: 500;
+border: 2px solid transparent;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+text-decoration: none;
+}
+.btn-arts:hover {
+background: #3d90c2;
+color: white;
+cursor: pointer;
+}
+.btn-arts:focus {
+background: #3d90c2 !important;
+color: white !important;
+border-color: #3d90c2 !important;
+box-shadow: none;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-arts:active {
+background: #3d90c2 !important;
+color: white !important;
+box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
+border: 2px solid #3d90c2 !important;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
