@@ -100,19 +100,19 @@ border: 2px solid transparent;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.5); 
 border-radius: 2px;
 }
-.addresourcemodchooser:hover {
+.addresourcemodchooser a:hover {
 background: #3d90c2;
 color: white !important;
 cursor: pointer;
 }
-.addresourcemodchooser:focus {
+.addresourcemodchooser a:focus {
 background: #3d90c2 !important;
 color: white !important;
 border-color: #3d90c2 !important;
 box-shadow: none;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.addresourcemodchooser:active {
+.addresourcemodchooser a:active {
 background: #3d90c2 !important;
 color: white !important;
 box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
