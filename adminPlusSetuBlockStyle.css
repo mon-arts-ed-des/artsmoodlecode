@@ -87,6 +87,7 @@ white-space: nowrap;
 font-weight: 500;
 border: 2px solid transparent;
 text-decoration: none;
+margin-bottom: 1.5rem;
 }
 .addresourcemodchooser a {
 color: white !important;
