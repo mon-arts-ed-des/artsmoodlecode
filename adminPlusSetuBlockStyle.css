@@ -37,7 +37,7 @@ text-align: center !important;
 
 /*This adds a border the same colour as the header around the links*/
 div#settingsnav {
-border: 2px solid #4a4a4a !important;
+border: 2px solid #f0f0f0 !important;
 border-radius: 5px !important;
 padding: 5px 0px 5px 0px !important;
 }
