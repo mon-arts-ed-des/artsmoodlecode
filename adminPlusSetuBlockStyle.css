@@ -1,7 +1,7 @@
 /*inst2243495 is the Administration Menu all references affect the design of the Admin Block*/
 /*Changes the colour of the text and controls of the Admin Block to white*/
 #inst2243495 .action-menu, #inst2243495 .dropdown-toggle, #inst2243495 .moodle-core-dragdrop-draghandle, #inst484478 .action-menu,#inst484478 .dropdown-toggle, #inst484478 .moodle-core-dragdrop-handle {
-color: #000 !important;
+color: #4a4a4a !important;
 }
 /*Changes the margin of the links within the block to 0, reducing space*/
 #inst2243495 .card-text{
@@ -31,13 +31,13 @@ text-decoration: none !important;
 /*Changes the colour of the background of the block header*/
 #instance-2243495-header {
 background: #f0f0f0 !important;
-color: #000 !important;
+color: #4a4a4a !important;
 text-align: center !important;
 }
 
 /*This adds a border the same colour as the header around the links*/
 div#settingsnav {
-border: 2px solid #f0f0f0 !important;
+border: 2px solid #4a4a4a !important;
 border-radius: 5px !important;
 padding: 5px 0px 5px 0px !important;
 }
@@ -60,13 +60,13 @@ display: none !important;
 
 /*This changes the colour of the SETU block header and text*/
 #instance-484478-header {
-background: #5a6268 !important;
-color: #fff !important;
+background: #f0f0f0 !important;
+color: #4a4a4a !important;
 text-align: center !important;
 }
 /*This adds a border the same colour as the header*/
 #inst484478 .card-text {
-border: 2px solid #5a6268 !important;
+border: 2px solid #4a4a4a !important;
 border-radius: 5px !important;
 padding: 5px 0px 5px 0px !important;
 margin: 0.7rem !important;
