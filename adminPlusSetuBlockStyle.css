@@ -55,6 +55,10 @@ color: #fff !important;
 background: #fff !important;
 display: none !important;
 }
+/*centres all HTML block card titles*/
+.block_html .card-title {
+text-align: center;
+}
 
 /*instance-484478 refers to the SETU block*/
 
