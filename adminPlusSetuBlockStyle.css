@@ -55,8 +55,8 @@ color: #fff !important;
 background: #fff !important;
 display: none !important;
 }
-/*centres all HTML block card titles*/
-.block_html .card-title {
+/*centres all HTML block card titles as well as the activity block and panopto block*/
+.block_html .card-title, .block_activity_modules .card-title, block_panopto .card-title {
 text-align: center;
 }
 
