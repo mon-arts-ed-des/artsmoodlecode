@@ -175,9 +175,9 @@ background: #dde5f2;
 border: 1px solid #006DAE;
 color: #10171f !important;
 }
-border-arts {
+.border-arts {
 border: 1px solid #006DAE;
 }
-text-arts {
+.text-arts {
 color: #10171f !important;
 }
