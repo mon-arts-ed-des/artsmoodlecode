@@ -173,11 +173,11 @@ color: white;
 .alert-arts {
 background: #dde5f2;
 border: 1px solid #006DAE;
-color: #162639;
+color: #006DAE !important;
 }
 border-arts {
 border: 1px solid #006DAE;
 }
 text-arts {
-color: #006DAE;
+color: #006DAE !important;
 }
