@@ -181,13 +181,13 @@ border: 1px solid #006DAE;
 .text-arts {
 color: #006DAE !important;
 }
-.tooltip {
+.tooltip-arts {
   position: relative !important;
   display: inline-block !important;
   border-bottom: 1px dotted black !important;
 }
 
-.tooltip .tooltiptext {
+.tooltip-arts .tooltiptext-arts {
   visibility: hidden !important;
   width: 120px !important;
   background-color: #006DAE!important;
@@ -204,7 +204,7 @@ color: #006DAE !important;
   transition: opacity 0s !important;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip-arts .tooltiptext-arts::after {
   content: "" !important;
   position: absolute !important;
   top: 100% !important;
@@ -215,7 +215,7 @@ color: #006DAE !important;
   border-color: #555 transparent transparent transparent !important;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip-arts:hover .tooltiptext-arts {
   visibility: visible !important;
   opacity: 1 !important;
 }
