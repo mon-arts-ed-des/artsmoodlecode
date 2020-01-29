@@ -184,17 +184,16 @@ color: #006DAE !important;
 .tooltip-arts {
   position: relative !important;
   display: inline-block !important;
-  border-bottom: 1px dotted black !important;
 }
 
 .tooltip-arts .tooltiptext-arts {
   visibility: hidden !important;
-  width: 120px !important;
-  background-color: #006DAE!important;
+  width: 100% !important;
+  background-color: #dde5f2 !important;
   color: #fff !important;
   text-align: center !important;
-  border-radius: 6px !important;
-  padding: 5px 0 !important;
+  border-radius: 5px !important;
+  padding: 10px 0 !important;
   position: absolute !important;
   z-index: 1 !important;
   bottom: 125% !important;
@@ -202,6 +201,7 @@ color: #006DAE !important;
   margin-left: -60px !important;
   opacity: 0 !important;
   transition: opacity 0s !important;
+  border: 1px solid #006DAE;
 }
 
 .tooltip-arts .tooltiptext-arts::after {
@@ -210,9 +210,6 @@ color: #006DAE !important;
   top: 100% !important;
   left: 50% !important;
   margin-left: -5px !important;
-  border-width: 5px !important;
-  border-style: solid !important;
-  border-color: #555 transparent transparent transparent !important;
 }
 
 .tooltip-arts:hover .tooltiptext-arts {
