@@ -52,7 +52,7 @@ margin-top: 50px;
   color:black;
   font-weight:normal;
   white-space:pre-wrap;
-  content:"✱ [fa-hand-o-left] You can review this lesson material again before continuing. \00000A ✱ Or you can continue onto the next activity [fa-hand-o-right]. \00000A ✱ Or return to the week this lesson is part of [fa-calendar].";
+  content:"✱ ⇦ You can review this lesson material again before continuing. \00000A ✱ Or you can continue onto the next activity ⇨. \00000A ✱ Or return to the week this lesson is part of ⟲.";
 }
 .generalbox p::before{
   color:black;
@@ -94,13 +94,13 @@ a.lessonbutton:active {
 /**BUTTON 3 - REVIEW**/
 
 .generalbox a.lessonbutton:nth-child(3)::before {
-  content:'[fa-hand-o-left] \00a0';
+  content:'⇦ \00a0';
 }
 .generalbox a.lessonbutton:nth-child(4)::after {
-  content:'\00a0 [fa-hand-o-right]';
+  content:'\00a0 ⇨';
 }
 .generalbox a.lessonbutton:nth-child(5)::after {
-  content:'\00a0 [fa-calendar]';
+  content:'\00a0 ⟲';
 }
 
 /**STYLE FOR PROGRESS BAR**/
@@ -112,7 +112,7 @@ a.lessonbutton:active {
   display: inline-block !important;
 }
 .progress-bar::after {
-  content: ' Complete! [fa-flag-checkered]'
+  content: ' Complete! ☺'
 }
 .progress {
   height: 2.5rem !important;
