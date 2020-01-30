@@ -52,11 +52,9 @@ margin-top: 50px;
   color:black;
   font-weight:normal;
   white-space:pre-wrap;
-  content:"✱ ⇦ You can review this lesson material again before continuing. \00000A ✱ Or you can continue onto the next activity ⇨. \00000A ✱ Or return to the week this lesson is part of ⟲.";
-}
+  }
 .generalbox p::before{
   color:black;
-  content:'[fa-thumbs-o-up] \00000A You have completed the activity. Where to next?';
   font-size:1.5em;
   margin-bottom: 1rem;
 }
@@ -99,9 +97,7 @@ a.lessonbutton:active {
   font-size: 1.2rem !important;
   display: inline-block !important;
 }
-.progress-bar::after {
-  content: ' Complete! ☺'
-}
+
 .progress {
   height: 2.5rem !important;
   line-height: 2.3rem !important;
