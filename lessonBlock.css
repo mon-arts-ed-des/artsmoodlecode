@@ -52,11 +52,11 @@ margin-top: 50px;
   color:black;
   font-weight:normal;
   white-space:pre-wrap;
-  content:"✱ 👈 You can review this lesson material again before continuing. \00000A ✱ Or you can continue onto the next activity 👉. \00000A ✱ Or return to the week this lesson is part of 🗓️.";
+  content:"✱ [fa-hand-o-left] You can review this lesson material again before continuing. \00000A ✱ Or you can continue onto the next activity [fa-hand-o-right]. \00000A ✱ Or return to the week this lesson is part of [fa-calendar].";
 }
 .generalbox p::before{
   color:black;
-  content:'👍 \00000A You have completed the activity. Where to next?';
+  content:'[fa-thumbs-o-up] \00000A You have completed the activity. Where to next?';
   font-size:1.5em;
   margin-bottom: 1rem;
 }
@@ -94,13 +94,13 @@ a.lessonbutton:active {
 /**BUTTON 3 - REVIEW**/
 
 .generalbox a.lessonbutton:nth-child(3)::before {
-  content:'👈 \00a0';
+  content:'[fa-hand-o-left] \00a0';
 }
 .generalbox a.lessonbutton:nth-child(4)::after {
-  content:'\00a0 👉';
+  content:'\00a0 [fa-hand-o-right]';
 }
 .generalbox a.lessonbutton:nth-child(5)::after {
-  content:'\00a0 🗓️';
+  content:'\00a0 [fa-calendar]';
 }
 
 /**STYLE FOR PROGRESS BAR**/
@@ -112,7 +112,7 @@ a.lessonbutton:active {
   display: inline-block !important;
 }
 .progress-bar::after {
-  content: ' Complete! 🎉'
+  content: ' Complete! [fa-flag-checkered]'
 }
 .progress {
   height: 2.5rem !important;
