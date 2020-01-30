@@ -52,11 +52,11 @@ margin-top: 50px;
   color:black;
   font-weight:normal;
   white-space:pre-wrap;
-  content:"✱ You can now to continue onto the next activity 👉. \00000A ✱ 👈 Or review this lesson material again before continuing. \00000A ✱ Or return to the week this lesson is part of 🗓️.";
+  content:"✱ 👈 You can review this lesson material again before continuing. \00000A ✱ Or you can continue onto the next activity 👉. \00000A ✱ Or return to the week this lesson is part of 🗓️.";
 }
 .generalbox p::before{
   color:black;
-  content:'👍 \00000A You completed the activity. Where to next?';
+  content:'👍 \00000A You have completed the activity. Where to next?';
   font-size:1.5em;
   margin-bottom: 1rem;
 }
