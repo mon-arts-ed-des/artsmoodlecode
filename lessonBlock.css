@@ -91,18 +91,6 @@ a.lessonbutton:active {
 }
 /**SETTINGS if REVIEW LESSON is ENABLED & NEXT ACTIVITY (ie assessment item) IS SELECTED***/
 
-/**BUTTON 3 - REVIEW**/
-
-.generalbox a.lessonbutton:nth-child(3)::before {
-  content:'⇦ \00a0';
-}
-.generalbox a.lessonbutton:nth-child(4)::after {
-  content:'\00a0 ⇨';
-}
-.generalbox a.lessonbutton:nth-child(5)::after {
-  content:'\00a0 ⟲';
-}
-
 /**STYLE FOR PROGRESS BAR**/
 .progress-bar {
   background-color: #5cb85c;
