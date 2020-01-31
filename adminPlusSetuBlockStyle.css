@@ -171,7 +171,7 @@ background: #006DAE;
 color: white;
 }
 .alert-arts {
-background: #dde5f2;
+background: rgba(0, 109, 174, .3);
 border: 1px solid #006DAE;
 color: #000 !important;
 }
