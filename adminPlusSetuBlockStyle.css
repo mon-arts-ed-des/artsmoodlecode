@@ -171,13 +171,18 @@ background: #006DAE;
 color: white;
 }
 .alert-arts {
-background: rgba(0, 109, 174, .3);
+background: rgba(0, 109, 174, .25);
 border: 1px solid #006DAE;
 color: #000 !important;
 }
 .border-arts {
 border: 1px solid #006DAE;
 }
+
+.border-arts-3 {
+border: 3px solid #006dae;
+}
+
 .text-arts {
 color: #006DAE !important;
 }
@@ -201,7 +206,7 @@ color: #006DAE !important;
   margin-left: -60px !important;
   opacity: 0 !important;
   transition: opacity 0s !important;
-  border: 1px solid #006DAE;
+  border: 1px solid rgba(0, 109, 174, .25);
 }
 
 .tooltip-arts .tooltiptext-arts::after {
