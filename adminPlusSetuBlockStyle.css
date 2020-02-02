@@ -194,7 +194,7 @@ color: #006DAE !important;
 .tooltip-arts .tooltiptext-arts {
   visibility: hidden !important;
   width: 100% !important;
-  background-color: #dde5f2 !important;
+  background-color: 1px solid rgba(0, 109, 174, .25) !important;
   color: #000 !important;
   text-align: center !important;
   border-radius: 5px !important;
@@ -206,7 +206,7 @@ color: #006DAE !important;
   margin-left: -60px !important;
   opacity: 0 !important;
   transition: opacity 0s !important;
-  border: 1px solid rgba(0, 109, 174, .25);
+  border: 1px solid rgba(0, 109, 174, 1);
 }
 
 .tooltip-arts .tooltiptext-arts::after {
