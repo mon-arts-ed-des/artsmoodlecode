@@ -134,7 +134,7 @@ display: none !important;
 /*This is the styling for a Bootstrap button that contains the colours used in the Arts Navigation Banner. It should be used in conjunction with the classes .btn and .btn-default to work similarly to Bootstrap buttons.*/
 .btn-arts {
 background: #006DAE;
-color: white;
+color: white !important;
 font-size: 1rem;
 line-height: 1.5;
 padding: .375rem .75rem;
@@ -149,7 +149,7 @@ text-decoration: none;
 }
 .btn-arts:hover {
 background: #3d90c2;
-color: white;
+color: white !important;
 cursor: pointer;
 }
 .btn-arts:focus {
