@@ -42,16 +42,16 @@ border-radius: 5px !important;
 padding: 5px 0px 5px 0px !important;
 }
 /*the following three sets of styling hide this block that contains styling for the Admin block so that it isn't visible unless altered in the browser's inspector. Block instance-2373107*/
-#inst2373107 {
+#inst3098311 {
 box-shadow: none !important;
 height: 0px !important;
 margin: 0px !important;
 }
-#inst2373107 .action-menu, #inst2373107 .dropdown-toggle, #inst2373107 i {
+#inst3098311 .action-menu, #inst3098311 .dropdown-toggle, #inst3098311 i {
 background: #fff !important;
 color: #fff !important;
 }
-#inst2373107 .card-title {
+#inst3098311 .card-title {
 background: #fff !important;
 display: none !important;
 }
