@@ -56,7 +56,7 @@ background: #fff !important;
 display: none !important;
 }
 /*centres all HTML block card titles as well as the activity block and panopto block*/
-.block_html .card-title, .block_activity_modules .card-title, block_panopto .card-title {
+.block_html .card-title, .block_activity_modules .card-title, .block_panopto .card-title, .block_callista .card-title {
 text-align: center;
 }
 
