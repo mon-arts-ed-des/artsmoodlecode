@@ -3,6 +3,5 @@ window.onload=function(){
         this.href=this.href.replace('#section-','&section=');
     $('.editor_atto_toolbar div').removeAttr('hidden');
     $('.editor_atto_toolbar div').css('display', 'inline-block');
-    $('.howToLabel').closest('li').empty();
     });
 };
