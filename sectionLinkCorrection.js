@@ -3,5 +3,7 @@ window.onload=function(){
         this.href=this.href.replace('#section-','&section=');
     $('.editor_atto_toolbar div').removeAttr('hidden');
     $('.editor_atto_toolbar div').css('display', 'inline-block');
+    $("#id_page_toolbar2").css("display", "table");
+    $("#id_page_toolbar3").css("display", "table");
     });
 };
