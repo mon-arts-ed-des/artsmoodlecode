@@ -221,3 +221,6 @@ color: #006DAE !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
+.mceLayout {
+  width:100% !important;
+}
