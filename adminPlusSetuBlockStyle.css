@@ -133,6 +133,9 @@ color: #fff !important;
 background: #006dae !important;
 border-color: #006dae !important;
 }
+.list-group-item-action {
+  color: #006dae !important;
+}
 /*This is the styling for a Bootstrap button that contains the colours used in the Arts Navigation Banner. It should be used in conjunction with the classes .btn and .btn-default to work similarly to Bootstrap buttons.*/
 .btn-arts {
 background: #006DAE;
