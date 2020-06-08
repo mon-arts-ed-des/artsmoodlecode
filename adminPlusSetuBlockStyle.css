@@ -138,7 +138,7 @@ border-color: #006dae !important;
   color: #006dae !important;
 }
 /*This is the styling for a Bootstrap button that contains the colours used in the Arts Navigation Banner. It should be used in conjunction with the classes .btn and .btn-default to work similarly to Bootstrap buttons.*/
-.btn-arts {
+.btn-arts, .btn-mu {
 background: #006DAE;
 color: white !important;
 font-size: 1rem;
@@ -153,80 +153,51 @@ border: 2px solid transparent;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
 text-decoration: none;
 }
-.btn-arts:hover {
+.btn-arts:hover, .btn-mu:hover {
 background: #3d90c2;
 color: white !important;
 cursor: pointer;
 }
-.btn-arts:focus {
+.btn-arts:focus, .btn-mu:focus {
 background: #3d90c2 !important;
 color: white !important;
 border-color: #3d90c2 !important;
 box-shadow: none;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.btn-arts:active {
+.btn-arts:active, .btn-mu:active {
 background: #3d90c2 !important;
 color: white !important;
 box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
 border: 2px solid #3d90c2 !important;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.bg-arts {
+.bg-arts, .btn-mu {
 background: #006DAE;
 color: white;
 }
-.alert-arts {
+.alert-arts, .alert-mu {
 background: rgba(0, 109, 174, .25);
 border: 1px solid #006DAE;
 color: #000 !important;
 }
-.border-arts {
+.border-arts, .border-mu {
 border: 1px solid #006DAE;
 }
 
-.border-arts-3 {
+.border-arts-3, .border-mu-3 {
 border: 3px solid #006dae;
 }
 
-.text-arts {
+.hr-3 {
+height: 3px; 
+background-color: #000;
+}
+
+.text-arts, .text-mu {
 color: #006DAE !important;
 }
-.tooltip-arts {
-  position: relative !important;
-  display: inline-block !important;
-}
 
-.tooltip-arts .tooltiptext-arts {
-  visibility: hidden !important;
-  width: 100% !important;
-  background-color: rgba(0, 109, 174, .25) !important;
-  color: #000 !important;
-  text-align: center !important;
-  border-radius: 5px !important;
-  padding: 10px 0 !important;
-  position: absolute !important;
-  z-index: 1 !important;
-  bottom: 125% !important;
-  left: 50% !important;
-  margin-left: -60px !important;
-  opacity: 0 !important;
-  transition: opacity 0s !important;
-  border: 1px solid rgba(0, 109, 174, 1);
-}
-
-.tooltip-arts .tooltiptext-arts::after {
-  content: "" !important;
-  position: absolute !important;
-  top: 100% !important;
-  left: 50% !important;
-  margin-left: -5px !important;
-}
-
-.tooltip-arts:hover .tooltiptext-arts {
-  visibility: visible !important;
-  opacity: 1 !important;
-}
 .mceLayout {
   width:100% !important;
 }
