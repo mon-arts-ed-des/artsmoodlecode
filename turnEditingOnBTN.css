@@ -1,0 +1,11 @@
+#edit-setting {
+  position: absolute;
+  right: 15px;
+/* You can change the color here */
+  background-color:#336600;
+}
+
+/* On smaller screens, hide button text and display pen icon only*/
+@media screen and (max-width: 600px) {
+  #edit-setting span {display: none;}
+}
