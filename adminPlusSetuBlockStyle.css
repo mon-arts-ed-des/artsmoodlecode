@@ -189,11 +189,14 @@ border: 1px solid #006DAE;
 border: 3px solid #006dae;
 }
 
-.hr-3 {
+.hr-3, .hr3 {
 height: 3px; 
 background-color: #000;
 }
-
+.hr2 {
+background-color: #000; 
+height:2px; 
+}
 .text-arts, .text-mu {
 color: #006DAE !important;
 }
