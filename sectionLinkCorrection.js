@@ -6,6 +6,9 @@ $('nav a, .bookexit').each(function(){
     $('.mceToolbarRow2').css('display', 'table');
     $('.mceToolbarRow3').css('display', 'table');
     });
+        $('.noUnderline').click(function(){
+    $(this).find('i').toggleClass('fa-plus fa-minus')
+});
         $(".header-title:contains(S2 2020)").filter(function () {
     $('#arts-guide').remove();});
 $(".block-region .type_course a").each(function(){
