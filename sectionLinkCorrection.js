@@ -6,9 +6,11 @@ $('nav a, .bookexit').each(function(){
     $('.mceToolbarRow2').css('display', 'table');
     $('.mceToolbarRow3').css('display', 'table');
     });
-        $('.noUnderline').click(function(){
-    $(this).find('i').toggleClass('fa-plus fa-minus')
-});
+      $(".collapse").on('show.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
         $(".header-title:contains(S2 2020)").filter(function () {
     $('#arts-guide').remove();});
 $(".block-region .type_course a").each(function(){
