@@ -7,6 +7,9 @@ window.onload=function(){
   $('.generalbox p').append('<ul style="color:black;"><li><i class="fa fa-hand-o-left" aria-hidden="true"></i> You can review this lesson material again before continuing</li><li> Or you can continue onto the next activity <i class="fa fa-hand-o-right" aria-hidden="true"></i></li><li>Or return to the week this lesson is part of <i class="fa fa-calendar" aria-hidden="true"></i></li></ul>');
   $('.generalbox a.lessonbutton:nth-child(3)').prepend('<i class="fa fa-hand-o-left" aria-hidden="true"></i> ');
   $('.generalbox a.lessonbutton:nth-child(4)').append(' <i class="fa fa-hand-o-right" aria-hidden="true"></i>');
-  $('.generalbox a.lessonbutton:nth-child(5)').append(' <i class="fa fa-calendar" aria-hidden="true"></i>');
+  var linkUrl=$('ol.breadcrumb li:nth-last-child(2) > a').html();
+  $('.generalbox a:last-child').html(linkUrl);
+  $('.generalbox a:last-child').append(' <i class="fa fa-reply"></i>');
+  $('.generalbox a:last-child').prepend('Return to ');
   $('.progress-bar').append(' <span>Complete! <i class="fa fa-flag-checkered" aria-hidden="true"></i></span>');
 };
