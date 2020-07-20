@@ -6,7 +6,10 @@ $('nav a, .bookexit').each(function(){
     $('.mceToolbarRow2').css('display', 'table');
     $('.mceToolbarRow3').css('display', 'table');
     });
-      $(".collapse").on('show.bs.collapse', function(){
+    $("#inst3127749 ol li a").removeAttr("style");
+    $('#inst3127749 .list a').css({"color": "#006DAE","text-decoration": "none !important","font-size": "1.1rem"});
+    $('#inst3127749 ol').css({"border":"2px solid #f0f0f0", "border-radius":"5px","padding":"12px"});
+    $(".collapse").on('show.bs.collapse', function(){
         	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
         }).on('hide.bs.collapse', function(){
         	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
