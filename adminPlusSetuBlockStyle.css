@@ -198,3 +198,7 @@ color: #006DAE !important;
 .mceLayout {
   width:100% !important;
 }
+
+.block .content {
+  margin-top: 0px !important;
+}
