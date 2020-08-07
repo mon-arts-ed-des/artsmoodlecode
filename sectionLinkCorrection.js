@@ -18,7 +18,7 @@ $('nav a, .bookexit').each(function(){
         $(".header-title:contains(S2 2020)").filter(function () {
     $('#arts-guide').remove();});
 $(".block-region .type_course a").each(function(){
-    if($(this).text().match(/Turn editing/)){
+    if($(this).text().match(/Recycle bin/)){
 
 $( ".header-right" ).prepend('<div class="custom-menus my-auto"><a href="https://lms.monash.edu/course/view.php?id=48399&section=13" target="_blank" class="border border-dark rounded-circle text-dark p-2" role="button" title="Ed Tech how tos"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></a></div>');
 
