@@ -60,7 +60,7 @@ margin-top: 50px;
 }
 
 /***END-OF-LESSON LINKS APPEAR AS BUTTONS***/
-.generalbox a.lessonbutton {
+.lessonbutton {
   font-weight:500; 
   background: #ced4da; 
   border: 2px solid transparent;
@@ -79,11 +79,11 @@ margin-top: 50px;
   -webkit-transition: color .15s ease-in-out,background-color ease-in-out,border ease-in-out,box-shadow ease-in-out;
 }
 
-a.lessonbutton:hover {
+.lessonbutton:hover {
   background:#b8c1ca; 
   text-decoration:none;
 }
-a.lessonbutton:active {
+.lessonbutton:active {
   box-shadow: none;
   border: 2px solid #E6E9EC;
 }
