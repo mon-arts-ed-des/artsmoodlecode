@@ -8,8 +8,8 @@ window.onload=function(){
   $('.generalbox a.lessonbutton:nth-child(3)').prepend('<i class="fa fa-hand-o-left" aria-hidden="true"></i> ');
   $('.generalbox a.lessonbutton:nth-child(4)').append(' <i class="fa fa-hand-o-right" aria-hidden="true"></i>');
   var linkUrl=$('ol.breadcrumb li:nth-last-child(2) > a').html();
-  $('.generalbox a:last-child').html(linkUrl);
-  $('.generalbox a:last-child').append(' <i class="fa fa-reply"></i>');
-  $('.generalbox a:last-child').prepend('Return to ');
+  $('.generalbox a:nth-last-child(2)').html(linkUrl);
+  $('.generalbox a:nth-last-child(2)').append(' <i class="fa fa-reply"></i>');
+  $('.generalbox a:nth-last-child(2)').prepend('Return to ');
   $('.progress-bar').append(' <span>Complete! <i class="fa fa-flag-checkered" aria-hidden="true"></i></span>');
 };
