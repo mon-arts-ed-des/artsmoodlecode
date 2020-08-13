@@ -75,6 +75,11 @@ display: none !important;
 box-shadow: none !important;
 background: none !important;
 }
+/*Hide the delete section option from the section action menu */
+.section_action_menu .editing_delete {
+display: none !important;
+}
+
 .addresourcemodchooser {
 display: inline-flex !important;
 float: right !important;
@@ -202,3 +207,4 @@ color: #006DAE !important;
 .block .content {
   margin-top: 0px !important;
 }
+
