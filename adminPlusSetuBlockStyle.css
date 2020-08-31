@@ -207,4 +207,6 @@ color: #006DAE !important;
 .block .content {
   margin-top: 0px !important;
 }
-
+.alert p:last-of-type {
+margin-bottom: 0px !important;
+}
