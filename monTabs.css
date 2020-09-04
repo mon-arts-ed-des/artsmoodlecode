@@ -2,7 +2,7 @@
   background: #006dae !important;
   color: white !important;
 }
-.monTabs .nav-link.active {
+.monTabs .nav-link:active {
   background: #006dae !important;
   color: white !important;
 }
