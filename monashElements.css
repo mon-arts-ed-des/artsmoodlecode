@@ -57,3 +57,29 @@ border: 3px solid #006dae;
 .text-arts, .text-mu {
 color: #006DAE !important;
 }
+btn-outline-mu {
+ color:#006dae;
+    background-color:transparent;
+    background-image:none;
+    border-color:#006dae
+  }
+  .btn-outline-mu:hover {
+    color:#fff;
+    background-color:#006dae;
+    border-color:#006dae
+  }
+  .btn-outline-mu.focus,.btn-outline-mu:focus { 
+    box-shadow:0 0 0 .2rem rgba(0,123,255,1)
+  }
+  .btn-outline-mu.disabled,.btn-outline-mu:disabled {
+    color:#006dae;
+    background-color:transparent
+  }
+  .btn-outline-mu:not(:disabled):not(.disabled).active,.btn-outline-mu:not(:disabled):not(.disabled):active,.show>.btn-outline-mu.dropdown-toggle {
+    color:#fff;
+    background-color:#006dae;
+    border-color:#006dae
+  }
+  .btn-outline-mu:not(:disabled):not(.disabled).active:focus,.btn-outline-mu:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-mu.dropdown-toggle:focus {
+    box-shadow:0 0 0 .2rem rgba(0,109,174, 1)
+  }
