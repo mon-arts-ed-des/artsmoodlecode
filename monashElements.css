@@ -15,6 +15,18 @@ border: 2px solid transparent;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
 text-decoration: none;
 }
+.btn-lg {
+  padding:.5rem 1rem !important;
+  font-size:1.25rem !important;
+  line-height:1.5 !important;
+  border-radius:.3rem !important;
+}
+.btn-sm {
+  padding:.25rem .5rem !important;
+  font-size:.875rem !important;
+  line-height:1.5 !important;
+  border-radius:.2rem !important;
+}
 .btn-arts:hover, .btn-mu:hover {
 background: #3d90c2;
 color: white !important;
@@ -57,29 +69,29 @@ border: 3px solid #006dae;
 .text-arts, .text-mu {
 color: #006DAE !important;
 }
-btn-outline-mu {
+.btn-outline-mu {
  color:#006dae;
     background-color:transparent;
     background-image:none;
-    border-color:#006dae
+    border-color:#006dae;
   }
   .btn-outline-mu:hover {
     color:#fff;
     background-color:#006dae;
-    border-color:#006dae
+    border-color:#006dae;
   }
   .btn-outline-mu.focus,.btn-outline-mu:focus { 
-    box-shadow:0 0 0 .2rem rgba(0,123,255,1)
+    box-shadow:0 0 0 .2rem rgba(0,123,255,1);
   }
   .btn-outline-mu.disabled,.btn-outline-mu:disabled {
     color:#006dae;
-    background-color:transparent
+    background-color:transparent;
   }
   .btn-outline-mu:not(:disabled):not(.disabled).active,.btn-outline-mu:not(:disabled):not(.disabled):active,.show>.btn-outline-mu.dropdown-toggle {
     color:#fff;
     background-color:#006dae;
-    border-color:#006dae
+    border-color:#006dae;
   }
   .btn-outline-mu:not(:disabled):not(.disabled).active:focus,.btn-outline-mu:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-mu.dropdown-toggle:focus {
-    box-shadow:0 0 0 .2rem rgba(0,109,174, 1)
+    box-shadow:0 0 0 .2rem rgba(0,109,174, 1);
   }
