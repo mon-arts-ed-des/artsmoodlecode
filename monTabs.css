@@ -9,3 +9,6 @@
 .monTabs .nav-link {
 color: #006dae !important;
 }
+.tab-content p:last-of-type {
+margin-bottom: 0px !important;
+}
