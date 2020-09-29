@@ -13,4 +13,4 @@ t.type = "text/javascript";
 t.src = "https://mon-arts-ed-des.github.io/artsmoodlecode/initializeTooltip.js";
 $("head").append(s);
 $("head").append(t);
-$("head").append(u);
+$('head').append('<script>$(document).ready(function(){ $(\'[data-toggle="tooltip"]\').tooltip();});</script>');
