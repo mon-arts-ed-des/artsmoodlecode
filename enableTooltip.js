@@ -10,6 +10,6 @@ t.integrity = "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusv
 t.crossorigin = "anonymous";
 $("head").append(s);
 $("head").append(t);
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
 });
