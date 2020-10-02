@@ -33,7 +33,7 @@ $( "#nav-drawer .list-group" ).prepend('<a class="list-group-item list-group-ite
 });
 	$(".block-region .type_course a").each(function(){
 		if($(this).text().match(/Restore/)){
-var userName = document.querySelecter('.myprofileitem.fullname')
+var userName = document.querySelector('.myprofileitem.fullname')
 ? document.querySelector('myprofileitem.fullname').innerText
 : null;
 	if(userName == "Tim Scholl" || userName == "Sneha Mohandas" || userName == "Tahlia Birnbaum" || userName == "Carmen Sapsed" || userName == "Josephine Hook"){
