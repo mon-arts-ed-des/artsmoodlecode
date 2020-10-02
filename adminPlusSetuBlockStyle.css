@@ -40,17 +40,17 @@ border: 2px solid #f0f0f0 !important;
 border-radius: 5px !important;
 padding: 5px 0px 5px 0px !important;
 }
-/*the following three sets of styling hide this block that contains styling for the Admin block so that it isn't visible unless altered in the browser's inspector. Block instance-2373107*/
-#inst3098311 {
+/*the following three sets of styling hide this block that contains styling for the Admin block so that it isn't visible unless altered in the browser's inspector. Block instance-3098311. This also hides inst3242994 which refers to the logged in user block at category level*/*/
+#inst3098311, #inst3242994 {
 box-shadow: none !important;
 height: 0px !important;
 margin: 0px !important;
 }
-#inst3098311 .action-menu, #inst3098311 .dropdown-toggle, #inst3098311 i {
+#inst3098311 .action-menu, #inst3098311 .dropdown-toggle, #inst3098311 i, #inst3242994 .action-menu, #inst3242994 .dropdown-toggle, #inst3242994 i {
 background: #fff !important;
 color: #fff !important;
 }
-#inst3098311 .card-title {
+#inst3098311 .card-title, #inst3242994 .card-title {
 background: #fff !important;
 display: none !important;
 }
