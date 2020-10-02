@@ -50,7 +50,7 @@ margin: 0px !important;
 background: #fff !important;
 color: #fff !important;
 }
-#inst3098311 .card-title, #inst3242994 .card-title {
+#inst3098311 .card-title, #inst3098311 .card-body, #inst3242994 .card-title, #inst3242994 .card-body {
 background: #fff !important;
 display: none !important;
 }
