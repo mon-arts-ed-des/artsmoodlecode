@@ -52,7 +52,8 @@ color: #fff !important;
 }
 #inst3098311 .card-title, #inst3098311 .card-body, #inst3243453 .card-title, #inst3243453 .card-body {
 background: #fff !important;
-display: none !important;
+color: #fff !important;
+  height: 0px !important;
 }
 
 /*instance-484478 refers to the SETU block*/
