@@ -27,25 +27,19 @@ $('nav a, .bookexit').each(function(){
         //add how to's link to the nav banner if you are a tutor, lect, non-primary lect, designer or admin
 $(".block-region .type_course a").each(function(){
     if($(this).text().match(/Recycle bin/)){
-
 $( ".header-right" ).prepend('<div class="custom-menus my-auto"><a href="https://lms.monash.edu/course/view.php?id=48399&section=14" target="_blank" class="border border-dark rounded-circle text-dark p-2" role="button" title="Ed Tech how tos"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></a></div>');
-
 $( "#nav-drawer .list-group" ).prepend('<a class="list-group-item list-group-item-action" href="https://lms.monash.edu/course/view.php?id=48399&section=14" target="_blank" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0"><div class="ml-0"><div class="media"><span class="media-left"><i class="icon fa fa-bolt fa-fw " aria-hidden="true"></i></span><span class="media-body ">Ed Tech how tos</span></div></div></a>');
     };
 });
-$(".block-region .type_course a").each(function(){
-	//check the permission first
-if($(this).text().match(/Restore/)){
-	//match the username from a list of options
-	var name = document.querySelector('.myprofileitem.fullname')
-	? document.querySelector('.myprofileitem.fullname').innerText
-	: null;
-//alert(name);
-if(name == "Sneha Mohandas" || name== "Tim Scholl" || name=="Tahlia Birnbaum" || name=="Carmen Sapsed" || name=="Josephine Hook" || name=="Ingrid D'Souza"){
-  $(".header-right").prepend('<div class="custom-menus my-auto dropdown"><button type="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="BEEST" style="width: 38px; height: 38px;" data-toggle="modal" data-target=".beest-home-modal" id="beestDropdown"><img src="https://mon-arts-ed-des.github.io/BEEST/img/dragon-solid-black.png" width="20px" height="20px" style="margin-bottom: 4px;" /></button>');
-        
-  $("#region-main").append('<style>.modal-beest{max-width: 80% !important;}</style><div class="modal fade beest-home-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg modal-beest"><div class="modal-content"><div class="modal-header mb-0 p-2 bg-danger text-white px-5"><h5 class="modal-title text-white my-auto" id="exampleModalLabel">To close this window click the button on the right or anywhere outside this box.</h5><button type="button" class="btn btn-outline-light btn-lg rounded" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <i class="fa fa-times"></i></span></button></div><iframe src="https://mon-arts-ed-des.github.io/BEEST/index.html" width="100%" height="900px"></iframe></div></div></div>');
-};
-};
-});
+	$(".block-region .type_course a").each(function(){
+		if($(this).text().match(/Restore/)){
+var userName = document.querySelecter('.myprofileitem.fullname')
+? document.querySelector('myprofileitem.fullname').innerText
+: null;
+	if(userName == "Tim Scholl" || userName == "Sneha Mohandas" || userName == "Tahlia Birnbaum" || userName == "Carmen Sapsed" || userName == "Josephine Hook"){
+		$(".header-right").prepend('<div class="custom-menus my-auto dropdown"><button type="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="BEEST" style="width:38px; height: 38px;" data-toggle="modal" data-target=".beest-home-modal" id="beestDropdown"><img src="https://mon-arts-ed-des.github.io/BEEST/img/dragon-solid-black.png" width="20px" height="20px" style="margin-bottom: 4px;" /></button>');
+		$("#region-main").append('<style>.modal-beest{max-width: 80% !important;}</style><div class="modal fade beest-home-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg modal-beest"><div class="modal-content"><div class="modal-header mb-0 p-2 bg-danger text-white px-5"><h5 class="modal-title text-white my-auto" id="exampleModalLabel">To close this window click the button on the right or anywhere outside this box.</h5><button type="button" class="btn btn-outline-light btn-lg rounded" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <i class="fa fa-times"></i></span></button></div><iframe src="https://mon-arts-ed-des.github.io/BEEST/index.html" width="100%" height="900px"></iframe></div></div></div>');
+	};
+		};
+	});
 };
