@@ -34,7 +34,7 @@ $( "#nav-drawer .list-group" ).prepend('<a class="list-group-item list-group-ite
 	$(".block-region .type_course a").each(function(){
 		if($(this).text().match(/Restore/)){
 var userName = document.querySelector('.myprofileitem.fullname')
-? document.querySelector('myprofileitem.fullname').innerText
+? document.querySelector('.myprofileitem.fullname').innerText
 : null;
 	if(userName == "Tim Scholl" || userName == "Sneha Mohandas" || userName == "Tahlia Birnbaum" || userName == "Carmen Sapsed" || userName == "Josephine Hook"){
 		$(".header-right").prepend('<div class="custom-menus my-auto dropdown"><button type="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="BEEST" style="width:38px; height: 38px;" data-toggle="modal" data-target=".beest-home-modal" id="beestDropdown"><img src="https://mon-arts-ed-des.github.io/BEEST/img/dragon-solid-black.png" width="20px" height="20px" style="margin-bottom: 4px;" /></button>');
