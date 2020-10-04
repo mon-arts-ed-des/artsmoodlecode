@@ -80,7 +80,10 @@ background: none !important;
 .section_action_menu .editing_delete {
 display: none !important;
 }
-
+/*make enough white space between the footer and the white blocks*/
+footer {
+margin-top: 50px !important;
+}
 .addresourcemodchooser {
 display: inline-flex !important;
 float: right !important;
