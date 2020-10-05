@@ -50,8 +50,15 @@ $(".block-region .type_course a").each(function(){
 	    $('#accessThreeSixty').before('<div class="staffInstructions alert alert-mu rounded">This external tool is linked to Echo 360, the university’s lecture capture service. If you have any time set up in spaces where recording is available, they will become available to students shortly after completing the recording.</div>');
 	    $('#studentSupportResources').before('<div class="staffInstructions alert alert-mu rounded">The page resources here contain links to Faculty and University level support services for students. These include technical support, mental health support, student interest groups and disability support.</div>');
 	    $('#industryResources').before('<div class="staffInstructions alert alert-mu rounded">Resources here connect the learner and the content to real world organisations, case studies, careers in the field and general application of the knowledge and skills addressed in your unit. These may be journals, web sites or interesting roles in the field you are aware of.</div>');
+	      //gets the url and checks for the text modedit to prove you are in an editing screen. If modedit is in the url the alerts will be hidden.
+      var editScreen = window.location.href.indexOf('modedit')
+      //section is null so it must be the entry page
+      if (editScreen > -1) {
+$('.alert-mu').remove()
+};
   };
 });
+    
 	$(".block-region .type_course a").each(function(){
 		if($(this).text().match(/Restore/)){
 var userName = document.querySelector('.myprofileitem.fullname')
