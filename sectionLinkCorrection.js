@@ -28,9 +28,12 @@ $('nav a, .bookexit').each(function(){
 $(".block-region .type_course a").each(function(){
     if($(this).text().match(/Recycle bin/)){
 //link to how to's in the uni wide banner and nav drawer
+	    
 	    $( ".header-right" ).prepend('<div class="custom-menus my-auto"><a href="https://lms.monash.edu/course/view.php?id=48399&section=14" target="_blank" class="border border-dark rounded-circle text-dark p-2" role="button" title="Ed Tech how tos"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></a></div>');
 	    $( "#nav-drawer .list-group" ).prepend('<a class="list-group-item list-group-item-action" href="https://lms.monash.edu/course/view.php?id=48399&section=14" target="_blank" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0"><div class="ml-0"><div class="media"><span class="media-left"><i class="icon fa fa-bolt fa-fw " aria-hidden="true"></i></span><span class="media-body ">Ed Tech how tos</span></div></div></a>');
 //instructions for staff that need to be switched off at 0 week
+/*	    $('#section-0').after('<div class="staffInstructions mx-5 alert alert-danger border border-danger rounded" role="alert"><strong>A note on the blue boxes that appear throughout this template and this single red alert</strong>: These boxes will appear to lecturer and tutors until the Friday before 0 week. You cannot edit them or duplicate them. The Educational Design team have added code to this site that is making them temporarily appear to support Moodle site design.</div>');
+	    $('#otherWeekSequence').before('<div class="staffInstructions alert alert-mu rounded">Please check week 1 for an explanation of the structure of the content and examples of weekly activities</div>');
 	    $('#welcome').before('<div class="staffInstructions alert alert-mu rounded">Provide students with an introductory video message in order to foster familiarity and establish a comfortable learning environment. It is especially important in the digital space to provide a personal and friendly welcome to your students.</div>');
 	    $('#synopsis').before('<div class="staffInstructions alert alert-mu rounded">These should be the same as students will find in the handbook. Replicate them here so they are readily accessible by students. <a id="handbookLink" href="https://handbook.monash.edu/" target="_blank">Go to the handbook</a></div>');
 	    $('#keyDates').before('<div class="staffInstructions alert alert-mu rounded">Refer students to the key dates students need to diarise.</div>');
@@ -52,10 +55,10 @@ $(".block-region .type_course a").each(function(){
 	    $('#industryResources').before('<div class="staffInstructions alert alert-mu rounded">Resources here connect the learner and the content to real world organisations, case studies, careers in the field and general application of the knowledge and skills addressed in your unit. These may be journals, web sites or interesting roles in the field you are aware of.</div>');
 	      //gets the url and checks for the text modedit to prove you are in an editing screen. If modedit is in the url the alerts will be hidden.
       var editScreen = window.location.href.indexOf('modedit')
-      //section is null so it must be the entry page
+      //if greater than -1 then the user must be in an edit page so remove the instructions
       if (editScreen > -1) {
-$('.alert-mu').remove()
-};
+$('.staffInstructions').remove()
+};*/
   };
 });
     
