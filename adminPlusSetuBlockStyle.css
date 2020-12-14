@@ -55,7 +55,9 @@ background: #fff !important;
 color: #fff !important;
   height: 0px !important;
 }
-
+#inst3243453 .card-text{
+font-size: 1px !important;
+}
 /*instance-484478 refers to the SETU block*/
 
 /*This changes the colour of the SETU block header and text*/
@@ -82,7 +84,7 @@ display: none !important;
 }
 /*make enough white space between the footer and the white blocks*/
 footer {
-margin-top: 50px !important;
+margin-top: 75px !important;
 }
 .addresourcemodchooser {
 display: inline-flex !important;
