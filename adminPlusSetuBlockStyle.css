@@ -86,7 +86,7 @@ display: none !important;
 footer {
 margin-top: 75px !important;
 }
-.addresourcemodchooser {
+.section-modchooser-link {
 display: inline-flex !important;
 float: right !important;
 line-height: 1.5;
@@ -98,7 +98,7 @@ border: 2px solid transparent;
 text-decoration: none;
 margin-bottom: 1.5rem;
 }
-.addresourcemodchooser a {
+.section-modchooser-link a {
 color: white !important;
 text-decoration: none !important;
 background: #006DAE;
@@ -110,26 +110,26 @@ border: 2px solid transparent;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.5); 
 border-radius: 2px;
 }
-.addresourcemodchooser a:hover {
+.section-modchooser-link a:hover {
 background: #3d90c2;
 color: white !important;
 cursor: pointer;
 }
-.addresourcemodchooser a:focus {
+.section-modchooser-link a:focus {
 background: #3d90c2 !important;
 color: white !important;
 border-color: #3d90c2 !important;
 box-shadow: none;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.addresourcemodchooser a:active {
+.section-modchooser-link a:active {
 background: #3d90c2 !important;
 color: white !important;
 box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
 border: 2px solid #3d90c2 !important;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.section-navigation .mdl-right, .section-navigation .mdl-left, .addresourcedropdown, .jumpmenu {
+#seciton-0 .section-modchooser-link, .section-navigation .mdl-right, .section-navigation .mdl-left, .addresourcedropdown, .jumpmenu {
 display: none !important;
 color: #fff !important;
 }
