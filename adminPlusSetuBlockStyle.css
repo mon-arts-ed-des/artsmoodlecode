@@ -89,7 +89,7 @@ margin-top: 75px !important;
 .section-modchooser-link {
 display: inline-flex !important;
 float: right !important;
-line-height: 1.5;
+line-height: 1.5rem !important;
 vertical-align: middle;
 text-align: center;
 white-space: nowrap;
@@ -97,8 +97,6 @@ font-weight: 500;
 border: 2px solid transparent;
 text-decoration: none;
 margin-bottom: 1.5rem;
-}
-.section-modchooser-link {
 color: white !important;
 text-decoration: none !important;
 background: #006DAE;
@@ -128,6 +126,9 @@ color: white !important;
 box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
 border: 2px solid #3d90c2 !important;
 transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.section-modchooser-link i {
+line-height: 1.5rem !important;
 }
 #section-0 .section-modchooser-link, .section-navigation .mdl-right, .section-navigation .mdl-left, .addresourcedropdown, .jumpmenu {
 display: none !important;
