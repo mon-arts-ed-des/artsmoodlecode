@@ -39,7 +39,9 @@ margin-top: 50px;
   width:75%;
   overflow:hidden;
 }
-
+.generalbox .no-overflow {
+color: white !important;
+}
 
 /**TEXT INSTRUCTIONS FOR END-OF-LESSON PAGE**/
 .boxaligncenter p {
