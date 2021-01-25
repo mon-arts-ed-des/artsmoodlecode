@@ -1,4 +1,5 @@
 window.onload=function(){
+   if (window.location.href.indexOf("pageid=-9") > -1) {
   $('nav a, .bookexit').each(function(){
         this.href=this.href.replace('#section-','&section=');
     });
@@ -12,4 +13,5 @@ window.onload=function(){
   $('.generalbox a:last-child').append(' <i class="fa fa-reply"></i>');
   $('.generalbox a:last-child').prepend('Return to ');
   $('.progress-bar').append(' <span>Complete! <i class="fa fa-flag-checkered" aria-hidden="true"></i></span>');
+};
 };
