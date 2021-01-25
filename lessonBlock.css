@@ -29,7 +29,7 @@ margin-top: 50px;
 
 /***End of Lesson Page****/
 
-.generalbox {
+.boxaligncenter {
   border-color: #bee5eb;
   position: relative;
   padding: 50px !important;
@@ -42,10 +42,10 @@ margin-top: 50px;
 
 
 /**TEXT INSTRUCTIONS FOR END-OF-LESSON PAGE**/
-.generalbox p {
+.boxaligncenter p {
   color:white;
 }
-.generalbox p::after {
+.boxaligncenter p::after {
   display:block;
   line-height: 1.5rem;
   max-width:100%;
@@ -53,14 +53,14 @@ margin-top: 50px;
   font-weight:normal;
   white-space:pre-wrap;
   }
-.generalbox p::before{
+.boxaligncenter p::before{
   color:black;
   font-size:1.5em;
   margin-bottom: 1rem;
 }
 
 /***END-OF-LESSON LINKS APPEAR AS BUTTONS***/
-.generalbox a.lessonbutton {
+.boxaligncenter a.lessonbutton {
   font-weight:500; 
   background: #ced4da; 
   border: 2px solid transparent;
