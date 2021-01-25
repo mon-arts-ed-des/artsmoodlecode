@@ -41,6 +41,7 @@ margin-top: 50px;
 }
 .generalbox .no-overflow {
 color: white !important;
+  display: none !important;
 }
 
 /**TEXT INSTRUCTIONS FOR END-OF-LESSON PAGE**/
