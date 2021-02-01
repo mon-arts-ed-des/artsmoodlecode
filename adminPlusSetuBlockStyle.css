@@ -281,3 +281,7 @@ color: #006DAE !important;
 .alert p:last-of-type {
 margin-bottom: 0px !important;
 }
+.preambleSpecCon, .preambleAssessment {
+border: 2px solid #f0f0f0 !important;
+border-radius: 5px !important;
+}
