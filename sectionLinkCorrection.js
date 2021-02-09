@@ -10,7 +10,6 @@ $('nav a, .bookexit').each(function(){
     $('.mceToolbarRow2').css('display', 'table');
     $('.mceToolbarRow3').css('display', 'table');
     });
-	{setup_beest(match_lect,{button:true,iFrame:true})};
         //style library block to be like the others
     $("#inst3127749 ol li a").removeAttr("style");
     $('#inst3127749 .list a').css({"color": "#006DAE","text-decoration": "none !important","font-size": "1.1rem"});
@@ -55,4 +54,5 @@ var userName = document.querySelector('.myprofileitem.fullname')
 	};
 		};
 	});
+setup_beest(match_lect,{button:true,iFrame:true});
 };
