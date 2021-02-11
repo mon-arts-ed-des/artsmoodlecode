@@ -27,7 +27,7 @@ $('nav a, .bookexit').each(function(){
 	//Show Arts Graduate essentials block if the unit code has APG in it
 	var headingNum = $('.header-title').text();
 	if(headingNum.indexOf("APG") >= 1){
-    $('#inst335723').css('display','block');
+    $('#inst3357177').css('display','block');
 }
         //add how to's link to the nav banner if you are a tutor, lect, non-primary lect, designer or admin
 $(".block-region .type_course a").each(function(){
