@@ -24,6 +24,10 @@ $('nav a, .bookexit').each(function(){
         $(".header-title:contains(S2 2020)").filter(function(){
     $('#arts-guide').remove();
         });
+	var headingNum = $('.header-title').text();
+	if(headingNum.indexOf("APG") >= 1){
+    $('#inst3357273').css('display','block');
+}
         //add how to's link to the nav banner if you are a tutor, lect, non-primary lect, designer or admin
 $(".block-region .type_course a").each(function(){
     if($(this).text().match(/Recycle bin/)){
