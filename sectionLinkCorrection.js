@@ -24,6 +24,12 @@ $('nav a, .bookexit').each(function(){
         $(".header-title:contains(S2 2020)").filter(function(){
     $('#arts-guide').remove();
         });
+	/*var sectionIsOverview = $('.sectionname').text();
+	if(sectionIsOverview.indexOf("Overview") >= 0){
+$('.sectionname').after('<p class="text-center"><em>We wish to acknowledge the people of the Kulin Nations, on whose land Monash University operates. We pay our respects to their Elders, past, present and emerging.</em>')
+}
+else{
+}*/
 	//Show Arts Graduate essentials block if the unit code has APG in it
 	var headingNum = $('.header-title').text();
 	if(headingNum.indexOf("APG") >= 1){
