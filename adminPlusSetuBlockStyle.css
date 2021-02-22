@@ -78,13 +78,13 @@ display: none !important;
 box-shadow: none !important;
 background: none !important;
 }
-/*Hide the delete section option from the section action menu */
+/*Hide the delete section option from the section action menu 
 .section_action_menu .editing_delete {
 display: none !important;
-}
+}*/
 /*make enough white space between the footer and the white blocks*/
 footer {
-margin-top: 75px !important;
+margin-top: 80px !important;
 }
 .section-modchooser-link {
 display: inline-flex !important;
