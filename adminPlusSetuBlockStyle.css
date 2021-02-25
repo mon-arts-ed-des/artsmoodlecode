@@ -188,6 +188,7 @@ font-weight: 500;
 border: 2px solid transparent;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
 text-decoration: none;
+margin: .25rem;
 }
 .btn-arts:hover, .btn-mu:hover {
 background: #3d90c2;
