@@ -41,6 +41,7 @@ window.onload=function(){
 	if(headerTitle.indexOf("APG") >= 1){
 		$('#inst3357177').css('display','block');
 	}
+	/*
 // define expiration duration as 72 hours
 	const expirationDuration = 1000 * 60 * 60 * 72;
 // save the time of the current login to localStorage
@@ -74,7 +75,7 @@ window.onload=function(){
     		else{
       		//Do nothing
     		}
-	}
+	}*/
 //add material to our FoA category if you are a tutor, lect, non-primary lect, designer or admin
 //check the role level. Tutor and above have access to the recycle bin link. So the material that follows will not display to students.
 //Check the admin block. Check each link in the block.
