@@ -139,5 +139,11 @@ window.onload=function(){
 		});
 //Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
+	var currentURL = window.location.href;
+        var blockTitles = $('aside section .card-title').text();
+        var returnToSectionLink = $('.breadcrumb-item:nth-last-child(2) > a').attr('href');
+	function redirectAfterClose(){
+		window.location.href=returnToSectionLink};
+}
 //Close window.onload function	
 	};
