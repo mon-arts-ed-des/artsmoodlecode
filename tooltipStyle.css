@@ -6,6 +6,6 @@ cursor: none !important;
   text-align: left;
   padding: 15px;
   font-size: 1.05rem;
-  max-width: 480px;
+  max-width: 480px !important;
   border-radius: 5px;
 }
