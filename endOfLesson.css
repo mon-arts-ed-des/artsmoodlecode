@@ -1,0 +1,108 @@
+/*Hides all HTML blocks on the page where this is linked*/
+.block_html {
+box-shadow: none !important;
+height: 0px !important;
+margin: 0px !important;
+}
+.block_html i {
+color: #fff !important;
+}
+.block_html .dropdown-toggle {
+color: #fff !important;
+}
+.block_html .card-title {
+color: #fff !important;
+background: #fff !important;
+}
+/*Changes the width of the element that contains Lesson Navigation buttons to 70%, centres them on the page and evenly spaces them across the element they sit in.*/
+.branchbuttoncontainer
+{
+width: 70% !important;
+margin: auto !important;
+display: flex !important;
+justify-content: space-between;
+}
+/*Space the footer so the block doesn't show*/
+footer {
+margin-top: 50px;
+}
+/**STYLE FOR PROGRESS BAR**/
+.progress-bar {
+  background-color: #5cb85c;
+  border:1px solid black;
+  border-radius: 5px !important;
+  font-size: 1.2rem !important;
+  display: inline-block !important;
+}
+
+.progress {
+  height: 2.5rem !important;
+  line-height: 2.3rem !important;
+  border-radius: 5px;
+}
+/***End of Lesson Page****/
+
+.boxaligncenter {
+  border-color: #bee5eb;
+  position: relative;
+  padding: 50px !important;
+  margin: 0px !important;
+  border: 1px solid grey;
+  border-radius: 5px !important;
+  width:75%;
+  overflow:hidden;
+}
+.generalbox .no-overflow {
+color: white !important;
+  display: none !important;
+}
+
+/**TEXT INSTRUCTIONS FOR END-OF-LESSON PAGE**/
+.boxaligncenter p {
+  color:white;
+}
+.boxaligncenter p::after {
+  display:block;
+  line-height: 1.5rem;
+  max-width:100%;
+  color:black;
+  font-weight:normal;
+  white-space:pre-wrap;
+  }
+.boxaligncenter p::before{
+  color:black;
+  font-size:1.5em;
+  margin-bottom: 1rem;
+}
+
+/***END-OF-LESSON LINKS APPEAR AS BUTTONS***/
+.boxaligncenter a.lessonbutton {
+  font-weight:500; 
+  background: #ced4da; 
+  border: 2px solid transparent;
+  padding: .375rem .75rem; 
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.5); 
+  border-radius: 2px; 
+  margin: 20px auto 0px auto !important;
+  color: #212529; 
+  display: block;
+  position:relative;
+  width: 100%;
+  text-align: center !important;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color .15s ease-in-out,background-color ease-in-out,border ease-in-out,box-shadow ease-in-out;
+  -webkit-transition: color .15s ease-in-out,background-color ease-in-out,border ease-in-out,box-shadow ease-in-out;
+}
+
+a.lessonbutton:hover {
+  background:#b8c1ca; 
+  text-decoration:none;
+}
+a.lessonbutton:active {
+  box-shadow: none;
+  border: 2px solid #E6E9EC;
+}
+/**SETTINGS if REVIEW LESSON is ENABLED & NEXT ACTIVITY (ie assessment item) IS SELECTED***/
+
+
