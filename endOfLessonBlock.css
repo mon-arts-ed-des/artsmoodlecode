@@ -43,36 +43,18 @@ margin-top: 50px;
 /***End of Lesson Page****/
 
 .boxaligncenter {
-  border-color: #bee5eb;
   position: relative;
   padding: 50px !important;
   margin: 0px !important;
   border: 1px solid grey;
   border-radius: 5px !important;
-  width:75%;
+  width:100%;
   overflow:hidden;
-}
-.generalbox .no-overflow {
-color: white !important;
-  display: none !important;
 }
 
 /**TEXT INSTRUCTIONS FOR END-OF-LESSON PAGE**/
-.boxaligncenter p {
+.boxaligncenter .center {
   color:white;
-}
-.boxaligncenter p::after {
-  display:block;
-  line-height: 1.5rem;
-  max-width:100%;
-  color:black;
-  font-weight:normal;
-  white-space:pre-wrap;
-  }
-.boxaligncenter p::before{
-  color:black;
-  font-size:1.5em;
-  margin-bottom: 1rem;
 }
 
 /***END-OF-LESSON LINKS APPEAR AS BUTTONS***/
