@@ -8,13 +8,13 @@ color: #4a4a4a !important;
 margin: 0 !important;
 }
 /*Changes the colour and size of the links within the block while also removing the underline of the links*/
-#inst3234586 li a {
+#inst3234586 li a, #inst3343846 li a {
 color: #006DAE !important;
 text-decoration: none !important;
 font-size: 1.1rem !important;
 }
 /*Changes the colour of the links within the block on hover to be slightly lighter, so people can see which link they're about to click*/
-#inst3234586 li a:hover {
+#inst3234586 li a:hover, #inst3343846 li a:hover {
 color: #3D90C2 !important;
 text-decoration: none !important;
 }
