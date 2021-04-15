@@ -95,10 +95,15 @@ window.onload=function(){
 //make a variable of the Moodle section name
 							var moodleSectionName = $('.sectionname').text();
 //check the variable for the text Staff resources. Make sure the section you are on is the staff resources section.
-							if(moodleSectionName.indexOf("Staff resources") >= 1){
+							if(moodleSectionName.indexOf("Staff resources") > -1){
+							if(window.location.href.indexOf('section-0') > -1 || window.location.href.indexOf('section=0') > -1) {	
 //If you are on the staff resources section, remove the ability to hide/show the section to students. Ensuring it is not accidentally shown to students.
+							//do nothing						      
+							}
+							else{
 							$('.section-actions .editing_showhide').remove();
-							};
+							} 
+							}
 //Search the left hand nav for the link to the Staff resources section, and make a variable out of that link.
 							var SRSectionLink=$("nav .list-group-item:contains('Staff resources')").attr('href');
 //Create a new button on the end of the nav labelled staff resources.
