@@ -6,6 +6,9 @@
   margin-top: 31px !important;
   z-index: 8000;
 }
+.stickyNavOnly {
+margin-top: 48px !important;
+}
 .sticky .content{
 	padding:0 !important;
 }
