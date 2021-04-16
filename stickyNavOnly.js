@@ -9,13 +9,13 @@ window.addEventListener("load",function set_sticky_nav(){
 		if(window.pageYOffset>=stick_height){
    			nav_drawer.setAttribute("data-region2","drawer");
     			//navbar.classList.add("sticky");
-			$(navbar).addClass("sticky");
+			$(navbar).addClass("sticky stickyNavOnly");
   		}
 		else{
    			nav_drawer.removeAttribute("data-region2");
     			nav_drawer.style.top=nav_drawer_top;
     			//navbar.classList.remove("sticky");
-			$(navbar).removeClass("sticky");
+			$(navbar).removeClass("sticky stickyNavOnly");
   		}
 	window.onscroll=function(){set_sticky_nav()};
 });
