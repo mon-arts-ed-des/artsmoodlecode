@@ -1,0 +1,24 @@
+.sticky{
+  position: fixed !important;
+  top: 0;
+  left:0;
+  width: 100%;
+  margin-top: 32px !important;
+  z-index: 8000;
+}
+.sticky .content{padding:0 !important;}
+.sticky .left.side{width:0px !important;}
+.sticky .section{display:none;}
+
+.sticky .arts-banner-btn{
+	position: absolute;
+	right: 10px;
+	top: -40px;
+}
+
+
+#region-main{padding:5px !important;}
+#section-0 .content{padding:0 !important;}
+#section-0 .side{width:0 !important;}
+
+.sticky + .tcsection{padding-top: 140px !important;}
