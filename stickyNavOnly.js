@@ -3,7 +3,7 @@ window.addEventListener("load",function set_sticky_nav(){
 	var breadcrumbs=document.getElementById("page-navbar");
 	navbar=document.getElementById("section-0");
 	stick_height=breadcrumbs.offsetTop;
-	stick_height-=15;
+//	stick_height-=15;
 	var nav_drawer=document.getElementById("nav-drawer");
 	var nav_drawer_top=nav_drawer.offsetTop;
 		if(window.pageYOffset>=stick_height){
