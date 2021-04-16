@@ -1,10 +1,6 @@
-
 var log_this=true;
-
-
 var orig_array=[];
 var nav_array=[];
-
 var home_array=["welcome","overview","home"];
 var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
@@ -240,9 +236,6 @@ function set_start(){
 		window.location.href = overviewSection;
 	}
 }
-
-
-
 function set_sticky_nav(){
 	var nav_drawer=document.getElementById("nav-drawer");
 
@@ -255,7 +248,5 @@ function set_sticky_nav(){
     nav_drawer.removeAttribute("data-region2");
     nav_drawer.style.top=nav_drawer_top;
     navbar.classList.remove("sticky");
-
   }
-	$('.sticky').css('margin-top','32px');
 }
