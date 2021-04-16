@@ -178,7 +178,7 @@ function build_nav(){
 	
 	nav_menu=nav_menu.replace(/#section-/g, "&section=");
 
-	$(".summary .no-overflow").append(nav_menu);	
+	$(".summary .no-overflow").first().append(nav_menu);	
 		
 }
 
