@@ -17,4 +17,5 @@ window.addEventListener("load",function set_sticky_nav(){
     			//navbar.classList.remove("sticky");
 			$(navbar).removeClass("sticky");
   		}
+	window.onscroll=function(){set_sticky_nav()};
 });
