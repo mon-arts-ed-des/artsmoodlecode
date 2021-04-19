@@ -25,8 +25,8 @@ li.breadcrumb-item a:focus{
 }
 /*inverts the colour of the text and the background when you hover over a breadcrumb link so users can more effectively see where they are clicking*/
 li.breadcrumb-item a:hover{
-  color: #fff;
-  background: #3D90CC;
+  color: #fff !important;
+  background: #3D90C2 !important;
 }
 /*currently not used.
 #inst3343846 ul {
