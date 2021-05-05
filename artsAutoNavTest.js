@@ -208,11 +208,11 @@ function set_click(){
 function dropdownParent(){
 var dropdownText = $('.arts-banner-dropdown-content a').text()
 		if(dropdownText.indexOf("Topic") != -1){
-			$('.arts-banner-dropdown-link').text('Topics')
+			$('.arts-banner-dropdown-link').html('Topics <i class="fa fa-caret-down"></i>')
 		}
 		else{
-			$('.arts-banner-dropdown-link').text('Weeks')
-		}
+			$('.arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
+            }
 }
 
 function set_start(){
