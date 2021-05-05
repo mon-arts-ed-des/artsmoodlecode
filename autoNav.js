@@ -8,6 +8,7 @@ var forum_array=["forum","communication","communication/faqs"];
 var topics_array=["topic","week","module","day","block"];
 var stick_height, navbar;
 var start_section;
+var dropdownText;
 
 checkJQuery();
 function checkJQuery(){if (typeof(jQuery)==='undefined'){setTimeout(checkJQuery,100);}else{get_nav();}}
@@ -53,7 +54,7 @@ function get_nav(){
 	
 	build_nav();
 	set_click();
-	
+	dropdownParent();
 }
 
 
@@ -210,7 +211,15 @@ function set_click(){
 	});
 	
 }
-
+function dropdownParent(){
+var dropdownText = $('.arts-banner-dropdown-content a').text()
+		if(dropdownText.indexOf("Topic") != -1){
+			$('.arts-banner-dropdown-link').html('Topics <i class="fa fa-caret-down"></i>')
+		}
+		else{
+			$('.arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
+            }
+}
 
 function set_start(){
 	var sectionNumberRD = window.location.href.indexOf('section')
