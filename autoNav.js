@@ -138,7 +138,7 @@ function get_topics(){
 		});	
 	});
 	
-	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link">'+obj.name+''+'s'+' <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link">Weeks <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
 	nav_array.push(full);
 	/*var dropdownText = $('.arts-banner-dropdown-content a').text()
