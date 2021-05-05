@@ -8,6 +8,8 @@ var forum_array=["forum","communication","communication/faqs"];
 var topics_array=["topic","week","module","day","block"];
 var stick_height, navbar;
 var start_section;
+var dropdownText
+var dropdownBtn
 
 checkJQuery();
 function checkJQuery(){if (typeof(jQuery)==='undefined'){setTimeout(checkJQuery,100);}else{get_nav();}}
