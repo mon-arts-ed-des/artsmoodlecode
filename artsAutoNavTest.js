@@ -207,11 +207,11 @@ function set_click(){
 }
 function dropdownParent(){
 var dropdownText = $('.arts-banner-dropdown-content a').text()
-		if(dropdownText.indexOf("Topic:") != -1){
-			var dropdownBtn = "Topics"
+		if(dropdownText.indexOf("Topic") != -1){
+			$('.arts-banner-dropdown-link').text('Topics')
 		}
 		else{
-			var dropdownBtn = "Weeks"
+			$('.arts-banner-dropdown-link').text('Weeks')
 		}
 }
 
