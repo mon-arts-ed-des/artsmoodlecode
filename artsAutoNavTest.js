@@ -172,13 +172,7 @@ function build_nav(){
 	nav_menu=nav_menu.replace(/#section-/g, "&section=");
 
 	$(".summary .no-overflow").first().append(nav_menu);	
-	var dropdownText = $('.arts-banner-dropdown-content a').text()
-		if(dropdownText.indexOf("Topic:") != -1){
-			var dropdownBtn = "Topics"
-		}
-		else{
-			var dropdownBtn = "Weeks"
-		}
+	
 }
 
 function set_click(){
@@ -210,7 +204,15 @@ function set_click(){
 	});
 	
 }
-
+function dropdownParent(){
+var dropdownText = $('.arts-banner-dropdown-content a').text()
+		if(dropdownText.indexOf("Topic:") != -1){
+			var dropdownBtn = "Topics"
+		}
+		else{
+			var dropdownBtn = "Weeks"
+		}
+}
 
 function set_start(){
 	var sectionNumberRD = window.location.href.indexOf('section')
