@@ -121,7 +121,6 @@ function get_forum(){
 			}
 		});	
 	});
-	
 }
 
 function get_topics(){
