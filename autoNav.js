@@ -5,15 +5,12 @@ var home_array=["welcome","overview","home"];
 var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
-var topics_array=["topic","week","module","day"];
+var topics_array=["topic","week","module","day","block"];
 var stick_height, navbar;
 var start_section;
 
 checkJQuery();
 function checkJQuery(){if (typeof(jQuery)==='undefined'){setTimeout(checkJQuery,100);}else{get_nav();}}
-
-
-
 
 //push all the nav items into an array - all we care about is name and URL
 function get_nav(){
@@ -141,10 +138,16 @@ function get_topics(){
 		});	
 	});
 	
-	
-	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link">Weeks <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link">'+dropdownBtn+' <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
 	nav_array.push(full);
+	var dropdownText = $('.arts-banner-dropdown-content a').text()
+	if(dropdownText.indexOf('Topic') != -1){
+		var dropdownBtn = 'Topics'
+	}
+	else{
+		var dropdownBtn = 'Weeks'
+	}
 	
 }
 
