@@ -27,8 +27,8 @@ if (window.location.href.indexOf("pageid=-9") > -1) {
         $('.boxaligncenter .center').before('<h5>You have completed the activity <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>, Where to next?</h5>');
         $('.boxaligncenter p').after('<ul style="color:black;"><li><i class="fa fa-hand-o-left" aria-hidden="true"></i> You can review this lesson material again before continuing (if made available in this lesson)</li><li> Or you can continue onto the next activity (if made available in this lesson) <i class="fa fa-hand-o-right" aria-hidden="true"></i></li><li>Or return to the section this lesson is part of <i class="fa fa-reply" aria-hidden="true"></i></li></ul>');
         $('.boxaligncenter .center').after('<ul style="color:black;"><li><i class="fa fa-hand-o-left" aria-hidden="true"></i> You can review this lesson material again before continuing (if made available in this lesson)</li><li> Or you can continue onto the next activity (if made available in this lesson) <i class="fa fa-hand-o-right" aria-hidden="true"></i></li><li>Or return to the section this lesson is part of <i class="fa fa-reply" aria-hidden="true"></i></li></ul>');
-        $('.boxaligncenter a.lessonbutton:nth-last-child(2)').prepend('<i class="fa fa-hand-o-left" aria-hidden="true"></i>&nbsp;&nbsp;');
-        $('.boxaligncenter a.lessonbutton:nth-last-child(1)').append(' <i class="fa fa-hand-o-right" aria-hidden="true"></i>');
+        $('.boxaligncenter a.lessonbutton:nth-last-child(3)').prepend('<i class="fa fa-hand-o-left" aria-hidden="true"></i>&nbsp;&nbsp;');
+        $('.boxaligncenter a.lessonbutton:nth-last-child(2)').append(' <i class="fa fa-hand-o-right" aria-hidden="true"></i>');
         var linkUrl=$('ol.breadcrumb li:nth-last-child(2) > a').html();
         $('.boxaligncenter a:last-child').html(linkUrl);
         $('.boxaligncenter a:last-child').append('&nbsp;&nbsp;<i class="fa fa-reply"></i>');
