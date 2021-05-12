@@ -38,7 +38,13 @@ function get_nav(){
 	window.onscroll=function(){set_sticky_nav()};
 
 	$(window).resize(function(){
+		var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length
+		if (titleLengthMax > 8){
+			$('.arts-banner-dropdown-content').width('unset')
+		}
+		else {
 		$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
+		}		
 		if($(window).width()<1000)$(".arts-banner-dropdown-content").css('width','100%');
 	});
 
