@@ -43,9 +43,9 @@ function get_nav(){
 	});*/
 	$(window).resize(function(){
 	$('.arts-banner-dropdown-content').width('unset');
-		if($('.arts-banner-dropdown-content a:last-child').text().length < 8){
+		/*if($('.arts-banner-dropdown-content a:last-child').text().length < 8){
 		   $(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
-		   }
+		   }*/
 		if($(window).width()<1000)$(".arts-banner-dropdown-content").css('width','100%');
 	});
 	set_start();
