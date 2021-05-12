@@ -211,7 +211,8 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 }
 
 function resizeWindow(){
-var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length
+	if(log_this)console.log("------------------------ resize window ------------------------");
+var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length;
 		if (titleLengthMax > 8){
 			$('.arts-banner-dropdown-content').width('unset');
 		}
@@ -221,6 +222,7 @@ var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().leng
 		else if($(window).width()<1000){
 			$(".arts-banner-dropdown-content").css('width','100%');
 		}
+	console.log(titleLengthMax);
 }
 
 function set_start(){
