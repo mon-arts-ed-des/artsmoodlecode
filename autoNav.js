@@ -40,7 +40,7 @@ function get_nav(){
 	$(window).resize(function(){
 		var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length
 		if (titleLengthMax > 8){
-			$('.arts-banner-dropdown-content').width('unset')
+			$('.arts-banner-dropdown-content').width('unset');
 		}
 		else {
 		$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
