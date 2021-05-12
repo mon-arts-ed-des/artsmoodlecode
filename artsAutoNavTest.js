@@ -58,7 +58,7 @@ function get_nav(){
 	build_nav();
 	set_click();
 	dropdownParent();
-	resizeWindow();
+	//resizeWindow();
 }
 
 
