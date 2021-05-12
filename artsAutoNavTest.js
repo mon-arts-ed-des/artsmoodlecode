@@ -182,8 +182,8 @@ function set_click(){
 	if(log_this)console.log("------------------------ set click ------------------------");
 	
 	$(".arts-banner-dropdown").on("click",function(){
-      var obj=$(this).find(".arts-banner-dropdown-content");
-			obj.width($("#arts-dropdown").width());
+     // var obj=$(this).find(".arts-banner-dropdown-content");
+	//		obj.width($("#arts-dropdown").width());
 			var id1=$(this).attr("id");
 			
 			$(".arts-banner-dropdown-content").each(function(){
