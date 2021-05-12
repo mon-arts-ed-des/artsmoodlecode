@@ -51,7 +51,7 @@ function get_nav(){
 	build_nav();
 	set_click();
 	dropdownParent();
-	
+	resizeWindow();
 }
 
 
@@ -208,7 +208,10 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 		else{
 			$('.arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
             }
-		var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length
+}
+
+function resizeWindow(){
+var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length
 		if (titleLengthMax > 8){
 			$('.arts-banner-dropdown-content').width('unset');
 		}
