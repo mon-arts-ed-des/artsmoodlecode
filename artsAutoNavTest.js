@@ -41,29 +41,13 @@ function get_nav(){
 		$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
 		if($(window).width()<1000)$(".arts-banner-dropdown-content").css('width','100%');
 	});*/
-	$(window).resize(function(){
-		var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length
-		if (titleLengthMax > 8){
-			$('.arts-banner-dropdown-content').width('unset');
-		}
-		else if (titleLengthMax < 8) {
-			$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
-		}		
-		else if($(window).width()<1000){
-			$(".arts-banner-dropdown-content").css('width','100%');
-		}
-	});
-
-
 	set_start();
-	
 	get_home();
 	get_topics();
 	get_assessment();
 	get_forum();
 	get_resources();
 	get_grades();
-	
 	build_nav();
 	set_click();
 	dropdownParent();
@@ -224,6 +208,18 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 		else{
 			$('.arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
             }
+	$(window).resize(function(){
+		var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length
+		if (titleLengthMax > 8){
+			$('.arts-banner-dropdown-content').width('unset');
+		}
+		else if (titleLengthMax < 8) {
+			$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
+		}		
+		else if($(window).width()<1000){
+			$(".arts-banner-dropdown-content").css('width','100%');
+		}
+	});
 }
 
 function set_start(){
