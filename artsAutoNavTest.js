@@ -178,7 +178,7 @@ function set_click(){
 	$(".arts-banner-dropdown").on("click",function(){
       var obj=$(this).find(".arts-banner-dropdown-content");
 		$(".arts-banner-dropdown-content a").each(function(){
-	if($(this).text().length > 8){
+	if($(".arts-banner-dropdown-content").text().length > 8){
 		$('.arts-banner-dropdown-content').width('unset');
 		   }
 		else{
