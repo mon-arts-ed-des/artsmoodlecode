@@ -177,14 +177,19 @@ function set_click(){
 	
 	$(".arts-banner-dropdown").on("click",function(){
       var obj=$(this).find(".arts-banner-dropdown-content");
-		$(".arts-banner-dropdown-content a").each(function(){
-			$(this).text().length
-	if($(".arts-banner-dropdown-content a").text().length > 8){
-		$('.arts-banner-dropdown-content').width('unset');
-		   }
-		else{
-		obj.width($("#arts-dropdown").width());
+		var lengths = $(".arts-banner-dropdown-content a").map(function(i, el) {
+    		return $(el).text().length;
+		}).get();
+		var maxLength = Math.max.apply(this, lengths);
+		console.log(maxLength);
+		if (maxLength > 8){
+			$('.arts-banner-dropdown-content').width('unset');
 		}
+		else {
+			$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
+		}		
+		if($(window).width()<1000)$(".arts-banner-dropdown-content").css('width','100%');
+	
 			var id1=$(this).attr("id");
 			
 			$(".arts-banner-dropdown-content").each(function(){
@@ -213,9 +218,18 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 		if(dropdownText.indexOf("Topic") != -1){
 			$('.arts-banner-dropdown-link').html('Topics <i class="fa fa-caret-down"></i>')
 		}
-		else{
+		else if(dropdownText.indexOf("Week") != -1){
 			$('.arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
-            }
+       		}
+		else if(dropdownText.indexOf("Block") != -1){
+			$('.arts-banner-dropdown-link').html('Blocks <i class="fa fa-caret-down"></i>')
+            	}
+		else if(dropdownText.indexOf("Module") != -1){
+			$('.arts-banner-dropdown-link').html('Modules <i class="fa fa-caret-down"></i>')
+            	}
+		else if(dropdownText.indexOf("Day") != -1){
+			$('.arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
+	        }
 }
 
 /*function resizeWindow(){
