@@ -198,7 +198,7 @@ function set_click(){
 					if($(this).css("display") == "block"){$(this).stop(true).slideToggle(); }
 				}
 			});
-		});	
+
       obj.stop(true).slideToggle();
     });
 	
