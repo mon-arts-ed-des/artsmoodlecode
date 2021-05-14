@@ -4,6 +4,8 @@
 
 #section-0 .content h3, #region-main div h2{display:none;}
 #page-header a, #page-content a{color:#8c8c8c;}
+#page-content a:focus {background-color: unset;box-shadow: none;}
+
 .modified{display:none;}
 .activity-navigation{display:none;}
 
@@ -112,6 +114,9 @@ a.icc-accordion-show{border-bottom:0 !important;}
 
 .icc-callout1{display:inline-block;padding:20px 100px 20px 40px; color:#fff; background-color:#FF8E4E; }
 
+
+/* flex */
+.flexcol{flex-direction: column;}
 
 
 /* lesson blocks */
