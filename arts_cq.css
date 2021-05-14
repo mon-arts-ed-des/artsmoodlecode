@@ -4,7 +4,7 @@
 
 #section-0 .content h3, #region-main div h2{display:none;}
 #page-header a, #page-content a{color:#8c8c8c;}
-#page-content a:focus {background-color: unset;box-shadow: none;}
+#page-content a:focus{background-color: #FF8E4E;color: #fff;box-shadow: none;outline: none;}
 
 .modified{display:none;}
 .activity-navigation{display:none;}
@@ -73,7 +73,6 @@ h3.sectionname{color:#1a1a1a;text-align:left !important;margin-left:4rem;font-we
 	text-align: center;
 	border: 1px solid #FF8E4E;
     margin: 10px;
-	/*padding: 10px;*/
 	-webkit-box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
 	-moz-box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
 	box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
@@ -122,11 +121,11 @@ a.icc-accordion-show{border-bottom:0 !important;}
 /* lesson blocks */
 
 .icc-block3{
-	border: 1px solid #f2f2f2;
-  padding: 10px;
-	-webkit-box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
-	-moz-box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
-	box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
+    border: 1px solid #f2f2f2;
+    padding: 10px;
+    -webkit-box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
+    -moz-box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
+    box-shadow: 5px 5px 5px 0 rgba(242,242,242,1);
 }
 .icc-block3 h4{color:#FF8E4E;}
 .icc-block3 hr,.icc-box hr{background-color: #FF8E4E;width:100%;}
@@ -172,14 +171,13 @@ a.icc-accordion-show{border-bottom:0 !important;}
 .arts-nav a {
     float: left;
     font-size: 1.2em;
-    color: #8c8c8c !important;
     text-align: center;
     padding: 14px 2px 0 2px;
     text-decoration: none;
     font-weight:400;
     margin-right:20px;
 }
-
+.arts-nav a:focus{background-color: unset;}
 
 .arts-nav a::after, .arts-dropdown .arts-dropdown-btn::after {
     content: '';
@@ -194,12 +192,8 @@ a.icc-accordion-show{border-bottom:0 !important;}
     background: #FF8E4E;
     width:100%;
 }
-
-.arts-nav a.arts-nav-active:after{
-	height: 6px;
-	background: #FF8E4E;
-  width:100%;
-}
+a.arts-nav-active {color:#1a1a1a !important;}
+.arts-nav a.arts-nav-active:after{height: 3px;background: #FF8E4E;width:100%;}
 
 
 
