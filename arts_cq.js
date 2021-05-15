@@ -10,6 +10,7 @@ function startJS(){
 		$(".arts-dropdown").on("click",function(){$(this).find(".arts-dropdown-content").stop(true).slideToggle();});
 		$(".arts-banner-btn").on("click",function(){$(this).parent().next().stop(true).slideToggle();$(this).find("i").toggle();});
 		changeLinks();
+		checkEndOfLesson();
 
 
 		$('.icc-acc-toggle').click(function(e){
