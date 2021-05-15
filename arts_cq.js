@@ -55,6 +55,15 @@ function startJS(){
 
 		});
 
+		/* CQ Scores */
+		$(".CQ_scores_btn").on("click",function(){
+			var clsArr=this.className.split(' ');
+			$(".CQ_scores_fb").hide();
+			var clsNum=clsArr.length;
+			var clsName=clsArr[clsNum-1];
+			$("#"+clsName).fadeIn();
+		});
+
 	});
 }
 
