@@ -432,3 +432,5 @@ a.arts-nav-active {color:#1a1a1a !important;}
 /* CQ scores */
 
 .CQ_scores_fb{display: none;}
+.CQ_scores_header{background-color: #ff8e4e;padding: 20px;font-size: 1.2rem;color: #fff;text-align: center;}
+.CQ_scores_body{font-size: 1.1rem;text-align: center;padding: 20px;border:1px solid #ff8e4e;}
