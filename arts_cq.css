@@ -431,7 +431,7 @@ a.arts-nav-active {color:#1a1a1a !important;}
 
 /* CQ scores */
 .rowSameHeight > div {display: flex;}
-.CQ_scores_btn{border: 1px solid #ff8e4e;width: 100%;}
+.CQ_scores_btn{border: 1px solid #ff8e4e;width: 100%;cursor:pointer;}
 .CQ_scores_fb{display: none;display: none;background-color: #c8c8c8;margin-top: 1rem;padding: 20px;}
 .CQ_scores_header{background-color: #ff8e4e;padding: 20px;font-size: 1.2rem;color: #fff;text-align: center;display: block; margin-bottom: 10px;}
 .CQ_scores_body{font-size: 1.1rem;text-align: center;padding: 20px;display: block;}
