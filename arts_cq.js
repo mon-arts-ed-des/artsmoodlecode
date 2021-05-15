@@ -70,10 +70,8 @@ function changeLinks(){
 	var url=window.location.href.split('?')[0];
 	
 	
-	
-	
-	console.log(sec);
-	if(sec==null&&menunum==undefined){location.href=url+"?id="+id+"&section=1";}
+
+	//if(sec==null&&menunum==undefined){location.href=url+"?id="+id+"&section=1";}
 	
  	if(menunum==undefined){
 		$(".arts-nav a[href]").each(function(i){if(sec==(i+1))$(this).addClass("arts-nav-active");});
