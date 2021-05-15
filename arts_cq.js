@@ -88,7 +88,9 @@ function getParameterByName(name) {
 }
 
 function checkEndOfLesson(){
+	console.log("checkEndOfLesson");
 	if($("h3").text().indexOf("end of lesson")>0){
+		console.log("checkEndOfLesson h3 "+$("h3").text().indexOf("end of lesson"));
 		showEndOfLesson();
 	}
 }
