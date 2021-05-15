@@ -177,7 +177,7 @@ a.icc-accordion-show{border-bottom:0 !important;}
     font-weight:400;
     margin-right:20px;
 }
-.arts-nav a:focus{background-color: unset;}
+.arts-nav a:focus{background-color: unset !important;color:#8c8c8c !important;}
 
 .arts-nav a::after, .arts-dropdown .arts-dropdown-btn::after {
     content: '';
