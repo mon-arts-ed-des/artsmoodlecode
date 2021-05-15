@@ -78,13 +78,7 @@ function changeLinks(){
 	}else{
 		$(".arts-nav a[href]").eq(menunum-1).addClass("arts-nav-active");
 	}
-  
-	
-	
-	
-	
-	
-  
+
 }
 
 function getParameterByName(name) {
@@ -92,6 +86,10 @@ function getParameterByName(name) {
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }
 
-
+function checkEndOfLesson(){
+	if($("h3").text().indexOf("end of lesson")>0){
+		showEndOfLesson();
+	}
+}
 
 
