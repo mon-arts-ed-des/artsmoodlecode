@@ -61,7 +61,7 @@ function startJS(){
 			$(".CQ_scores_fb").hide();
 			var clsNum=clsArr.length;
 			var clsName=clsArr[clsNum-1];
-			$("#"+clsName).slideDown();
+			$("#"+clsName).fadeIn();
 		});
 
 	});
