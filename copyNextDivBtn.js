@@ -8,7 +8,7 @@ window.addEventListener("load", function(){
         btn.toggleClass('btn-success btn-light');
         btn.html('<i class="fa fa-check" aria-hidden="true"></i> Done! Instructions have been copied to clipboard');
         window.setTimeout(function() {
-            btn.html('<i class="fa fa-clipboard" aria-hidden="true"></i> Copy instructions');
+            // btn.html('<i class="fa fa-clipboard" aria-hidden="true"></i> Copy instructions');
             // btn.removeClass('btn-danger');
             btn.toggleClass('btn-success btn-light');
         }, 3000);
