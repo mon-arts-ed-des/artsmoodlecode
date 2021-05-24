@@ -10,7 +10,7 @@ var stick_height, navbar;
 var start_section;
 var dropdownText;
 
-window.addEventListener('load',function hideCollapsedArea(){
+window.addEventListener('DOMContentLoaded',function hideCollapsedArea(){
 $('.topics').first().remove();
 $('#toggle-all').remove();
 $('#topcoll-display-instructions').remove();
