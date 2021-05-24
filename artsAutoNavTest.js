@@ -11,8 +11,18 @@ var start_section;
 var dropdownText;
 
 checkJQuery();
-function checkJQuery(){if (typeof(jQuery)==='undefined'){setTimeout(checkJQuery,100);}else{get_nav();}}
-
+hideCollapsedArea();
+function checkJQuery(){
+	if (typeof(jQuery)==='undefined'){
+		setTimeout(checkJQuery,100);}
+	else{
+		get_nav();}
+}
+function hideCollapsedArea(){
+$('.topics').first().remove();
+$('#toggle-all').remove();
+$('#topcoll-display-instructions').remove();
+}
 //push all the nav items into an array - all we care about is name and URL
 function get_nav(){
 	if(log_this)console.log("------------------------ get nav ------------------------");
