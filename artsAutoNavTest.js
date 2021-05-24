@@ -10,12 +10,12 @@ var stick_height, navbar;
 var start_section;
 var dropdownText;
 
-window.addEventListener('DOMContentLoaded',function hideCollapsedArea(){
+/*window.addEventListener('DOMContentLoaded',function hideCollapsedArea(){
 	document.querySelectorAll(".topics").forEach(e => e.parentNode.removeChild(e));
 	document.querySelectorAll("#toggle-all").forEach(f => f.parentNode.removeChild(f));
 	document.querySelectorAll("#topcoll-display-instructions").forEach(g => g.parentNode.removeChild(g));
 console.log("removed topics collapsed complete");
-});
+});*/
 
 checkJQuery();
 function checkJQuery(){
@@ -262,6 +262,7 @@ window.addEventListener('load', function(){
 }*/
 
 function set_start(){
+	
 	var sectionNumberRD = window.location.href.indexOf('section')
 	var editScreenRD = window.location.href.indexOf('edit')
 	var completionRD = window.location.href.indexOf('completion')
@@ -281,6 +282,9 @@ function set_start(){
 	var previewRD = window.location.href.indexOf('preview')
 	//section is null so it must be the entry page
 	if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
+		 document.querySelector(".topics").remove();
+	document.querySelector("#toggle-all").remove();
+	document.querySelector("#topcoll-display-instructions").remove();
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 		var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
 		//change the current window address to the new section
