@@ -11,9 +11,10 @@ var start_section;
 var dropdownText;
 
 window.addEventListener('DOMContentLoaded',function hideCollapsedArea(){
-$('.topics').first().remove();
-$('#toggle-all').remove();
-$('#topcoll-display-instructions').remove();
+	document.querySelectorAll(".topics").forEach(e => e.parentNode.removeChild(e));
+	document.querySelectorAll("#toggle-all").forEach(f => f.parentNode.removeChild(f));
+	document.querySelectorAll("#topcoll-display-instructions").forEach(g => g.parentNode.removeChild(g));
+console.log("removed topics collapsed complete");
 });
 
 checkJQuery();
