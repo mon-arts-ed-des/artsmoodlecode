@@ -166,7 +166,7 @@ function get_topics(){
 function makeArrayUnique(tmpArr1){
 	var tmpArr2=[];
 	for(var i=0;i<tmpArr1.length;i++){
-		if($.inArray(tmpArr1[i],tmpArr2)==-1)tmpArr2.push(tmpArr1[i]);
+		if($.inArray(tmpArr1[i].name,tmpArr2)==-1)tmpArr2.push(tmpArr1[i]);
 	}
 	return tmpArr2;
 }
