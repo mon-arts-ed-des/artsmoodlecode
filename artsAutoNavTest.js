@@ -85,7 +85,7 @@ function get_zoom(){
 	if(log_this)console.log("------------------------ get zoom ------------------------");
 	
 	$.each(home_array,function(i,word){
-		$.each(orig_array,function(x,obj){
+		$.each(zoom_array,function(x,obj){
 			if(word==obj.name.toLowerCase()){
 				if(log_this)console.log("FOUND "+word+" AT "+x);
 				var tmp='<div id="arts-zoom"><a href="'+obj.href+'"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
