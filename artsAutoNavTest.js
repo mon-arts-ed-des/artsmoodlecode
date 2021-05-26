@@ -150,7 +150,7 @@ function get_topics(){
 		});	
 	});
 
-	console.log("----------------");
+	console.log("-------------------");
 	console.log(tmpArray);
 	tmpArray=makeArrayUnique(tmpArray);
 	console.log(tmpArray);
