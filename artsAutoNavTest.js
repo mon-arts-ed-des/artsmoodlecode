@@ -29,7 +29,7 @@ function checkJQuery(){
 function get_nav(){
 	if(log_this)console.log("------------------------ get nav ------------------------");
 	
-	$("#nav-drawer .list-group:first a").each(function(){
+	$("#nav-drawer .list-group:first a").one().each(function(){
 		var new_obj=new Object();
 		new_obj.name=$(this).prop("innerText").trim();
 		new_obj.href=$(this).attr("href");
