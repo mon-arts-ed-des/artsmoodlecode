@@ -151,7 +151,7 @@ function get_topics(){
 
 	console.log("-------------------");
 	console.log(tmpArray);
-	tmpArray=makeArrayUnique(tmpArray);
+	tmpArray=removeDumplicateValue(tmpArray);
 	console.log(tmpArray);
 
 	$.each(tmpArray,function(i,val) {
@@ -170,6 +170,21 @@ function makeArrayUnique(tmpArr1){
 	}
 	return tmpArr2;
 }
+
+function removeDumplicateValue(myArray){
+	var newArray = [];
+
+	$.each(myArray, function(key, value) {
+		var exists = false;
+		$.each(newArray, function(k, val2) {
+			if(value.name == val2.name){ exists = true };
+		});
+		if(exists == false && value.name != "") { newArray.push(value); }
+	});
+
+	return newArray;
+}
+
 
 
 
