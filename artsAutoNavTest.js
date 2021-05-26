@@ -124,22 +124,37 @@ function get_forum(){
 
 function get_topics(){
 	if(log_this)console.log("------------------------ get topics ------------------------");
-	
+
+	var tmpArray=[];
 	var tmp="";
 	$.each(topics_array,function(i,word){
 		$.each(orig_array,function(x,obj){
 			
 			if(obj.name.toLowerCase().indexOf(word)!=-1){
 				if(log_this)console.log("FOUND "+word+" AT "+x);
-				tmp+='<a href="'+obj.href+'">'+obj.name+'</a>';
-				
+				//tmp+='<a href="'+obj.href+'">'+obj.name+'</a>';
+				tmpArray.push(obj.name);
 			}
 		});	
 	});
+
+	console.log("----------------");
+	console.log(tmpArray);
+	tmpArray=makeArrayUnique(tmpArray);
+	console.log(tmpArray);
+
 	
-	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+	//var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
 	nav_array.push(full);
+}
+
+function makeArrayUnique(tmpArr1){
+	var tmpArr2=[];
+	for(var i=0;i<tmpArr1.length;i++){
+		if($.inArray(tmpArr1[i],tmpArr2)==-1)tmpArr2.push(tmpArr1[i]);
+	}
+	return tmpArr2;
 }
 
 
