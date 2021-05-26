@@ -151,7 +151,7 @@ function get_topics(){
 
 	console.log("-------------------");
 	console.log(tmpArray);
-	tmpArray=removeDumplicateValue(tmpArray);
+	tmpArray=makeArrayUnique(tmpArray);
 	console.log(tmpArray);
 
 	$.each(tmpArray,function(i,val) {
@@ -165,27 +165,15 @@ function get_topics(){
 
 function makeArrayUnique(tmpArr1){
 	var tmpArr2=[];
-	for(var i=0;i<tmpArr1.length;i++){
-		if($.inArray(tmpArr1[i].name,tmpArr2)==-1)tmpArr2.push(tmpArr1[i]);
-	}
+	$.each(tmpArr1,function(key, value){
+		var exists=false;
+		$.each(tmpArr2,function(k,value2) {
+			if(value.name == value2.name){exists=true};
+		});
+		if(exists==false){tmpArr2.push(value);}
+	});
 	return tmpArr2;
 }
-
-function removeDumplicateValue(myArray){
-	var newArray = [];
-
-	$.each(myArray, function(key, value) {
-		var exists = false;
-		$.each(newArray, function(k, val2) {
-			if(value.name == val2.name){ exists = true };
-		});
-		if(exists == false && value.name != "") { newArray.push(value); }
-	});
-
-	return newArray;
-}
-
-
 
 
 function get_grades(){
