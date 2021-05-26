@@ -144,7 +144,6 @@ function get_topics(){
 			
 			if(obj.name.toLowerCase().indexOf(word)!=-1){
 				if(log_this)console.log("FOUND "+word+" AT "+x);
-				//tmp+='<a href="'+obj.href+'">'+obj.name+'</a>';
 				tmpArray.push(obj.name);
 			}
 		});	
@@ -155,8 +154,10 @@ function get_topics(){
 	tmpArray=makeArrayUnique(tmpArray);
 	console.log(tmpArray);
 
-	
-	//var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+	$.each(tmpArray,function(i,val) {
+		tmp+='<a href="'+obj.href+'">'+val+'</a>';
+	});
+	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
 	nav_array.push(full);
 }
