@@ -153,7 +153,17 @@ function get_topics(){
 	nav_array.push(full);
 }
 
-
+function makeArrayUnique(tmpArr1){
+	var tmpArr2=[];
+	$.each(tmpArr1,function(i,value){
+		var exists=false;
+		$.each(tmpArr2,function(j,value2){
+			if(value.name==value2.name){exists=true};
+		});
+		if(exists==false){tmpArr2.push(value);}
+	});
+	return tmpArr2;
+}
 
 function get_grades(){
 	if(log_this)console.log("------------------------ get grades ------------------------");
