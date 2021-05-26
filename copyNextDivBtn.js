@@ -4,14 +4,12 @@ window.addEventListener("load", function(){
         var snippet = btn.next('div').html();
         console.log("@GB: snippet = ", snippet);
         copyTextToClipboard(snippet);
-        // btn.addClass('btn-danger');
-        btn.toggleClass('btn-success btn-light');
-        btn.html('<i class="fa fa-check" aria-hidden="true"></i> Done! Instructions have been copied to clipboard');
+        var originalBtn = $('.copybutton').clone().html()        
+        btn.html('<i class="fa fa-check" aria-hidden="true"></i> Code copied');
         window.setTimeout(function() {
-            btn.html('<i class="fa fa-clipboard" aria-hidden="true"></i> Copy instructions');
-            // btn.removeClass('btn-danger');
+                btn.html(originalBtn);
             btn.toggleClass('btn-success btn-light');
-        }, 3000);
+        }, 1500);
         /* Act on the event */
     });
 });
