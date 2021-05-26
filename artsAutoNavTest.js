@@ -165,10 +165,10 @@ function get_topics(){
 
 function makeArrayUnique(tmpArr1){
 	var tmpArr2=[];
-	$.each(tmpArr1,function(key, value){
+	$.each(tmpArr1,function(i,value){
 		var exists=false;
-		$.each(tmpArr2,function(k,value2) {
-			if(value.name == value2.name){exists=true};
+		$.each(tmpArr2,function(j,value2){
+			if(value.name==value2.name){exists=true};
 		});
 		if(exists==false){tmpArr2.push(value);}
 	});
