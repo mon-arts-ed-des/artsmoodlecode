@@ -7,6 +7,7 @@ var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
 var topics_array=["topic","week","module","day","block"];
+var zoom_array=["zoom","zoom sessions","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
 var dropdownText;
@@ -54,6 +55,7 @@ function get_nav(){
 	get_assessment();
 	get_forum();
 	get_resources();
+	get_zoom();
 	get_grades();
 	build_nav();
 	set_click();
@@ -79,7 +81,21 @@ function get_home(){
 	
 }
 
-
+function get_zoom(){
+	if(log_this)console.log("------------------------ get zoom ------------------------");
+	
+	$.each(home_array,function(i,word){
+		$.each(orig_array,function(x,obj){
+			if(word==obj.name.toLowerCase()){
+				if(log_this)console.log("FOUND "+word+" AT "+x);
+				var tmp='<div id="arts-zoom"><a href="'+obj.href+'"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
+				nav_array.push(tmp);
+				if(!start_section)start_section=obj.href;
+			}
+		});	
+	});
+	
+}
 
 function get_resources(){
 	if(log_this)console.log("------------------------ get resources ------------------------");
