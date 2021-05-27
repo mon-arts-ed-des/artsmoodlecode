@@ -1,3 +1,4 @@
+//Create arrays to obtains all the required names and links and sort them into their various buckets.
 var log_this=true;
 var orig_array=[];
 var nav_array=[];
@@ -6,17 +7,11 @@ var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
 var topics_array=["topic","week","module","day","block"];
+var zoom_array=["zoom","zoom sessions","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
 var dropdownText;
-
-/*window.addEventListener('DOMContentLoaded',function hideCollapsedArea(){
-	document.querySelectorAll(".topics").forEach(e => e.parentNode.removeChild(e));
-	document.querySelectorAll("#toggle-all").forEach(f => f.parentNode.removeChild(f));
-	document.querySelectorAll("#topcoll-display-instructions").forEach(g => g.parentNode.removeChild(g));
-console.log("removed topics collapsed complete");
-});*/
-
+//Check jQuery is working on the site.
 checkJQuery();
 function checkJQuery(){
 	if (typeof(jQuery)==='undefined'){
@@ -48,18 +43,19 @@ function get_nav(){
 	//remove 15 for the padding in the main panel
 	stick_height-=15;
 	window.onscroll=function(){set_sticky_nav()};
-
+	//resize the dropdown content to fit the nav
 	$(window).resize(function(){
 		$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
 		if($(window).width()<1000)$(".arts-banner-dropdown-content").css('width','100%');
 	});
-	
+	//run all functions to sort arrays and build nav 
 	set_start();
 	get_home();
 	get_topics();
 	get_assessment();
 	get_forum();
 	get_resources();
+	get_zoom();
 	get_grades();
 	build_nav();
 	set_click();
@@ -85,7 +81,21 @@ function get_home(){
 	
 }
 
-
+function get_zoom(){
+	if(log_this)console.log("------------------------ get zoom ------------------------");
+	
+	$.each(zoom_array,function(i,word){
+		$.each(orig_array,function(x,obj){
+			if(word==obj.name.toLowerCase()){
+				if(log_this)console.log("FOUND "+word+" AT "+x);
+				var tmp='<div id="arts-zoom"><a href="'+obj.href+'"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
+				nav_array.push(tmp);
+				if(!start_section)start_section=obj.href;
+			}
+		});	
+	});
+	
+}
 
 function get_resources(){
 	if(log_this)console.log("------------------------ get resources ------------------------");
@@ -267,23 +277,6 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 			$('.arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
 	        }
 }
-
-/*function resizeWindow(){
-	if(log_this)console.log("------------------------ resize window ------------------------");
-window.addEventListener('load', function(){
-	var titleLengthMax = $('.arts-banner-dropdown-content a:last-child').text().length;
-		if (titleLengthMax > 8){
-			$('.arts-banner-dropdown-content').width('unset');
-		}
-		else if (titleLengthMax < 8) {
-			$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
-		}		
-		else if($(window).width()<1000){
-			$(".arts-banner-dropdown-content").css('width','100%');
-		}
-	console.log(titleLengthMax);
-});
-}*/
 
 function set_start(){
 	

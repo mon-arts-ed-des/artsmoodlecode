@@ -5,7 +5,7 @@ var home_array=["welcome","overview","home"];
 var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
-var topics_array=["topic","week","module","day","block"];
+var topics_array=["week","topic","module","block","day"];
 var stick_height, navbar;
 var start_section;
 var dropdownText;
@@ -126,32 +126,44 @@ function get_forum(){
 
 function get_topics(){
 	if(log_this)console.log("------------------------ get topics ------------------------");
-	
+
+	var tmpArray=[];
 	var tmp="";
 	$.each(topics_array,function(i,word){
 		$.each(orig_array,function(x,obj){
 			
 			if(obj.name.toLowerCase().indexOf(word)!=-1){
 				if(log_this)console.log("FOUND "+word+" AT "+x);
-				tmp+='<a href="'+obj.href+'">'+obj.name+'</a>';
+				tmpArray.push({href:obj.href,name:obj.name});
 			}
 		});	
 	});
-	
-	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link">Weeks <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+
+	console.log("-------------------");
+	console.log(tmpArray);
+	tmpArray=makeArrayUnique(tmpArray);
+	console.log(tmpArray);
+
+	$.each(tmpArray,function(i,val) {
+		tmp+='<a href="'+val.href+'">'+val.name+'</a>';
+	});
+
+	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
 	nav_array.push(full);
-	/*var dropdownText = $('.arts-banner-dropdown-content a').text()
-	if(dropdownText.indexOf('Topic') != -1){
-		var dropdownBtn = 'Topics'
-	}
-	else{
-		var dropdownBtn = 'Weeks'
-	}*/
-	
 }
 
-
+function makeArrayUnique(tmpArr1){
+	var tmpArr2=[];
+	$.each(tmpArr1,function(i,value){
+		var exists=false;
+		$.each(tmpArr2,function(j,value2){
+			if(value.name==value2.name){exists=true};
+		});
+		if(exists==false){tmpArr2.push(value);}
+	});
+	return tmpArr2;
+}
 
 function get_grades(){
 	if(log_this)console.log("------------------------ get grades ------------------------");
