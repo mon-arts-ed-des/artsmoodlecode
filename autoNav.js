@@ -5,7 +5,7 @@ var home_array=["welcome","overview","home"];
 var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
-var topics_array=["topic","week","module","day","block"];
+var topics_array=["week","topic","module","block","day"];
 var stick_height, navbar;
 var start_section;
 var dropdownText;
