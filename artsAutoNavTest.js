@@ -11,13 +11,17 @@ var zoom_array=["zoom","zoom sessions","zoom workshops","zoom tutorials","zoom l
 var stick_height, navbar;
 var start_section;
 var dropdownText;
+
+
+set_start();
+
 //Check jQuery is working on the site.
-checkJQuery();
 function checkJQuery(){
 	if (typeof(jQuery)==='undefined'){
 		setTimeout(checkJQuery,100);}
 	else{
-		get_nav();}
+		get_nav();
+	}
 }
 
 //push all the nav items into an array - all we care about is name and URL
@@ -32,8 +36,8 @@ function get_nav(){
 		orig_array.push(new_obj);
 	});
 	if(log_this)console.log(orig_array);
-	
-	
+
+
 	//get navbar section so we can apply styles to it
 	navbar=document.getElementById("section-0");
 
@@ -48,8 +52,7 @@ function get_nav(){
 		$(".arts-banner-dropdown-content").width($("#arts-dropdown").width());
 		if($(window).width()<1000)$(".arts-banner-dropdown-content").css('width','100%');
 	});
-	//run all functions to sort arrays and build nav 
-	set_start();
+	//run all functions to sort arrays and build nav
 	get_home();
 	get_topics();
 	get_assessment();
@@ -60,9 +63,13 @@ function get_nav(){
 	build_nav();
 	set_click();
 	dropdownParent();
-	
+
 }
 
+
+function show_nav(){
+
+}
 
 
 function get_home(){
@@ -284,10 +291,7 @@ function set_start(){
 	//var queryArr=['section','edit','completion','#section-','user','enrol','group','roles','filter','report','grade','backup','reset','question','files','admin','preview'];
 	//$.inArray(window.location.href,queryArr);
 
-
-
-
-	var sectionNumberRD = window.location.href.indexOf('section')
+	/*var sectionNumberRD = window.location.href.indexOf('section')
 	var editScreenRD = window.location.href.indexOf('edit')
 	var completionRD = window.location.href.indexOf('completion')
 	var hashSectionRD = window.location.href.indexOf('#section-')
@@ -303,23 +307,47 @@ function set_start(){
 	var questionRD = window.location.href.indexOf('question')
 	var filesRD = window.location.href.indexOf('files')
 	var adminRD = window.location.href.indexOf('admin')
-	var previewRD = window.location.href.indexOf('preview')
+	var previewRD = window.location.href.indexOf('preview')*/
 
 
 	//section is null so it must be the entry page
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
 	if(location.search.indexOf("&")==-1){
-		 document.querySelector(".topics").remove();
+		document.querySelector(".topics").remove();
 		document.querySelector("#toggle-all").remove();
 		document.querySelector("#topcoll-display-instructions").remove();
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
-		var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
+
+		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
+
 		//change the current window address to the new section
+		var navdr=document.getElementById('nav-drawer');
+		var atags=navdr.querySelectorAll("a");
+		var regex=/\b(?:overview|welcome|home)\b/gi;
+		for(var i=0;i<atags.length;i++){
+			if(atags[i].innerText.match(regex)){
+				overviewSection=atags[i].href;
+				break;
+			}
+		}
+
 		overviewSection=overviewSection.replace("#section-", "&section=");
 		window.location.href = overviewSection;
 	}
+
+	//on the right page now so start nav building
+	checkJQuery();
 }
+
+function contains(selector,text){
+	var elements=document.querySelectorAll(selector);
+	return Array.prototype.filter.call(elements,function(element){
+		return RegExp(text).test(element.textContent);
+	});
+}
+
+
 function set_sticky_nav(){
 	var nav_drawer=document.getElementById("nav-drawer");
 
