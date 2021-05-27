@@ -334,10 +334,13 @@ function set_start(){
 
 		overviewSection=overviewSection.replace("#section-", "&section=");
 		window.location.href = overviewSection;
+	}else{
+		//on the right page now so start nav building
+		checkJQuery();
 	}
 
-	//on the right page now so start nav building
-	checkJQuery();
+
+
 }
 
 function contains(selector,text){
