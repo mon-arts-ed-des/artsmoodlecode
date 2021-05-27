@@ -162,6 +162,8 @@ function get_topics(){
 	if(log_this)console.log(tmpArray);
 	tmpArray=makeArrayUnique(tmpArray);
 	if(log_this)console.log(tmpArray);
+	tmpArray=sortBySection(tmpArray);
+	if(log_this)console.log(tmpArray);
 
 	$.each(tmpArray,function(i,val) {
 		tmp+='<a href="'+val.href+'">'+val.name+'</a>';
@@ -183,6 +185,10 @@ function makeArrayUnique(tmpArr1){
 		if(exists==false){tmpArr2.push(value);}
 	});
 	return tmpArr2;
+}
+
+function sortBySection(tmpArr1){
+	tmpArr1.sort(function(a,b){return a.section-b.section;});
 }
 
 
