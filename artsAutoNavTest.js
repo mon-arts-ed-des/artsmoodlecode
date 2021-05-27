@@ -33,8 +33,8 @@ function get_nav(){
 		var new_obj=new Object();
 		new_obj.name=$(this).prop("innerText").trim();
 		new_obj.href=$(this).attr("href");
+		new_obj.section=new_obj.href.substring(new_obj.href.indexOf("section=")+8,new_obj.href.length);
 		orig_array.push(new_obj);
-		
 	});
 	if(log_this)console.log(orig_array);
 	
@@ -149,14 +149,18 @@ function get_topics(){
 		});	
 	});
 
-	console.log("-------------------");
-	console.log(tmpArray);
+	if(log_this)console.log(tmpArray);
 	tmpArray=makeArrayUnique(tmpArray);
-	console.log(tmpArray);
+	if(log_this)console.log(tmpArray);
+
+
+
 
 	$.each(tmpArray,function(i,val) {
 		tmp+='<a href="'+val.href+'">'+val.name+'</a>';
 	});
+
+
 
 	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
