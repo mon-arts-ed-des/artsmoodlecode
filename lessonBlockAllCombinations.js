@@ -57,7 +57,7 @@ window.addEventListener('load', (event) => {
 			//add an icon to the go to next activity button
 			$('.boxaligncenter a.lessonbutton:nth-last-child(3)').append('&nbsp;&nbsp;<i class="fa fa-hand-o-right" aria-hidden="true"></i>');
 			//tell the user what they can choose to do on this screen
-			$('.boxaligncenter p').after('<ul style="color:black;" id="returnToSectionDescription"><li>Continue onto the next activity <i class="fa fa-hand-o-right" aria-hidden="true"></i></li><li>Or return to the section this lesson is part of <i class="fa fa-reply" aria-hidden="true"></i></li><li>Or view your grades for this activity <i class="fa fa-check-square-o fa-fw" aria-hidden="true"></i></li></ul>');
+			$('.boxaligncenter div').first().before('<ul style="color:black;" id="returnToSectionDescription"><li>Continue onto the next activity <i class="fa fa-hand-o-right" aria-hidden="true"></i></li><li>Or return to the section this lesson is part of <i class="fa fa-reply" aria-hidden="true"></i></li><li>Or view your grades for this activity <i class="fa fa-check-square-o fa-fw" aria-hidden="true"></i></li></ul>');
 			//remove the well done text in the box as it doubles up the message unnecessarily
 			$('.boxaligncenter p:contains("Well done!")').remove();
 		}
@@ -76,7 +76,7 @@ window.addEventListener('load', (event) => {
 			$('.boxaligncenter a.lessonbutton:nth-last-child(4)').prepend('<i class="fa fa-hand-o-left" aria-hidden="true"></i>&nbsp;&nbsp;');
 			$('.boxaligncenter a.lessonbutton:nth-last-child(3)').append('&nbsp;&nbsp;<i class="fa fa-hand-o-right" aria-hidden="true"></i>');
 			//tell the user what they can choose to do on this screen
-			$('.boxaligncenter p').after('<ul style="color:black;" id="returnToSectionDescription"><li><i class="fa fa-hand-o-left" aria-hidden="true"></i> You can review this lesson material again before continuing</li><li>Or continue onto the next activity <i class="fa fa-hand-o-right" aria-hidden="true"></i></li><li>Or return to the section this lesson is part of <i class="fa fa-reply" aria-hidden="true"></i></li><li>Or view your grades for this activity <i class="fa fa-check-square-o fa-fw" aria-hidden="true"></i></li></ul>');
+			$('.boxaligncenter div').first().before('<ul style="color:black;" id="returnToSectionDescription"><li><i class="fa fa-hand-o-left" aria-hidden="true"></i> You can review this lesson material again before continuing</li><li>Or continue onto the next activity <i class="fa fa-hand-o-right" aria-hidden="true"></i></li><li>Or return to the section this lesson is part of <i class="fa fa-reply" aria-hidden="true"></i></li><li>Or view your grades for this activity <i class="fa fa-check-square-o fa-fw" aria-hidden="true"></i></li></ul>');
 			//remove the well done text in the box as it doubles up the message unnecessarily
 			$('.boxaligncenter p:contains("Well done!")').remove();    
 		}
