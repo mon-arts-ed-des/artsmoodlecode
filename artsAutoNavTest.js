@@ -166,10 +166,7 @@ function get_topics(){
 	if(log_this)console.log(tmpArray);
 
 
-	$.each(tmpArray,function(i,val) {
-		tmp+='<a href="'+val.href+'">'+val.name+'</a>';
-	});
-
+	$.each(tmpArray,function(i,val){tmp+='<a href="'+val.href+'">'+val.name+'</a>';});
 
 	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
@@ -283,7 +280,13 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 }
 
 function set_start(){
-	
+
+	//var queryArr=['section','edit','completion','#section-','user','enrol','group','roles','filter','report','grade','backup','reset','question','files','admin','preview'];
+	//$.inArray(window.location.href,queryArr);
+
+
+
+
 	var sectionNumberRD = window.location.href.indexOf('section')
 	var editScreenRD = window.location.href.indexOf('edit')
 	var completionRD = window.location.href.indexOf('completion')
@@ -301,11 +304,15 @@ function set_start(){
 	var filesRD = window.location.href.indexOf('files')
 	var adminRD = window.location.href.indexOf('admin')
 	var previewRD = window.location.href.indexOf('preview')
+
+
 	//section is null so it must be the entry page
-	if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
+	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
+
+	if(location.search.indexOf("&")==-1){
 		 document.querySelector(".topics").remove();
-	document.querySelector("#toggle-all").remove();
-	document.querySelector("#topcoll-display-instructions").remove();
+		document.querySelector("#toggle-all").remove();
+		document.querySelector("#topcoll-display-instructions").remove();
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 		var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
 		//change the current window address to the new section
