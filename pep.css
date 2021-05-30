@@ -1,0 +1,36 @@
+
+/* ----- moodle ----- */
+
+.course-content ul.gtopics li.section .content{margin:0;}
+.section .label .mod-indent-outer{padding-left:0;}
+.section .activity.modtype_label.label{padding-bottom: 2rem;}
+.single-section h3.sectionname{display:none;}
+.section .label .contentwithoutlink, .section .label .activityinstance{padding-right:0;}
+.section .activity.modtype_label.label{padding:0 0 3rem 0;}
+
+
+/* ----- sections ----- */
+#aboutSection{padding:20px;margin:10px;-webkit-box-shadow: 0px 0px 10px 1px rgba(94,94,94,0.3);box-shadow: 0px 0px 10px 1px rgba(94,94,94,0.3);border: 1px solid #ccc;}
+#keyDates{margin:10px;}
+#synopsis{margin:10px;}
+#teachingLearning{margin:10px;}
+.pep_blue{background-color:#D3EDF0;padding:20px;margin:10px;}
+
+
+
+/* ----- titles ----- */
+.pep_title{background-color:#e8eaeb;padding:30px !important;}
+.pep_title_img{background-color:#e8eaeb;}
+.pep_title h1{font-size:1.5rem;}
+.pep_title_line{background-color:#10A1AF;height:5px;width:100px;margin-bottom:1rem;}
+h4.bluetitle{color:#006DAE;}
+.pep_line{background-color:#10A1AF;height:2px;margin-bottom:10px;}
+
+
+/* ----- general ----- */
+.no-padding{padding:0;}
+.flex{display:flex;}
+.align-ctr{align-items:center;}
+.just-end{justify-content:flex-end;}
+.just-ctr{justify-content:center;}
+
