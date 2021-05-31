@@ -355,13 +355,12 @@ function continue_start(){
 function set_start() {
 	try{
 		var atags=document.querySelectorAll('#nav-drawer a');
-
 		console.log(atags);
+		if(atags.length>0)continue_start();
 	}catch(ex){
 		if(log_this)console.log(ex);
 		setTimeout(set_start,1000);
 	}
-	if(atags.length>0)continue_start();
 }
 
 
