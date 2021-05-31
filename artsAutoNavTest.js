@@ -322,26 +322,34 @@ function set_start(){
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
 
 		//change the current window address to the new section
-		var navdr=document.getElementById('nav-drawer');
-		var atags=navdr.querySelectorAll("a");
-		var regex=/\b(?:overview|welcome|home)\b/gi;
-		for(var i=0;i<atags.length;i++){
-			if(atags[i].innerText.match(regex)){
-				overviewSection=atags[i].href;
-				break;
+
+		try{
+			var navdr=document.getElementById('nav-drawer');
+			var atags=navdr.querySelectorAll("a");
+
+			var regex=/\b(?:overview|welcome|home)\b/gi;
+			for(var i=0;i<atags.length;i++){
+				if(atags[i].innerText.match(regex)){
+					overviewSection=atags[i].href;
+					break;
+				}
 			}
+
+			overviewSection=overviewSection.replace("#section-", "&section=");
+			window.location.href = overviewSection;
+		}catch(ex){
+			if(log_this)console.log(ex);
+			setInterval(set_start,100);
 		}
 
-		overviewSection=overviewSection.replace("#section-", "&section=");
-		window.location.href = overviewSection;
 	}else{
 		//on the right page now so start nav building
 		checkJQuery();
 	}
 
-
-
 }
+
+
 
 function contains(selector,text){
 	var elements=document.querySelectorAll(selector);
