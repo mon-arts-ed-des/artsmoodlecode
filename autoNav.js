@@ -322,7 +322,7 @@ function set_start(){
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
 
 		//change the current window address to the new section
-		var navdr=document.querySelectorAll('#nav-drawer a')
+		var navdr=document.querySelectorAll('#nav-drawer a');
 		//getElementById('nav-drawer');
 		//var atags=navdr.querySelectorAll('a');
 		var regex=/\b(?:overview|welcome|home)\b/gi;
