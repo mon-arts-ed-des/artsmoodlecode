@@ -322,12 +322,13 @@ function set_start(){
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
 
 		//change the current window address to the new section
-		var navdr=document.getElementById('nav-drawer');
-		var atags=navdr.querySelectorAll('a');
+		var navdr=document.querySelectorAll('#nav-drawer a')
+		//getElementById('nav-drawer');
+		//var atags=navdr.querySelectorAll('a');
 		var regex=/\b(?:overview|welcome|home)\b/gi;
-		for(var i=0;i<atags.length;i++){
-			if(atags[i].innerText.match(regex)){
-				overviewSection=atags[i].href;
+		for(var i=0;i<navdr.length;i++){
+			if(navdr[i].innerText.match(regex)){
+				overviewSection=navdr[i].href;
 				break;
 			}
 		}
