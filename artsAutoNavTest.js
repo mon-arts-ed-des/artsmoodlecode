@@ -286,8 +286,11 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 	        }
 }
 
-function set_start(){
 
+
+
+function continue_start(){
+	if(log_this)console.log("continue_start");
 	//var queryArr=['section','edit','completion','#section-','user','enrol','group','roles','filter','report','grade','backup','reset','question','files','admin','preview'];
 	//$.inArray(window.location.href,queryArr);
 
@@ -314,7 +317,9 @@ function set_start(){
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
 	if(location.search.indexOf("&")==-1){
-
+		document.querySelector(".topics").remove();
+		document.querySelector("#toggle-all").remove();
+		document.querySelector("#topcoll-display-instructions").remove();
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
@@ -323,12 +328,8 @@ function set_start(){
 
 		try{
 
-			document.querySelector(".topics").remove();
-			document.querySelector("#toggle-all").remove();
-			document.querySelector("#topcoll-display-instructions").remove();
-
-			var navdr=document.getElementById('nav-drawer');
-			var atags=navdr.querySelectorAll("a");
+			//var navdr=document.getElementById('nav-drawer');
+			var atags=querySelectorAll('#nav-drawer a');
 
 			var regex=/\b(?:overview|welcome|home)\b/gi;
 			for(var i=0;i<atags.length;i++){
@@ -342,7 +343,6 @@ function set_start(){
 			window.location.href = overviewSection;
 		}catch(ex){
 			if(log_this)console.log(ex);
-			setTimeout(set_start,1000);
 		}
 
 	}else{
@@ -352,6 +352,16 @@ function set_start(){
 
 }
 
+function set_start() {
+	try{
+		var atags=querySelectorAll('#nav-drawer a');
+		continue_start();
+	}catch(ex){
+		if(log_this)console.log(ex);
+		setTimeout(set_start,1000);
+	}
+
+}
 
 
 function contains(selector,text){
