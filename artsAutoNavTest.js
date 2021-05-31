@@ -334,7 +334,7 @@ function continue_start(){
 			var regex=/\b(?:overview|welcome|home)\b/gi;
 			for(var i=0;i<atags.length;i++){
 				if(atags[i].innerText.match(regex)){
-					overviewSection=atags[i].href;
+					var overviewSection=atags[i].href;
 					break;
 				}
 			}
