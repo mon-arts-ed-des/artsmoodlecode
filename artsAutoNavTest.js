@@ -314,9 +314,7 @@ function set_start(){
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
 	if(location.search.indexOf("&")==-1){
-		document.querySelector(".topics").remove();
-		document.querySelector("#toggle-all").remove();
-		document.querySelector("#topcoll-display-instructions").remove();
+
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
@@ -324,6 +322,11 @@ function set_start(){
 		//change the current window address to the new section
 
 		try{
+
+			document.querySelector(".topics").remove();
+			document.querySelector("#toggle-all").remove();
+			document.querySelector("#topcoll-display-instructions").remove();
+
 			var navdr=document.getElementById('nav-drawer');
 			var atags=navdr.querySelectorAll("a");
 
@@ -339,7 +342,7 @@ function set_start(){
 			window.location.href = overviewSection;
 		}catch(ex){
 			if(log_this)console.log(ex);
-			setInterval(set_start,100);
+			setTimeout(set_start,1000);
 		}
 
 	}else{
