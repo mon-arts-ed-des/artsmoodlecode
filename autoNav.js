@@ -323,7 +323,7 @@ function set_start(){
 
 		//change the current window address to the new section
 		var navdr=document.getElementById('nav-drawer');
-		var atags=navdr.querySelectorAll("a");
+		var atags=navdr.querySelectorAll('a');
 		var regex=/\b(?:overview|welcome|home)\b/gi;
 		for(var i=0;i<atags.length;i++){
 			if(atags[i].innerText.match(regex)){
