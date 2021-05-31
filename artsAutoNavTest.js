@@ -355,8 +355,8 @@ function continue_start(){
 function set_start() {
 	try{
 		var atags=document.querySelectorAll('#nav-drawer a');
-		console.log(atags);
-		if(atags.length>0)continue_start();
+		if(log_this)console.log(atags+" length: "+atags.length);
+		if(atags.length>0){continue_start();}else{setTimeout(set_start,1000);}
 	}catch(ex){
 		if(log_this)console.log(ex);
 		setTimeout(set_start,1000);
