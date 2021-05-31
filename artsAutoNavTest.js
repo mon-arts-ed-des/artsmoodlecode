@@ -329,7 +329,7 @@ function continue_start(){
 		try{
 
 			//var navdr=document.getElementById('nav-drawer');
-			var atags=querySelectorAll('#nav-drawer a');
+			var atags=document.querySelectorAll('#nav-drawer a');
 
 			var regex=/\b(?:overview|welcome|home)\b/gi;
 			for(var i=0;i<atags.length;i++){
@@ -354,7 +354,7 @@ function continue_start(){
 
 function set_start() {
 	try{
-		var atags=querySelectorAll('#nav-drawer a');
+		var atags=document.querySelectorAll('#nav-drawer a');
 		continue_start();
 	}catch(ex){
 		if(log_this)console.log(ex);
