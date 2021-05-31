@@ -317,9 +317,9 @@ function continue_start(){
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
 	if(location.search.indexOf("&")==-1){
-		document.querySelector(".topics").remove();
-		document.querySelector("#toggle-all").remove();
-		document.querySelector("#topcoll-display-instructions").remove();
+		//document.querySelector(".topics").remove();
+		//document.querySelector("#toggle-all").remove();
+		//document.querySelector("#topcoll-display-instructions").remove();
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
@@ -355,12 +355,13 @@ function continue_start(){
 function set_start() {
 	try{
 		var atags=document.querySelectorAll('#nav-drawer a');
-		continue_start();
+
+		console.log(atags);
 	}catch(ex){
 		if(log_this)console.log(ex);
 		setTimeout(set_start,1000);
 	}
-
+	if(atags.length>0)continue_start();
 }
 
 
