@@ -10,6 +10,19 @@ window.onload=function(){
    		$('.mceToolbarRow2').css('display', 'table');
   		$('.mceToolbarRow3').css('display', 'table');
   	});
+	$('#section-0 h3 a').attr('href','#');
+	var adminBlock = $('.block_settings').length
+	var zeroLinkEquals = document.querySelectorAll('a[href$="section=0"]');
+	var zeroLinkHash = document.querySelectorAll('a[href$="section-0"]');
+	var changeRoleToStdt = $('p.tree_item').length;
+	if (adminBlock == 0 || changeRoleToStdt <= 6){
+		//console.log('this is a student - section 0 removed')
+		$(zeroLinkEquals,zeroLinkHash).remove();  
+	}
+	else{
+		//console.log('this is a staff member');
+		$(zeroLinkEquals,zeroLinkHash).html('<div class="ml-0"><div class="media"><span class="media-left"><i class=\"icon fa fa-list-ol fa-fw\" aria-hidden="true"></i> </span><span class="media-body">All sections page</span></div></div>')
+	}
 // style library block to be like the others
 // first remove the existing styles
 	$("#inst3127749 ol li a").removeAttr("style");
