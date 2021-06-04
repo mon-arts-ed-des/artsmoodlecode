@@ -127,7 +127,7 @@ function get_assessment(){
 		$.each(orig_array,function(x,obj){
 			if(word==obj.name.toLowerCase()){
 				if(log_this)console.log("FOUND "+word+" AT "+x);
-				var tmp='<div id="arts-assessment"><a href="'+obj.href+'"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
+				var tmp='<div id="arts-assessment"><a href="'+obj.href+'"><i class="fa fa-edit fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
 				nav_array.push(tmp);
 				if(!start_section)start_section=obj.href;
 			}
