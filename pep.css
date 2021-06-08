@@ -60,6 +60,14 @@ h4.bluetitle{color:#006DAE;}
 
 /* ----- round buttons ----- */
 .pep_round_box{padding:0;}
-.pep_round1{background-color:#10A1AF;width:100%;min-height:130px;border-radius:50%;display:flex;justify-content:center;align-items:center;}
-.pep_center1{background-color:#DAF0F2;width:90%;min-height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .pep_round_box p{padding:10px;margin-bottom:0;text-align:center;}
+.pep_round{width:130px;height:130px;border-radius:50%;display:flex;justify-content:center;align-items:center;}
+.pep_center{background-color:#DAF0F2;width:110px;height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.pep_round_1{background-color:#10A1AF;}
+.pep_center_1{background-color:#10A1AF;}
+.pep_round_2{background-color:#484C7F;}
+.pep_center_2{background-color:#E8E9F7;}
+.pep_round_3{background-color:#006DAE;}
+.pep_center_3{background-color:#E1F4FF;}
+.pep_round_4{background-color:#FF7B40;}
+.pep_center_4{background-color:#FFE8DE;}
