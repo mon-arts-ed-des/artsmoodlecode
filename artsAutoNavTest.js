@@ -317,6 +317,7 @@ function continue_start(){
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
 	if(location.search.indexOf("&")==-1){
+
 		try{
 			document.querySelector(".topics").remove();
 			document.querySelector("#toggle-all").remove();
@@ -345,6 +346,9 @@ function continue_start(){
 			}
 
 			overviewSection=overviewSection.replace("#section-", "&section=");
+			console.log("------------------------");
+			console.log(overviewSection);
+			console.log("------------------------");
 			window.location.href = overviewSection;
 		}catch(ex){
 			if(log_this)console.log(ex);
