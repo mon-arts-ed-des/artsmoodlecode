@@ -71,3 +71,20 @@ h4.bluetitle{color:#006DAE;}
 .pep_center_3{background-color:#E1F4FF;}
 .pep_round_4{background-color:#FF7B40;}
 .pep_center_4{background-color:#FFE8DE;}
+
+.pep_tooltip{cursor: pointer;}
+.pep_line_color1{border-left:3px solid #10A1AF;}
+.pep_line_color2{border-left:3px solid #484C7F;}
+.pep_line_color3{border-left:3px solid #006DAE;}
+.pep_line_color4{border-left:3px solid #FF7B40;}
+.pep_popup_space{margin:200px 0;}
+.pep_vert_line_up{visibility:hidden;position:absolute;top:-60px;left:50%;height:60px;}
+.pep_vert_line_down{visibility:hidden;position:absolute;bottom:-60px;left:49%;height:60px;}
+.pep_tooltip .tooltiptext{visibility:hidden;width:400px;background-color:#fff;color:#000;border-radius:6px;padding:5px 0;position:absolute;z-index:1;-webkit-box-shadow:0 0 13px 0 #828282;box-shadow:0 0 13px 0 #828282;}
+.pep_tooltip .tooltipleft{left:30px;}
+.pep_tooltip .tooltipright{right:30px;}
+.pep_tooltip .tooltiptop{bottom:145%;}
+.pep_tooltip .tooltipbottom{top:145%;}
+.pep_tooltip:hover .tooltiptext,.pep_tooltip:hover .pep_vert_line_up,.pep_tooltip:hover .pep_vert_line_down{visibility: visible;}
+.pep_tooltip_title{color:#006DAE;font-size:1.1rem !important;}
+.pep_tooltip .tooltiptext p{text-align:left;font-size: 1rem;}
