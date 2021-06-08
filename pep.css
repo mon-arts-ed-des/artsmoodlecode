@@ -54,5 +54,11 @@ h4.bluetitle{color:#006DAE;}
 .flex-col{flex-direction:column;}
 
 
+/* ----- buttons ----- */
+.pep_dark_blue{background-color:#022868;}
 
 
+/* ----- round buttons ----- */
+.pep_round_box{}
+.pep_round1{background-color:#10A1AF;width:100%;height:130px;border-radius:50%;}
+.pep_center1{background-color:#DAF0F2;width:100%;height:130px;border-radius:50%;}
