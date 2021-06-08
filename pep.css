@@ -7,6 +7,9 @@
 .single-section h3.sectionname{display:none;}
 .section .label .contentwithoutlink, .section .label .activityinstance{padding-right:0;}
 .section .activity.modtype_label.label{padding:0 0 3rem 0;}
+.section-title{display:none;}
+.header-button .singlebutton {position:fixed;top:81px;right:20px;z-index:9000;}
+
 
 
 /* ----- sections ----- */
@@ -17,8 +20,7 @@
 .pep_blue{background-color:#D3EDF0;padding:20px;margin:10px;}
 
 .pep_acknowledgement{text-align:center;background-color:#fff;padding:20px;}
-
-
+.pep_acknowledgement p{margin-bottom:0;}
 
 /* ----- titles ----- */
 .pep_title{background-color:#e8eaeb;padding:30px !important;}
