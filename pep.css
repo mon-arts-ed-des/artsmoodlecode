@@ -10,11 +10,14 @@
 .section-title{display:none;}
 .header-button .singlebutton {position:fixed;top:81px;right:20px;z-index:9000;}
 #page-header{margin-bottom:0;}
+
+
+
+/* ----- breadcrumbs ----*/
 #page-navbar {padding:15px 0;background-color:#D3EDF0;margin-left:-35px;margin-right:-35px;}
 #page-navbar nav{margin-left:35px;}
-
-
-
+ol.breadcrumb > li {display: flex;align-items: center;}
+li.breadcrumb-item a:hover{border-radius:0;padding:0.5rem;}
 
 /* ----- sticky ----- */
 .sticky {margin-top: 70px !important;}
