@@ -1,4 +1,4 @@
-/*inst2956050 is the Administration Menu all references affect the design of the Admin Block*/
+/*inst3234586 is the Administration Menu all references affect the design of the Admin Block*/
 /*Changes the colour of the text and controls of the Admin Block to white*/
 #inst3234586 .action-menu, #inst3234586 .dropdown-toggle, #inst3234586 .moodle-core-dragdrop-draghandle, #inst484478 .action-menu,#inst484478 .dropdown-toggle, #inst484478 .moodle-core-dragdrop-handle {
 color: #4a4a4a !important;
@@ -39,12 +39,12 @@ color: #3D90C2 !important;
 text-decoration: none !important;
 }
 /*Changes the size and colour of the text in the sub menus of the block to match other links*/
-#inst3234586 span {
+#inst3234586 p.tree_item {
 font-size: 1.1rem !important;
 color: #006DAE !important;
 }
 /*Changes the size and colour of the text on hover in the sub menus of the block to match other links*/
-#inst3234586 span:hover {
+#inst3234586 p.tree_item:hover {
 color: #3D90C2 !important;
 text-decoration: none !important;
 }

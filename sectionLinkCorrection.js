@@ -10,6 +10,19 @@ window.onload=function(){
    		$('.mceToolbarRow2').css('display', 'table');
   		$('.mceToolbarRow3').css('display', 'table');
   	});
+	$('#section-0 h3 a').attr('href','#');
+	var adminBlock = $('.block_settings').length
+	var zeroLinkEquals = document.querySelectorAll('a[href$="section=0"]');
+	var zeroLinkHash = document.querySelectorAll('a[href$="section-0"]');
+	var changeRoleToStdt = $('p.tree_item').length;
+	if (adminBlock == 0 || changeRoleToStdt <= 6){
+		//console.log('this is a student - section 0 removed')
+		$(zeroLinkEquals,zeroLinkHash).remove();  
+	}
+	else{
+		//console.log('this is a staff member');
+		$(zeroLinkEquals,zeroLinkHash).html('<div class="ml-0"><div class="media"><span class="media-left"><i class=\"icon fa fa-list-ol fa-fw\" aria-hidden="true"></i> </span><span class="media-body">All sections page</span></div></div>')
+	}
 // style library block to be like the others
 // first remove the existing styles
 	$("#inst3127749 ol li a").removeAttr("style");
@@ -124,8 +137,8 @@ window.onload=function(){
 			? document.querySelector('.myprofileitem.fullname').innerText
 			: null;
 //If you are part of the educational designer team, add the BEEST link			
-				if(userName == "Tim Scholl" || userName == "Sneha Mohandas" || userName == "Tahlia Birnbaum" || userName == "Carmen Sapsed" || userName == "Josephine Hook" || userName == "Ingrid D'Souza"){
-					$(".header-right").prepend('<div class="custom-menus my-auto dropdown"><a type="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="BEEST" style="width:38px; height: 38px;" data-toggle="modal" data-target=".beest-home-modal" id="beestDropdown"><img src="https://mon-arts-ed-des.github.io/BEEST/img/dragon-solid-black.png" width="20px" height="20px" style="margin-bottom: 4px;" /></a>');
+				if(userName == "Tim Scholl" || userName == "Tahlia Birnbaum" || userName == "Carmen Sapsed" || userName == "Josephine Hook" || userName == "Ingrid D'Souza"){
+					$(".header-right").prepend('<div class="custom-menus my-auto"><a type="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="BEEST" style="width:38px; height: 38px;" data-toggle="modal" data-target=".beest-home-modal" id="beestDropdown"><img src="https://mon-arts-ed-des.github.io/BEEST/img/dragon-solid-black.png" width="20px" height="20px" style="margin-bottom: 4px;" /></a>');
 					$("#region-main").append('<style>.modal-beest{max-width: 80% !important;}</style><div class="modal fade beest-home-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg modal-beest"><div class="modal-content"><div class="modal-header mb-0 p-2 bg-danger text-white px-5"><h5 class="modal-title text-white my-auto" id="exampleModalLabel">To close this window click the button on the right or anywhere outside this box.</h5><button type="button" class="btn btn-outline-light btn-lg rounded" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <i class="fa fa-times"></i></span></button></div><iframe src="https://mon-arts-ed-des.github.io/BEEST/index.html" width="100%" height="900px"></iframe></div></div></div>');
 				};
 			};

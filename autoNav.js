@@ -6,8 +6,8 @@ var home_array=["welcome","overview","home"];
 var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
-var topics_array=["week","topic","module","day","block"];
-var zoom_array=["zoom","zoom sessions","zoom workshops","zoom tutorials","zoom links"]
+var topics_array=["topic","week","module","day","block"];
+var zoom_array=["zoom","zoom sessions","zoom (online only)","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
 var dropdownText;
@@ -286,8 +286,11 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 	        }
 }
 
-function set_start(){
 
+
+
+function continue_start(){
+	if(log_this)console.log("continue_start");
 	//var queryArr=['section','edit','completion','#section-','user','enrol','group','roles','filter','report','grade','backup','reset','question','files','admin','preview'];
 	//$.inArray(window.location.href,queryArr);
 
@@ -322,26 +325,44 @@ function set_start(){
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
 
 		//change the current window address to the new section
-		var navdr=document.getElementById('nav-drawer');
-		var atags=navdr.querySelectorAll("a");
-		var regex=/\b(?:overview|welcome|home)\b/gi;
-		for(var i=0;i<atags.length;i++){
-			if(atags[i].innerText.match(regex)){
-				overviewSection=atags[i].href;
-				break;
+
+		try{
+
+			//var navdr=document.getElementById('nav-drawer');
+			var atags=document.querySelectorAll('#nav-drawer a');
+
+			var regex=/\b(?:overview|welcome|home)\b/gi;
+			for(var i=0;i<atags.length;i++){
+				if(atags[i].innerText.match(regex)){
+					var overviewSection=atags[i].href;
+					break;
+				}
 			}
+
+			overviewSection=overviewSection.replace("#section-", "&section=");
+			window.location.href = overviewSection;
+		}catch(ex){
+			if(log_this)console.log(ex);
 		}
 
-		overviewSection=overviewSection.replace("#section-", "&section=");
-		window.location.href = overviewSection;
 	}else{
 		//on the right page now so start nav building
 		checkJQuery();
 	}
 
-
-
 }
+
+function set_start() {
+	try{
+		var atags=document.querySelectorAll('#nav-drawer a');
+		if(log_this)console.log(atags+" length: "+atags.length);
+		if(atags.length>0){continue_start();}else{setTimeout(set_start,1000);}
+	}catch(ex){
+		if(log_this)console.log(ex);
+		setTimeout(set_start,1000);
+	}
+}
+
 
 function contains(selector,text){
 	var elements=document.querySelectorAll(selector);
