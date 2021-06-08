@@ -77,7 +77,8 @@ h4.bluetitle{color:#006DAE;}
 .pep_line_color2{border-left:3px solid #484C7F;}
 .pep_line_color3{border-left:3px solid #006DAE;}
 .pep_line_color4{border-left:3px solid #FF7B40;}
-.pep_popup_space{margin:200px 0;}
+.pep_popup_space_top{margin-top:100px}
+.pep_popup_space_bottom{margin-bottom:400px}
 .pep_vert_line_up{visibility:hidden;position:absolute;top:-60px;left:50%;height:60px;}
 .pep_vert_line_down{visibility:hidden;position:absolute;bottom:-60px;left:49%;height:60px;}
 .pep_tooltip .tooltiptext{visibility:hidden;width:400px;background-color:#fff;color:#000;border-radius:6px;padding:5px 0;position:absolute;z-index:1;-webkit-box-shadow:0 0 13px 0 #828282;box-shadow:0 0 13px 0 #828282;}
