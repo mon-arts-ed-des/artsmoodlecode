@@ -12,6 +12,10 @@
 
 
 
+/* ----- sticky ----- */
+.sticky {margin-top: 70px !important;}
+
+
 /* ----- sections ----- */
 #aboutSection{padding:20px;margin:10px;-webkit-box-shadow: 0 0 10px 1px rgba(94,94,94,0.3);box-shadow: 0 0 10px 1px rgba(94,94,94,0.3);border: 1px solid #ccc;}
 #keyDates{margin:10px;}
@@ -38,4 +42,7 @@ h4.bluetitle{color:#006DAE;}
 .just-end{justify-content:flex-end;}
 .just-ctr{justify-content:center;}
 .flex-col{flex-direction:column;}
+
+
+
 
