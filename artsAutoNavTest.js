@@ -346,9 +346,6 @@ function continue_start(){
 			}
 
 			overviewSection=overviewSection.replace("#section-", "&section=");
-			console.log("------------------------");
-			console.log(overviewSection);
-			console.log("------------------------");
 			window.location.href = overviewSection;
 		}catch(ex){
 			if(log_this)console.log(ex);

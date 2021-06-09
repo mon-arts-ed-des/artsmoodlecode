@@ -4,7 +4,7 @@
 .course-content ul.gtopics li.section .content{margin:0;}
 .section .label .mod-indent-outer{padding-left:0;}
 .section .activity.modtype_label.label{padding-bottom: 2rem;}
-.single-section h3.sectionname{display:none;}
+h3.sectionname{display:none;}
 .section .label .contentwithoutlink, .section .label .activityinstance{padding-right:0;}
 .section .activity.modtype_label.label{padding:0 0 3rem 0;}
 .section-title{display:none;}
