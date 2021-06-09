@@ -88,4 +88,4 @@ h4.bluetitle{color:#006DAE;}
 .pep_tooltip .tooltipbottom{top:145%;}
 .pep_tooltip:hover .tooltiptext,.pep_tooltip:hover .pep_vert_line_up,.pep_tooltip:hover .pep_vert_line_down{visibility: visible;}
 .pep_tooltip_title{color:#006DAE;font-size:1.1rem !important;}
-.pep_tooltip .tooltiptext p{text-align:left;font-size: 1rem;}
+.pep_tooltip .tooltiptext p{text-align:left;font-size: 1rem;line-height: 1.5rem;}
