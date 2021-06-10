@@ -15,11 +15,11 @@ h3.sectionname{display:none;}
 
 /* ----- breadcrumbs ----*/
 /*#page-navbar {background-color:#D3EDF0;margin-left:-35px;margin-right:-35px;padding:0;}
-#page-navbar nav{margin-left:35px;}*/
+#page-navbar nav{margin-left:35px;}
 #page-navbar{padding-bottom:0;}
 li.breadcrumb-item a{border-radius:0;padding:0.5rem !important;color: #006dae !important;}
 li.breadcrumb-item a:hover{border-radius:0;background: #006dae !important;}
-.breadcrumb-item+.breadcrumb-item::before{content:"";}
+.breadcrumb-item+.breadcrumb-item::before{content:"";}*/
 
 
 
