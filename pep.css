@@ -108,9 +108,9 @@ h4.bluetitle{color:#006DAE;}
 
 
 @media (max-width: 1000px){
-    .pep_tooltip .tooltipright{left:30px;}
+    .pep_tooltip .tooltipright{left:30px;right:unset;}
 }
-@media (min-width: 601px){
+@media (max-width: 600px){
     .pep_tooltip .tooltipleft{left:unset;}
     .pep_tooltip .tooltipright{right:unset;}
 }
