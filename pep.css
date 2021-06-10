@@ -104,14 +104,14 @@ h4.bluetitle{color:#006DAE;}
 .pep_left_line{border-bottom:3px dashed #ccc;width:50%;position:absolute;margin-top:40px;margin-left:47%;z-index:-1;}
 .pep_full_line{border-bottom:3px dashed #ccc;width:100%;position:absolute;margin-top:40px;z-index:-1;}
 .pep_right_line{border-bottom:3px dashed #ccc;width:50%;position:absolute;margin-top:40px;margin-right:47%;z-index:-1;}
-.pep_down_line{border-left: 3px dashed #ccc;height:29%;position:absolute;margin-top:100px;z-index:-1;}
+.pep_down_line{border-left: 3px dashed #ccc;height:60%;position:absolute;margin-top:100px;z-index:-1;}
 
 
 @media (max-width: 991px){
     .pep_tooltip .tooltip2{right:30px;left:unset;}
     .pep_tooltip .tooltip3{left:30px;right:unset;}
 }
-@media (max-width: 600px){
+@media (max-width: 767px){
     .pep_tooltip .tooltipleft{left:unset;}
     .pep_tooltip .tooltipright{right:unset;}
     .pep_tooltip .tooltip2{right:unset;}
