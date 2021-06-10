@@ -28,6 +28,9 @@ li.breadcrumb-item a:hover{
   color: #fff !important;
   background: #3D90C2 !important;
 }
+.breadcrumb-item+.breadcrumb-item::before {
+content: ">";
+}
 /*currently not used.
 #inst3343846 ul {
   list-style: none !important;
