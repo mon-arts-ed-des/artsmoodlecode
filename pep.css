@@ -107,8 +107,9 @@ h4.bluetitle{color:#006DAE;}
 .pep_down_line{border-left: 3px dashed #ccc;height:29%;position:absolute;margin-top:100px;z-index: 1;}
 
 
-@media (max-width: 1000px){
-    .pep_tooltip .tooltipright{left:30px;right:unset;}
+@media (max-width: 991px){
+    .pep_tooltip .tooltip2{right:30px;left:unset;}
+    .pep_tooltip .tooltip3{left:30px;right:unset;}
 }
 @media (max-width: 600px){
     .pep_tooltip .tooltipleft{left:unset;}
