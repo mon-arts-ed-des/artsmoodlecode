@@ -111,7 +111,7 @@ h4.bluetitle{color:#006DAE;}
 
 .pep_pes_line{border-left:3px solid #006dae;transform:translateY(32px);top:-32px;}
 .pep_pes_line_down{border-left:3px solid #006dae;top:75px;left:49.8%;}
-.pep_pes_tooltip{left:50%;margin-left:-200px;}
+.pep_pes_tooltip{left:50%;margin-left:-400px;width: 800px !important;}
 .pep_tooltip:hover .pep_pes_line{visibility:visible;transform:translateY(0px);height:32px;}
 .pep_tooltip:hover .pep_pes_line_down{visibility:visible;height:32px;}
 
@@ -123,11 +123,16 @@ h4.bluetitle{color:#006DAE;}
     .pep_tooltip .tooltip2{right:30px;left:unset;}
     .pep_tooltip .tooltip3{left:30px;right:unset;}
 }
+@media (max-width: 920px){
+    .pep_pes_tooltip{left:50%;margin-left:-300px;width: 600px !important;}
+}
+
 @media (max-width: 767px){
     .pep_tooltip .tooltipleft{left:unset;}
     .pep_tooltip .tooltipright{right:unset;}
     .pep_tooltip .tooltip2{right:unset;}
     .pep_tooltip .tooltip3{left:unset;}
+    .pep_pes_tooltip{left:50%;margin-left:-200px;width: 400px !important;}
 }
 
 
