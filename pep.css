@@ -114,3 +114,20 @@ h4.bluetitle{color:#006DAE;}
     .pep_tooltip .tooltipleft{left:unset;}
     .pep_tooltip .tooltipright{right:unset;}
 }
+
+
+@media all and (max-width: 1000px) {
+    .arts-banner-btn{display: block !important;}
+    .arts-banner-nav-row{display: none;}
+    .arts-banner-nav-row div a{padding:0 2px;}
+    .arts-banner-nav {display: none;border-bottom: 0px;-webkit-flex-flow: column wrap;flex-flow: column wrap;padding: 0;}
+    .arts-banner-nav a{padding: 10px;border-top: 1px solid rgba(255,255,255,0.3);border-bottom: 1px solid rgba(0,0,0,0.1);display: block;}
+    .arts-banner-nav div:first-of-type a {border-top: 1px solid rgba(0,0,0,0.1);}
+    .arts-banner-dropdown-content{position: static !important;}
+}
+
+@media all and (min-width: 1001px) {
+    .arts-banner-btn{display: none !important;}
+    .arts-banner-nav{display: flex !important}
+    .arts-banner-nav-row{display: inline-block !important;}
+}
