@@ -86,6 +86,7 @@ h4.bluetitle{color:#006DAE;}
 
 .pep_tooltip .tooltiptext{visibility:hidden;width:400px;background-color:#fff;color:#000;border-radius:6px;padding:10px 0;position:absolute;z-index:2001;-webkit-box-shadow:0 0 13px 0 #828282;box-shadow:0 0 13px 0 #828282;transition: opacity 0.5s ease-in 0.25s;opacity: 0;}
 
+.pep_tooltip .tooltipcenter{left:29%;}
 .pep_tooltip .tooltipleft{left:30px;}
 .pep_tooltip .tooltipright{right:30px;}
 .pep_tooltip .tooltiptop{bottom:145%;}
