@@ -95,6 +95,7 @@ h4.bluetitle{color:#006DAE;}
 .pep_tooltip:hover .pep_vert_line_up{visibility:visible;transform:translateY(0px);height:60px;}
 .pep_tooltip:hover .pep_vert_line_down{visibility:visible;height:60px;}
 
+
 .pep_tooltip_title{color:#006DAE;font-size:1.1rem !important;}
 .pep_tooltip .tooltiptext p{text-align:left;font-size: 1rem;line-height: 1.5rem;}
 
@@ -107,6 +108,14 @@ h4.bluetitle{color:#006DAE;}
 .pep_full_line{border-bottom:3px dashed #ccc;width:100%;position:absolute;margin-top:40px;z-index:-1;}
 .pep_right_line{border-bottom:3px dashed #ccc;width:50%;position:absolute;margin-top:40px;margin-right:47%;z-index:-1;}
 .pep_down_line{border-left: 3px dashed #ccc;height:60%;position:absolute;margin-top:100px;z-index:-1;}
+
+.pep_pes_line{border-left:3px solid #006dae;transform:translateY(32px);top:-32px;}
+.pep_pes_tooltip{left:50%;margin-left:-200px;}
+.pep_tooltip:hover .pep_pes_line{visibility:visible;transform:translateY(0px);height:32px;}
+
+
+#module-8832465 .no-overflow{overflow: visible;}
+
 
 
 @media (max-width: 991px){
