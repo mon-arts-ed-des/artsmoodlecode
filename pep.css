@@ -10,13 +10,13 @@ h3.sectionname{display:none;}
 .section-title{display:none;}
 .header-button .singlebutton {position:fixed;top:81px;right:20px;z-index:9000;}
 #page-header{margin-bottom:0;}
-
+#page-navbar{padding-top:10px;}
 
 
 /* ----- breadcrumbs ----*/
 /*#page-navbar {background-color:#D3EDF0;margin-left:-35px;margin-right:-35px;padding:0;}
 #page-navbar nav{margin-left:35px;}
-#page-navbar{padding-bottom:0;}
+
 li.breadcrumb-item a{border-radius:0;padding:0.5rem !important;color: #006dae !important;}
 li.breadcrumb-item a:hover{border-radius:0;background: #006dae !important;}
 .breadcrumb-item+.breadcrumb-item::before{content:"";}*/
