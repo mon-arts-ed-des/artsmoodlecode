@@ -110,7 +110,7 @@ h4.bluetitle{color:#006DAE;}
 .pep_down_line{border-left: 3px dashed #ccc;height:60%;position:absolute;margin-top:100px;z-index:-1;}
 
 .pep_pes_line{border-left:3px solid #006dae;transform:translateY(32px);top:-32px;}
-.pep_pes_line_down{border-left:3px solid #006dae;top:-32px;}
+.pep_pes_line_down{border-left:3px solid #006dae;top:75px;left:49.8%;}
 .pep_pes_tooltip{left:50%;margin-left:-200px;}
 .pep_tooltip:hover .pep_pes_line{visibility:visible;transform:translateY(0px);height:32px;}
 .pep_tooltip:hover .pep_pes_line_down{visibility:visible;height:32px;}
