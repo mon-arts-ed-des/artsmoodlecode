@@ -78,7 +78,7 @@ h4.bluetitle{color:#006DAE;}
 .pep_line_color3{border-left:3px solid #006DAE;}
 .pep_line_color4{border-left:3px solid #FF7B40;}
 .pep_popup_space_top{margin-top:100px}
-.pep_popup_space_bottom{margin-bottom:380px}
+.pep_popup_space_bottom{margin-bottom:400px}
 
 .pep_vert_line_up{visibility:hidden;position:absolute;top:-60px;left:50%;height:0;transform:translateY(60px);transition: height 0.5s, transform 0.5s;}
 .pep_vert_line_down{visibility:hidden;position:absolute;top:130px;left:49%;height:0;transition: height 0.5s; transform-origin:top;}
@@ -104,4 +104,4 @@ h4.bluetitle{color:#006DAE;}
 .pep_left_line{border-bottom:3px dashed #ccc;width:50%;position:absolute;margin-top:40px;margin-left:47%;z-index:1;}
 .pep_full_line{border-bottom:3px dashed #ccc;width:100%;position:absolute;margin-top:40px;z-index:1;}
 .pep_right_line{border-bottom:3px dashed #ccc;width:50%;position:absolute;margin-top:40px;margin-right:47%;z-index:1;}
-
+.pep_down_line{border-left: 3px dashed #ccc;height:29%;position:absolute;margin-top:100px;z-index: 1;}
