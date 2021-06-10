@@ -82,7 +82,7 @@ h4.bluetitle{color:#006DAE;}
 .pep_line_color3{border-left:3px solid #006DAE;}*/
 
 .pep_vert_line_up{visibility:hidden;position:absolute;top:-60px;left:50%;height:0;transform:translateY(60px);transition: height 0.5s, transform 0.5s;z-index: 2000;}
-.pep_vert_line_down{visibility:hidden;position:absolute;top:130px;left:49%;height:0;transition: height 0.5s; transform-origin:top;z-index: 2000;}
+.pep_vert_line_down{visibility:hidden;position:absolute;top:130px;left:50%;height:0;transition: height 0.5s; transform-origin:top;z-index: 2000;}
 
 .pep_tooltip .tooltiptext{visibility:hidden;width:400px;background-color:#fff;color:#000;border-radius:6px;padding:10px 0;position:absolute;z-index:2001;-webkit-box-shadow:0 0 13px 0 #828282;box-shadow:0 0 13px 0 #828282;transition: opacity 0.5s ease-in 0.25s;opacity: 0;}
 
