@@ -98,9 +98,9 @@ h4.bluetitle{color:#006DAE;}
 .pep_tooltip_title{color:#006DAE;font-size:1.1rem !important;}
 .pep_tooltip .tooltiptext p{text-align:left;font-size: 1rem;line-height: 1.5rem;}
 
-.pep_bar{background:#dff4c7;width: 85%;font-weight:bold;}
-.pep_top_bar::after{content:" ";position:absolute;top:75%;left:50%;margin-left:-40px;border-width:40px;border-style:solid;border-color:#dff4c7 transparent transparent transparent;}
-.pep_bottom_bar::after{content:" ";position:absolute;bottom:75%;left:50%;margin-left:-40px;border-width:40px;border-style:solid;border-color:transparent transparent #dff4c7 transparent;}
+.pep_bar{background:#006dae;width: 85%;font-weight:bold; color:#fff;}
+.pep_top_bar::after{content:" ";position:absolute;top:75%;left:50%;margin-left:-40px;border-width:40px;border-style:solid;border-color:#006dae transparent transparent transparent;}
+.pep_bottom_bar::after{content:" ";position:absolute;bottom:75%;left:50%;margin-left:-40px;border-width:40px;border-style:solid;border-color:transparent transparent #006dae transparent;}
 
 
 .pep_left_line{border-bottom:3px dashed #ccc;width:50%;position:absolute;margin-top:40px;margin-left:47%;z-index:-1;}
