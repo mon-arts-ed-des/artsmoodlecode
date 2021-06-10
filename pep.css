@@ -100,7 +100,7 @@ h4.bluetitle{color:#006DAE;}
 .pep_tooltip .tooltiptext p{text-align:left;font-size: 1rem;line-height: 1.5rem;}
 
 .pep_bar{background:#006dae;width: 85%;font-weight:bold; color:#fff;}
-.pep_top_bar::after{content:" ";position:absolute;top:78%;left:50%;margin-left:-40px;border-width:40px;border-style:solid;border-color:#006dae transparent transparent transparent;}
+.pep_top_bar::after{content:" ";position:absolute;top:77%;left:50%;margin-left:-40px;border-width:40px;border-style:solid;border-color:#006dae transparent transparent transparent;}
 .pep_bottom_bar::after{content:" ";position:absolute;bottom:100%;left:50%;margin-left:-40px;border-width:40px;border-style:solid;border-color:transparent transparent #006dae transparent;}
 
 
