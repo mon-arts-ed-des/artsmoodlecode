@@ -30,6 +30,7 @@ li.breadcrumb-item a:hover{
 }
 .breadcrumb-item+.breadcrumb-item::before {
 content: ">";
+font-family: 'FontAwesome';
 }
 /*currently not used.
 #inst3343846 ul {
