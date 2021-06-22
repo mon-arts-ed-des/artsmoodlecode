@@ -6,7 +6,7 @@ var home_array=["welcome","overview","home"];
 var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
-var topics_array=["topic","week","module","day","block"];
+var topics_array=["topic","week","module","day","block","session"];
 var zoom_array=["zoom","zoom sessions","zoom (online only)","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
@@ -284,6 +284,10 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 		else if(dropdownText.indexOf("Day") != -1){
 			$('.arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
 	        }
+		else if(dropdownText.indexOf("Session") != -1){
+			$('.arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>');
+			$('.arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
+	        }
 }
 
 
@@ -317,9 +321,15 @@ function continue_start(){
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
 	if(location.search.indexOf("&")==-1){
+		if($('#page-course-view-topics').length>0){
+			$('.topics').remove();
+		}
+		else if($('#page-course-view-topcoll').length>0){
+
 		document.querySelector(".topics").remove();
 		document.querySelector("#toggle-all").remove();
 		document.querySelector("#topcoll-display-instructions").remove();
+			}
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
