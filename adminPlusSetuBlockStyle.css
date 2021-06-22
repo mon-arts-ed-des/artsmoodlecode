@@ -64,6 +64,27 @@ border: 2px solid #f0f0f0 !important;
 border-radius: 5px !important;
 padding: 5px 0px 5px 0px !important;
 }
+/*style the back to top button to match the nav colours and position it in away from the blocks column*/
+#goto-top-link a {
+ line-height: 2rem !important;
+  background: #006DAE;
+  color: white;
+  padding: 10px 10px 10px 16px;
+  margin: 10px;
+  text-align: center;
+  position: fixed ;
+  bottom: 200px;
+  right: 300px;
+  z-index: 1;
+  border: 3px solid #3d90c2;
+  border-radius:10px;
+  box-shadow: 1px 1px 8px grey;
+}
+/*style the back to top button hover change*/
+#goto-top-link a:hover{
+  background: #3d90c2;
+  border: 3px solid #006DAE;
+}
 /*the following three sets of styling hide this block that contains styling for the Admin block so that it isn't visible unless altered in the browser's inspector. Block instance-3098311. This also hides inst3242994 which refers to the logged in user block at category level*/
 #inst3098311, #inst3243453 {
 box-shadow: none !important;
