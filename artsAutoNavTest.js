@@ -286,7 +286,7 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 	        }
 		else if(dropdownText.indexOf("Session") != -1){
 			$('.arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>');
-			//$('.arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
+			$('.arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
 	        }
 }
 
