@@ -284,6 +284,9 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 		else if(dropdownText.indexOf("Day") != -1){
 			$('.arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
 	        }
+		else if(dropdownText.indexOf("Session") != -1){
+			$('.arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>')
+	        }
 }
 
 
