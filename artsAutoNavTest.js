@@ -6,8 +6,8 @@ var home_array=["welcome","overview","home"];
 var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
-var topics_array=["topic","week","module","day","block","session"];
-var zoom_array=["zoom","zoom sessions","zoom workshops","zoom tutorials","zoom links"]
+var topics_array=["topic","week","module","day","block","sessions"];
+var zoom_array=["zoom","zoom sessions","zoom (online only)","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
 var dropdownText;
@@ -127,7 +127,7 @@ function get_assessment(){
 		$.each(orig_array,function(x,obj){
 			if(word==obj.name.toLowerCase()){
 				if(log_this)console.log("FOUND "+word+" AT "+x);
-				var tmp='<div id="arts-assessment"><a href="'+obj.href+'"><i class="fa fa-pencil-alt fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
+				var tmp='<div id="arts-assessment"><a href="'+obj.href+'"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
 				nav_array.push(tmp);
 				if(!start_section)start_section=obj.href;
 			}
@@ -285,7 +285,8 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 			$('.arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
 	        }
 		else if(dropdownText.indexOf("Session") != -1){
-			$('.arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>')
+			$('.arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>');
+			$('.arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
 	        }
 }
 
@@ -320,15 +321,9 @@ function continue_start(){
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
 	if(location.search.indexOf("&")==-1){
-
-		try{
-			document.querySelector(".topics").remove();
-			document.querySelector("#toggle-all").remove();
-			document.querySelector("#topcoll-display-instructions").remove();
-		}catch(ex){
-			if(log_this)console.log(ex);
-		}
-
+		document.querySelector(".topics").remove();
+		document.querySelector("#toggle-all").remove();
+		document.querySelector("#topcoll-display-instructions").remove();
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
