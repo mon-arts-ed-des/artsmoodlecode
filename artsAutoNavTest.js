@@ -1,3 +1,4 @@
+window.addEventListener('load' function(){
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
 var log_this=true;
 var orig_array=[];
@@ -396,3 +397,4 @@ function set_sticky_nav(){
     navbar.classList.remove("sticky");
   }
 }
+});
