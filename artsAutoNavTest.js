@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded' function(){
+window.addEventListener('DOMContentLoaded', function(){
 	if(location.search.indexOf("&")==-1){
 		if($('#page-course-view-topics').length>0){
 			$('.topics').remove();
