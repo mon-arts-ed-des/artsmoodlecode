@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		var currentLocation=window.location.href;
 		var newLocation=currentLocation+"&section=1";
 		window.location.href=newLocation;
+	}
 		/*if(document.getElementById("page-course-view-topics")!=null){
 		document.querySelector(".topics").remove();
 		}
