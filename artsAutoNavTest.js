@@ -38,8 +38,6 @@ window.addEventListener('DOMContentLoaded' function(){
 		//on the right page now so start nav building
 		checkJQuery();
 	}
-
-}
 })
 window.addEventListener('load' function(){
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
