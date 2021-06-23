@@ -2,14 +2,13 @@ window.addEventListener('DOMContentLoaded', function(){
 	if(location.search.indexOf("&")==-1){
 		window.stop();
 		if(document.getElementById("page-course-view-topics")!=null){
-		document.querySelector(".topics").remove();
+			document.querySelector(".topics").remove();
 		}
 		else if(document.getElementById("page-course-view-topcoll")!=null){
-
-		document.querySelector(".topics").remove();
-		document.querySelector("#toggle-all").remove();
-		document.querySelector("#topcoll-display-instructions").remove();
-			}
+			document.querySelector(".topics").remove();
+			document.querySelector("#toggle-all").remove();
+			document.querySelector("#topcoll-display-instructions").remove();
+		}
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
@@ -41,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	}
 })
 window.addEventListener('load', function(){
-checkJQuery();
+
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
 var log_this=true;
 var orig_array=[];
@@ -339,6 +338,8 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 
 function continue_start(){
 	if(log_this)console.log("continue_start");
+	checkJQuery();
+}
 	//var queryArr=['section','edit','completion','#section-','user','enrol','group','roles','filter','report','grade','backup','reset','question','files','admin','preview'];
 	//$.inArray(window.location.href,queryArr);
 
