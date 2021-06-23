@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(){
 	if(location.search.indexOf("&")==-1){
-		if($('#page-course-view-topics').length>0){
-			$('.topics').remove();
+		if(getElementById("page-course-view-topics").length>0){
+		document.querySelector(".topics").remove();
 		}
 		else if($('#page-course-view-topcoll').length>0){
 
