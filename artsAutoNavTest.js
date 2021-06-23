@@ -1,3 +1,46 @@
+window.addEventListener('DOMContentLoaded' function(){
+	if(location.search.indexOf("&")==-1){
+		if($('#page-course-view-topics').length>0){
+			$('.topics').remove();
+		}
+		else if($('#page-course-view-topcoll').length>0){
+
+		document.querySelector(".topics").remove();
+		document.querySelector("#toggle-all").remove();
+		document.querySelector("#topcoll-display-instructions").remove();
+			}
+		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
+
+		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
+
+		//change the current window address to the new section
+
+		try{
+
+			//var navdr=document.getElementById('nav-drawer');
+			var atags=document.querySelectorAll('#nav-drawer a');
+
+			var regex=/\b(?:overview|welcome|home)\b/gi;
+			for(var i=0;i<atags.length;i++){
+				if(atags[i].innerText.match(regex)){
+					var overviewSection=atags[i].href;
+					break;
+				}
+			}
+
+			overviewSection=overviewSection.replace("#section-", "&section=");
+			window.location.href = overviewSection;
+		}catch(ex){
+			if(log_this)console.log(ex);
+		}
+
+	}else{
+		//on the right page now so start nav building
+		checkJQuery();
+	}
+
+}
+})
 window.addEventListener('load' function(){
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
 var log_this=true;
@@ -321,7 +364,7 @@ function continue_start(){
 	//section is null so it must be the entry page
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
-	if(location.search.indexOf("&")==-1){
+	/*if(location.search.indexOf("&")==-1){
 		if($('#page-course-view-topics').length>0){
 			$('.topics').remove();
 		}
@@ -361,7 +404,7 @@ function continue_start(){
 		checkJQuery();
 	}
 
-}
+}*/
 
 function set_start() {
 	try{
