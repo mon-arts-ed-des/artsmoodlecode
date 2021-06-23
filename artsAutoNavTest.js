@@ -3,18 +3,14 @@ window.addEventListener('DOMContentLoaded', function(){
 		/*Simplistic idea if every single overview section was in section 1. Loads slower though. Check with Nigel.*/
 		if(document.getElementById("page-course-view-topics")!=null){
 		document.querySelector(".topics").remove();
-		var currentLocation=window.location.href;
-		var newLocation=currentLocation+"&section=1";
-		window.location.href=newLocation;	
+		window.location.href=window.location.href+"&section=1";	
 		}
 		else if(document.getElementById("page-course-view-topcoll")!=null){
 
 		document.querySelector(".topics").remove();
 		document.querySelector("#toggle-all").remove();
 		document.querySelector("#topcoll-display-instructions").remove();
-		var currentLocation=window.location.href;
-		var newLocation=currentLocation+"&section=1";
-		window.location.href=newLocation;
+		window.location.href=window.location.href+"&section=1";	
 			}
 		
 	}
