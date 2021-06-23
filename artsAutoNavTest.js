@@ -1,20 +1,6 @@
 window.addEventListener('DOMContentLoaded', function(){
 	if(location.search.indexOf("&")==-1){
-		/*Simplistic idea if every single overview section was in section 1. Loads slower though. Check with Nigel.*/
 		if(document.getElementById("page-course-view-topics")!=null){
-		document.querySelector(".topics").remove();
-		window.location.href=window.location.href+"&section=1";	
-		}
-		else if(document.getElementById("page-course-view-topcoll")!=null){
-
-		document.querySelector(".topics").remove();
-		document.querySelector("#toggle-all").remove();
-		document.querySelector("#topcoll-display-instructions").remove();
-		window.location.href=window.location.href+"&section=1";	
-			}
-		
-	}
-	/*	if(document.getElementById("page-course-view-topics")!=null){
 		document.querySelector(".topics").remove();
 		}
 		else if(document.getElementById("page-course-view-topcoll")!=null){
@@ -50,10 +36,11 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	}else{
 		//on the right page now so start nav building
-		checkJQuery();
-	}*/
+		
+	}
 })
 window.addEventListener('load', function(){
+checkJQuery();
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
 var log_this=true;
 var orig_array=[];
