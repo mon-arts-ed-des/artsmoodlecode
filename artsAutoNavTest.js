@@ -1,6 +1,9 @@
 window.addEventListener('DOMContentLoaded', function(){
 	if(location.search.indexOf("&")==-1){
-		if(document.getElementById("page-course-view-topics")!=null){
+		var currentLocation=window.location.href;
+		var newLocation=currentLocation+"&section=1";
+		window.location.href=newLocation;
+		/*if(document.getElementById("page-course-view-topics")!=null){
 		document.querySelector(".topics").remove();
 		}
 		else if(document.getElementById("page-course-view-topcoll")!=null){
@@ -37,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	}else{
 		//on the right page now so start nav building
 		checkJQuery();
-	}
+	}*/
 })
 window.addEventListener('load', function(){
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
