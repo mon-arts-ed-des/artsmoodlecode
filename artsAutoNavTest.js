@@ -1,9 +1,9 @@
 window.addEventListener('DOMContentLoaded', function(){
 	if(location.search.indexOf("&")==-1){
-		if(getElementById("page-course-view-topics").length>0){
+		if(document.getElementById("page-course-view-topics").length>0){
 		document.querySelector(".topics").remove();
 		}
-		else if($('#page-course-view-topcoll').length>0){
+		else if(document.getElementById("page-course-view-topcoll").length>0){
 
 		document.querySelector(".topics").remove();
 		document.querySelector("#toggle-all").remove();
