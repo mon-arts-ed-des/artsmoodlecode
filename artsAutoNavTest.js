@@ -438,4 +438,5 @@ function set_sticky_nav(){
     navbar.classList.remove("sticky");
   }
 }
+}
 });
