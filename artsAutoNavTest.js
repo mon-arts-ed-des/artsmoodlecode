@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		checkJQuery();
 	}
 })
-window.addEventListener('load' function(){
+window.addEventListener('load', function(){
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
 var log_this=true;
 var orig_array=[];
