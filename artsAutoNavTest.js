@@ -38,6 +38,16 @@ window.addEventListener('DOMContentLoaded', function(){
 		//on the right page now so start nav building
 		
 	}
+		stickNav=document.createElement('link');
+		stickNav.rel='stylesheet';
+		stickNav.href='https://mon-arts-ed-des.github.io/artsmoodlecode/stickyNav.css';
+		stickNav.type="text/css"
+		document.getElementsByTagName('head')[0].appendChild(stickNav);
+		artsNavCSS=document.createElement('link');
+		artsNavCSS.rel='stylesheet';
+		artsNavCSS.href='https://liberatelms.com/_boot/monash/art/banner/arts_banner.css';
+		artsNavCSS.type="text/css"
+		document.getElementsByTagName('head')[0].appendChild(artsNavCSS);
 })
 window.addEventListener('load', function(){
 
