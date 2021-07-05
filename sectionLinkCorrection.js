@@ -43,7 +43,7 @@ window.onload=function(){
 	if(headerTitle.indexOf("APG") >= 1){
 		$('#inst3357177').css('display','block');
 	}
-	
+/* attendance notification	
 // define expiration duration as 144 hours
 	const expirationDuration = 1000 * 60 * 60 * 144;
 // save the time of the current login to localStorage
@@ -78,6 +78,7 @@ window.onload=function(){
       		//Do nothing
     		}
 	}
+	*/
 //add material to our FoA category if you are a tutor, lect, non-primary lect, designer or admin
 //check the role level. Tutor and above have access to the recycle bin link. So the material that follows will not display to students.
 //Check the admin block. Check each link in the block.
@@ -90,6 +91,7 @@ window.onload=function(){
 					$('.section_action_menu .editing_delete').css('display','none');
 					$('#inst3407551 .action-menu-trigger').css('display','none');
 					$('#inst3407542 .action-menu-trigger').css('display','none');
+					$('#section-0 .summary .fa-cog').closest('a').remove();
 					$("#nav-drawer .list-group a").each(function(){
 						if($(this).text().match(/Staff resources/)){
 
