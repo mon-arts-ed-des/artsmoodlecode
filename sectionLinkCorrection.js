@@ -91,7 +91,7 @@ window.onload=function(){
 					$('.section_action_menu .editing_delete').css('display','none');
 					$('#inst3407551 .action-menu-trigger').css('display','none');
 					$('#inst3407542 .action-menu-trigger').css('display','none');
-					$('#section-0 .summary .fa-cog').closest('a').remove();
+					//$('#section-0 .summary .fa-cog').closest('a').remove();
 					$("#nav-drawer .list-group a").each(function(){
 						if($(this).text().match(/Staff resources/)){
 
