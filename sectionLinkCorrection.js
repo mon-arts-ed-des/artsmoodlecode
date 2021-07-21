@@ -146,6 +146,23 @@ window.onload=function(){
 				};
 			};
 		});
+	//make a variable of the section name
+  var assessmentSectionName=$('.sectionname').text();
+  //check if we are on the assessments section
+  if (assessmentSectionName.indexOf('Assessment')!=-1){
+    //check if the assessment text already exists
+    if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
+      console.log('text present')
+    }
+    else{
+      //input the text if it isn't already present, after the section name
+      console.log('text NOT present')
+      $('.sectionname').after('<p>Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:</p><p><em>You will receive a penalty of 10 per cent for late submission, and a further 10 per cent penalty will be applied for each additional day (24-hour period), or part thereof, that the assessment task is overdue. Assessment tasks submitted more than seven days late will not be accepted and will receive a zero mark.</em></p>')
+    }
+  }
+  else{
+    console.log('not Assessment Section')
+  }
 //Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
 /*	var currentURL = window.location.href;
