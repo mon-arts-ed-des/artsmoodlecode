@@ -163,6 +163,9 @@ window.onload=function(){
   else{
     console.log('not Assessment Section')
   }
+	//Start modification here
+	
+	//Next modification needs to start here
 //Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
 /*	var currentURL = window.location.href;
