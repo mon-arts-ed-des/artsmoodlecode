@@ -3,7 +3,7 @@ function removePenaltyText(){
   setTimeout(function(){
     var assessmentPenaltyText=document.getElementById("assessmentPenaltyText");
     assessmentPenaltyText.remove();
-    alert('run')
+console.log('Penalty text removed')
   }, 1000
             );
 };
