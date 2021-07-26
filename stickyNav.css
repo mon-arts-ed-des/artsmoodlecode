@@ -18,11 +18,11 @@ margin-top: 64px !important;
 .sticky .section{
 	display:none;
 }
-.sticky .arts-banner-btn{
+/*.sticky .arts-banner-btn{
 	position: absolute;
 	right: 10px;
 	top: -40px;
-}
+}*/
 #region-main{
 	padding:5px !important;
 }
