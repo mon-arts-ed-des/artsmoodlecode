@@ -1,6 +1,14 @@
 // directs the function to work once the page has loaded.
 window.onload=function(){
-// change all links that have #section- in them which goes to the all sections page, to &section= links that go to the single section instead
+	//temporarily remove liberate's CSS to fix nav issue until Nigel can help resolve the changes with best practice
+	var libLink = $( 'link[href*="https://liberatelms.com/_boot/monash/art/banner/arts_banner.css"]' );
+	libLink.remove();
+	var newNavCSS =document.createElement('link');
+	newNavCSS.rel='stylesheet';
+	newNavCSS.href='https://mon-arts-ed-des.github.io/artsmoodlecode/artsAutoNav.css';
+	newNavCSS.type="text/css";
+	document.getElementsByTagName('head')[0].appendChild(newNavCSS);
+	// change all links that have #section- in them which goes to the all sections page, to &section= links that go to the single section instead
 	$('nav a, .bookexit').each(function(){
         	this.href=this.href.replace('#section-','&section=');
 // opens the atto editor completely on load    
