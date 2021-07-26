@@ -104,13 +104,24 @@
 
 
 @media all and (max-width: 1000px) {
+  .arts-banner-btn{display: block !important;}
+	.arts-banner-nav-row{display: none;}
+	.arts-banner-nav-row div a{padding:0 2px;}
+  .arts-banner-nav {display: none;border-bottom: 0px;-webkit-flex-flow: column wrap;flex-flow: column wrap;padding: 0;}
+	.arts-banner-nav a{padding: 10px;border-top: 1px solid rgba(255,255,255,0.3);border-bottom: 1px solid rgba(0,0,0,0.1);display: block;}
+  .arts-banner-nav div:first-of-type a {border-top: 1px solid rgba(0,0,0,0.1);}
+  .arts-banner-dropdown-content{position: static !important;}
+}
+
+
+/*{
 	.arts-nav-container{padding:0;margin:0;}
   .arts-banner-nav {border-bottom: 0px;-webkit-flex-flow: column wrap;flex-flow: column wrap;padding: 0;}
   .arts-banner-nav a {padding: 10px;border-top: 1px solid rgba(255,255,255,0.3);border-bottom: 1px solid rgba(0,0,0,0.1); 
     display: block;}
   .arts-banner-nav div:first-of-type a {border-top: 1px solid rgba(0,0,0,0.1);}
   .arts-banner-dropdown-content{position: static !important;}
-}
+}*/
 
 @media all and (max-width: 600px) {
   .arts-banner-btn{display: block !important;}
