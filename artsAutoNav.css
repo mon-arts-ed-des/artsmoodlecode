@@ -76,7 +76,7 @@
   width:100px;
   position: relative;
   text-align: center;
-	margin-bottom:10px;
+  margin:0px auto 10px auto;
   display: none;
 }
 .arts-banner-btn:hover{
@@ -133,7 +133,7 @@
   .arts-banner-dropdown-content{position: static !important;}
 }
 
-@media all and (min-width: 601px) { 
+@media all and (min-width: 1000px) { 
  	.arts-banner-btn{display: none !important;}
   .arts-banner-nav{display: flex !important}
 	.arts-banner-nav-row{display: inline-block !important;}
