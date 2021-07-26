@@ -144,28 +144,31 @@ window.onload=function(){
 					$(".header-right").prepend('<div class="custom-menus my-auto"><a type="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="BEEST" style="width:38px; height: 38px;" data-toggle="modal" data-target=".beest-home-modal" id="beestDropdown"><img src="https://mon-arts-ed-des.github.io/BEEST/img/dragon-solid-black.png" width="20px" height="20px" style="margin-bottom: 4px;" /></a>');
 					$("#region-main").append('<style>.modal-beest{max-width: 80% !important;}</style><div class="modal fade beest-home-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg modal-beest"><div class="modal-content"><div class="modal-header mb-0 p-2 bg-danger text-white px-5"><h5 class="modal-title text-white my-auto" id="exampleModalLabel">To close this window click the button on the right or anywhere outside this box.</h5><button type="button" class="btn btn-outline-light btn-lg rounded" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <i class="fa fa-times"></i></span></button></div><iframe src="https://mon-arts-ed-des.github.io/BEEST/index.html" width="100%" height="900px"></iframe></div></div></div>');
 				};
+//If you have asked for the unit search bar to be available to you, add the search bar/Moodle FoA category link into your profile
+			if(userName == "Tim Scholl" || userName == "Carmen Sapsed" || userName == "Andrew Williams" || userName == "Anita Cascone" || userName == "Yiou Zhang" || userName == "Melva Renshaw" || userName == "Diana Wong" || userName == "Eleanor Horsburgh" || userName == "Tanya Leznik"){
+			$('.header-right').first().after('<div class="fixed-top w-75 text-center mx-auto" style="position:absolute;top:-5px;"><form id="coursesearch" action="https://lms.monash.edu/course/search.php" method="get" target="_blank" class="text-center"><fieldset class="coursesearchbox invisiblefieldset mx-auto w-75"><input type="text" id="coursesearchbox" name="search" placeholder="Unit code/title" class="w-25 p-2 h5 text-center mr-2"> <button type="submit" target="_blank" class="btn btn-default text-white bg-dark btn-lg h5 p-2 ml-2 w-25">Search <i class="fa fa-search" aria-hidden="true"></i></button><button class="btn btn-default text-white bg-dark btn-lg h5 p-2 ml-2 w-25" href="https://lms.monash.edu/course/index.php?categoryid=23" target="_blank"">Go To Categories <i class="fa fa-fw fa-database" aria-hidden="true"></i></button></fieldset></form></div>');
 			};
-		});
+		};
+	});
 	//make a variable of the section name
-  var assessmentSectionName=$('.sectionname').text();
-  //check if we are on the assessments section
-  if (assessmentSectionName.indexOf('Assessment')!=-1){
-    //check if the assessment text already exists
-    if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
-      console.log('text present')
-    }
-    else{
-      //input the text if it isn't already present, after the section name
-      console.log('text NOT present')
-      $('.sectionname').after('<div id="assessmentPenaltyText"><p>Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:</p><p><em>You will receive a penalty of 10 per cent for late submission, and a further 10 per cent penalty will be applied for each additional day (24-hour period), or part thereof, that the assessment task is overdue. Assessment tasks submitted more than seven days late will not be accepted and will receive a zero mark.</em></p></div>')
-    }
-  }
-  else{
-    console.log('not Assessment Section')
-  }
-	//Start modification here
+	var assessmentSectionName=$('.sectionname').text();
+	//check if we are on the assessments section
+	if (assessmentSectionName.indexOf('Assessment')!=-1){
+		//check if the assessment text already exists
+		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
+			console.log('text present')
+		}
+		else{
+			//input the text if it isn't already present, after the section name
+			console.log('text NOT present')
+			$('.sectionname').after('<div id="assessmentPenaltyText"><p>Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:</p><p><em>You will receive a penalty of 10 per cent for late submission, and a further 10 per cent penalty will be applied for each additional day (24-hour period), or part thereof, that the assessment task is overdue. Assessment tasks submitted more than seven days late will not be accepted and will receive a zero mark.</em></p></div>')
+		}
+	}
+	else{
+		console.log('not Assessment Section')
+	}
 	
-	//Next modification needs to start here
+	//Next Moodle modification needs to start on the line above. Leave this comment in place for future modifications.
 //Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
 /*	var currentURL = window.location.href;
