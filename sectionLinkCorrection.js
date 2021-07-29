@@ -175,7 +175,8 @@ window.onload=function(){
 	else{
 		console.log('not Assessment Section')
 	}
-	
+	$('#inst3494068 div.card-text div.no-overflow p').remove();
+	$('#inst3494068 div.card-text div.no-overflow').prepend('<div class="pb-0 pt-1 px-2 preambleAssessment mt-0"><p>Meet with an adviser for learning and English language support by clicking below.</p><p><a href="https://www.monash.edu/students/study-support/learning" class="btn btn-default btn-block w-50 mx-auto btn-secondary" target="_blank" title="Learning and English Language support">Go <i class="fa fa-arrow-right aria-hidden="true"></i></a></p></div>');
 	//Next Moodle modification needs to start on the line above. Leave this comment in place for future modifications.
 //Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
