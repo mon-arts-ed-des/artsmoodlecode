@@ -195,12 +195,12 @@ a.icc-accordion-show{border-bottom:0 !important;}
 
 .arts-nav {overflow: hidden;margin-left:3rem !important;}
 .arts-nav a{float:left;font-size:1.2em;color:#777 !important;text-align: center;padding:14px 2px 0 2px;text-decoration:none;font-weight:400;margin-right:20px;}
-.arts-nav a::after, .arts-dropdown .arts-dropdown-btn::after{content:'';display:block;width:100%;height:6px;margin-top:10px;background:#fff;border-bottom:1px solid #ccc;}
+.arts-nav a::after, .arts-dropdown .arts-dropdown-btn::after{content:'';display:block;width:100%;height:6px;margin-top:6px;background:#fff;border-bottom:3px solid #ccc;}
 .arts-nav a.arts-nav-active{color:#016CAC !important;}
 .arts-nav a:hover, .arts-dropdown-btn:hover{color:#016CAC;}
 .arts-nav a:focus{background-color:transparent;box-shadow:none;}
-.arts-nav a:hover::after,.arts-nav a:focus::after,.arts-dropdown .arts-dropdown-btn:hover::after,.arts-dropdown .arts-dropdown-btn:focus::after{height:6px;background:#016CAC;width:100%;}
-.arts-nav a.arts-nav-active:after{height:6px;background:#016CAC;width:100%;}
+.arts-nav a:hover::after,.arts-nav a:focus::after,.arts-dropdown .arts-dropdown-btn:hover::after,.arts-dropdown .arts-dropdown-btn:focus::after{height:3px;background:#016CAC;width:100%;}
+.arts-nav a.arts-nav-active:after{height:3px;background:#016CAC;width:100%;}
 .arts-num{color: #777;padding-right:10px;}
 .arts-dropdown{float:left;overflow:hidden;}
 .arts-dropdown .arts-dropdown-btn{font:unset;padding:14px 16px 0 16px;margin:0;font-size:1.2em;cursor:pointer;background-color:transparent;border:0;font-weight: 600;}
