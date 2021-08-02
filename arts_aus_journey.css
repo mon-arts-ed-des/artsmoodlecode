@@ -193,7 +193,7 @@ a.icc-accordion-show{border-bottom:0 !important;}
 
 
 
-.arts-nav {overflow: hidden;}
+.arts-nav {overflow: hidden;margin-left:3rem !important;}
 .arts-nav a{float:left;font-size:1.2em;color:#777 !important;text-align: center;padding:14px 2px 0 2px;text-decoration:none;font-weight:400;margin-right:20px;}
 .arts-nav a::after, .arts-dropdown .arts-dropdown-btn::after{content:'';display:block;width:100%;height:6px;margin-top:10px;background:#fff;border-bottom:1px solid #ccc;}
 .arts-nav a.arts-nav-active{color:#016CAC !important;}
