@@ -6,20 +6,29 @@
 #page-header a, #page-content a{color:#016CAC;}
 .modified{display:none;}
 .activity-navigation{display:none;}
-
 .section-navigation .mdl-left, .section-navigation .mdl-right, .jumpmenu{display: none !important;}
-
 .container{max-width: 100% !important;padding-bottom:3rem;}
 .container-no-bottom-padding{padding-bottom:0;}
-
 .section-navigation .container {padding-bottom: 0;}
 .content > .container{padding-bottom: .5rem;}
-
-
-.pad1rem{margin-left:1rem !important;}
-h3.sectionname{color:#016CAC;text-align:left !important;margin-left:4rem;font-weight:300;}
-
+h3.sectionname{color:#016CAC;text-align:left !important;margin-left:3rem;font-weight:300;}
 .activityinstance{margin-left:2rem;}
+
+h1,h2,h3,h4,h5{margin-bottom: 1.5rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .icc-tabs .nav-item{border:1px solid #ccc;border-top-left-radius:10px;border-top-right-radius: 10px;border-bottom:0;margin-right:2px;list-style:none;}
 .icc-card{padding:20px;width:100%;}
@@ -269,7 +278,7 @@ a.icc-accordion-show{border-bottom:0 !important;}
 }
 
 
-.arts-num{color: #016CAC;padding-right:10px;}
+.arts-num{color: #777;padding-right:10px;}
 
 
 /* --------------- mobile -----------------*/
