@@ -198,6 +198,7 @@ a.icc-accordion-show{border-bottom:0 !important;}
 .arts-nav a::after, .arts-dropdown .arts-dropdown-btn::after{content:'';display:block;width:100%;height:6px;margin-top:10px;background:#fff;border-bottom:1px solid #ccc;}
 .arts-nav a.arts-nav-active{color:#016CAC !important;}
 .arts-nav a:hover, .arts-dropdown-btn:hover{color:#016CAC;}
+.arts-nav a:focus{background-color:transparent;box-shadow:none;}
 .arts-nav a:hover::after,.arts-nav a:focus::after,.arts-dropdown .arts-dropdown-btn:hover::after,.arts-dropdown .arts-dropdown-btn:focus::after{height:6px;background:#016CAC;width:100%;}
 .arts-nav a.arts-nav-active:after{height:6px;background:#016CAC;width:100%;}
 .arts-num{color: #777;padding-right:10px;}
