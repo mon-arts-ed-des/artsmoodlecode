@@ -1,3 +1,56 @@
+window.addEventListener('DOMContentLoaded', function(){
+	if(location.search.indexOf("&")==-1){
+		window.stop();
+		if(document.getElementById("page-course-view-topics")!=null){
+			document.querySelector(".topics").remove();
+		}
+		else if(document.getElementById("page-course-view-topcoll")!=null){
+			document.querySelector(".topics").remove();
+			document.querySelector("#toggle-all").remove();
+			document.querySelector("#topcoll-display-instructions").remove();
+		}
+		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
+
+		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
+
+		//change the current window address to the new section
+
+		try{
+
+			//var navdr=document.getElementById('nav-drawer');
+			var atags=document.querySelectorAll('#nav-drawer a');
+
+			var regex=/\b(?:overview|welcome|home)\b/gi;
+			for(var i=0;i<atags.length;i++){
+				if(atags[i].innerText.match(regex)){
+					var overviewSection=atags[i].href;
+					break;
+				}
+			}
+
+			overviewSection=overviewSection.replace("#section-", "&section=");
+			window.location.href = overviewSection;
+		}catch(ex){
+			if(log_this)console.log(ex);
+		}
+
+	}else{
+		//on the right page now so start nav building
+		
+	}
+		stickNav=document.createElement('link');
+		stickNav.rel='stylesheet';
+		stickNav.href='https://mon-arts-ed-des.github.io/artsmoodlecode/stickyNav.css';
+		stickNav.type="text/css"
+		document.getElementsByTagName('head')[0].appendChild(stickNav);
+		artsNavCSS=document.createElement('link');
+		artsNavCSS.rel='stylesheet';
+		artsNavCSS.href='https://liberatelms.com/_boot/monash/art/banner/arts_banner.css';
+		artsNavCSS.type="text/css"
+		document.getElementsByTagName('head')[0].appendChild(artsNavCSS);
+})
+window.addEventListener('load', function(){
+
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
 var log_this=true;
 var orig_array=[];
@@ -6,8 +59,8 @@ var home_array=["welcome","overview","home"];
 var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
-var topics_array=["topic","week","module","day","block"];
-var zoom_array=["zoom","zoom sessions","zoom workshops","zoom tutorials","zoom links"]
+var topics_array=["topic","week","module","day","block","session"];
+var zoom_array=["zoom","zoom sessions","zoom (online only)","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
 var dropdownText;
@@ -127,7 +180,7 @@ function get_assessment(){
 		$.each(orig_array,function(x,obj){
 			if(word==obj.name.toLowerCase()){
 				if(log_this)console.log("FOUND "+word+" AT "+x);
-				var tmp='<div id="arts-assessment"><a href="'+obj.href+'"><i class="fa fa-pencil-alt fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
+				var tmp='<div id="arts-assessment"><a href="'+obj.href+'"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i> '+obj.name+'</a></div>';
 				nav_array.push(tmp);
 				if(!start_section)start_section=obj.href;
 			}
@@ -284,6 +337,10 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 		else if(dropdownText.indexOf("Day") != -1){
 			$('.arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
 	        }
+		else if(dropdownText.indexOf("Session") != -1){
+			$('.arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>');
+			$('.arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
+	        }
 }
 
 
@@ -291,6 +348,8 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 
 function continue_start(){
 	if(log_this)console.log("continue_start");
+	checkJQuery();
+}
 	//var queryArr=['section','edit','completion','#section-','user','enrol','group','roles','filter','report','grade','backup','reset','question','files','admin','preview'];
 	//$.inArray(window.location.href,queryArr);
 
@@ -316,16 +375,16 @@ function continue_start(){
 	//section is null so it must be the entry page
 	//if (sectionNumberRD == -1 && editScreenRD == -1 && completionRD == -1 && userRD == -1 && completionRD == -1 && enrolRD == -1 && groupRD == -1 && rolesRD == -1 && filterRD == -1 && reportRD == -1 && gradeRD == -1 && backupRD == -1 && resetRD == -1 && questionRD == -1 && filesRD == -1 && adminRD == -1 && previewRD == -1 || hashSectionRD > -1) {
 
-	if(location.search.indexOf("&")==-1){
-
-		try{
-			document.querySelector(".topics").remove();
-			document.querySelector("#toggle-all").remove();
-			document.querySelector("#topcoll-display-instructions").remove();
-		}catch(ex){
-			if(log_this)console.log(ex);
+	/*if(location.search.indexOf("&")==-1){
+		if($('#page-course-view-topics').length>0){
+			$('.topics').remove();
 		}
+		else if($('#page-course-view-topcoll').length>0){
 
+		document.querySelector(".topics").remove();
+		document.querySelector("#toggle-all").remove();
+		document.querySelector("#topcoll-display-instructions").remove();
+			}
 		//find the link that has the text Overview or Welcome in it and take its href value and assign it to a variable
 
 		//var overviewSection=$("nav a:contains('Overview'), nav a:contains('Welcome'), nav a:contains('Home')").attr('href');
@@ -356,7 +415,7 @@ function continue_start(){
 		checkJQuery();
 	}
 
-}
+}*/
 
 function set_start() {
 	try{
@@ -392,3 +451,4 @@ function set_sticky_nav(){
     navbar.classList.remove("sticky");
   }
 }
+});

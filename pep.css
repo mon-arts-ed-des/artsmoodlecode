@@ -3,10 +3,10 @@
 
 .course-content ul.gtopics li.section .content{margin:0;}
 .section .label .mod-indent-outer{padding-left:0;}
-.section .activity.modtype_label.label{padding-bottom: 2rem;}
+/*.section .activity.modtype_label.label{padding-bottom: 2rem;}*/
 h3.sectionname{display:none;}
 .section .label .contentwithoutlink, .section .label .activityinstance{padding-right:0;}
-.section .activity.modtype_label.label{padding:0 0 3rem 0;}
+/*.section .activity.modtype_label.label{padding:0 0 3rem 0;}*/
 .section-title{display:none;}
 .header-button .singlebutton {position:fixed;top:81px;right:20px;z-index:9000;}
 #page-header{margin-bottom:0;}
@@ -115,7 +115,7 @@ h4.bluetitle{color:#006DAE;}
 .pep_tooltip:hover .pep_pes_line{visibility:visible;transform:translateY(0px);height:32px;}
 .pep_tooltip:hover .pep_pes_line_down{visibility:visible;height:52px;}
 
-#module-8832465 .no-overflow{overflow: visible;}
+#module-8919312 .no-overflow{overflow: visible;}
 
 
 

@@ -1,6 +1,14 @@
 // directs the function to work once the page has loaded.
 window.onload=function(){
-// change all links that have #section- in them which goes to the all sections page, to &section= links that go to the single section instead
+	//temporarily remove liberate's CSS to fix nav issue until Nigel can help resolve the changes with best practice
+	var libLink = $( 'link[href*="https://liberatelms.com/_boot/monash/art/banner/arts_banner.css"]' );
+	libLink.remove();
+	var newNavCSS =document.createElement('link');
+	newNavCSS.rel='stylesheet';
+	newNavCSS.href='https://mon-arts-ed-des.github.io/artsmoodlecode/artsAutoNav.css';
+	newNavCSS.type="text/css";
+	document.getElementsByTagName('head')[0].appendChild(newNavCSS);
+	// change all links that have #section- in them which goes to the all sections page, to &section= links that go to the single section instead
 	$('nav a, .bookexit').each(function(){
         	this.href=this.href.replace('#section-','&section=');
 // opens the atto editor completely on load    
@@ -43,7 +51,7 @@ window.onload=function(){
 	if(headerTitle.indexOf("APG") >= 1){
 		$('#inst3357177').css('display','block');
 	}
-	
+/* attendance notification	
 // define expiration duration as 144 hours
 	const expirationDuration = 1000 * 60 * 60 * 144;
 // save the time of the current login to localStorage
@@ -78,6 +86,7 @@ window.onload=function(){
       		//Do nothing
     		}
 	}
+	*/
 //add material to our FoA category if you are a tutor, lect, non-primary lect, designer or admin
 //check the role level. Tutor and above have access to the recycle bin link. So the material that follows will not display to students.
 //Check the admin block. Check each link in the block.
@@ -90,6 +99,7 @@ window.onload=function(){
 					$('.section_action_menu .editing_delete').css('display','none');
 					$('#inst3407551 .action-menu-trigger').css('display','none');
 					$('#inst3407542 .action-menu-trigger').css('display','none');
+					$('#section-0 .summary .fa-cog').closest('a').css('display','none');
 					$("#nav-drawer .list-group a").each(function(){
 						if($(this).text().match(/Staff resources/)){
 
@@ -132,6 +142,7 @@ window.onload=function(){
 			$('.section_action_menu .editing_delete').css('display','block');
 			$('#inst3407551 .action-menu-trigger').css('display','block');
 			$('#inst3407542 .action-menu-trigger').css('display','block');
+			$('#section-0 .summary .fa-cog').closest('a').css('display','inline-block');
 //Query the logged in user block and find the user's name
 			var userName = document.querySelector('.myprofileitem.fullname')
 			? document.querySelector('.myprofileitem.fullname').innerText
@@ -141,8 +152,32 @@ window.onload=function(){
 					$(".header-right").prepend('<div class="custom-menus my-auto"><a type="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="BEEST" style="width:38px; height: 38px;" data-toggle="modal" data-target=".beest-home-modal" id="beestDropdown"><img src="https://mon-arts-ed-des.github.io/BEEST/img/dragon-solid-black.png" width="20px" height="20px" style="margin-bottom: 4px;" /></a>');
 					$("#region-main").append('<style>.modal-beest{max-width: 80% !important;}</style><div class="modal fade beest-home-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg modal-beest"><div class="modal-content"><div class="modal-header mb-0 p-2 bg-danger text-white px-5"><h5 class="modal-title text-white my-auto" id="exampleModalLabel">To close this window click the button on the right or anywhere outside this box.</h5><button type="button" class="btn btn-outline-light btn-lg rounded" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close <i class="fa fa-times"></i></span></button></div><iframe src="https://mon-arts-ed-des.github.io/BEEST/index.html" width="100%" height="900px"></iframe></div></div></div>');
 				};
+//If you have asked for the unit search bar to be available to you, add the search bar/Moodle FoA category link into your profile
+			if(userName == "Tim Scholl" || userName == "Carmen Sapsed" || userName == "Andrew Williams" || userName == "Anita Cascone" || userName == "Yiou Zhang" || userName == "Melva Renshaw" || userName == "Diana Wong" || userName == "Eleanor Horsburgh" || userName == "Tanya Leznik"){
+			$('.header-right').first().after('<div class="fixed-top text-center" style="position:absolute;top:-5px;z-index:1;display: grid;left:25%;right:25%;text-align:center;max-width: 30%;"><form id="coursesearch" action="https://lms.monash.edu/course/search.php" method="get" target="_blank" class="text-center"><fieldset class="coursesearchbox invisiblefieldset"><input type="text" id="coursesearchbox" name="search" placeholder="Unit code/title" class="p-2 h5 text-center mr-2"> <button type="submit" target="_blank" class="btn btn-default text-white bg-dark btn-lg h5 p-2 ml-2"><i class="fa fa-search" aria-hidden="true"></i></button><a class="btn btn-default text-white bg-dark btn-lg h5 p-2 ml-2" href="https://lms.monash.edu/course/index.php?categoryid=23" target="_blank"><i class="fa fa-fw fa-database" aria-hidden="true"></i></a></fieldset></form></div>');
 			};
-		});
+		};
+	});
+	//make a variable of the section name
+	var assessmentSectionName=$('.sectionname').text();
+	//check if we are on the assessments section
+	if (assessmentSectionName.indexOf('Assessment')!=-1){
+		//check if the assessment text already exists
+		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
+			console.log('text present')
+		}
+		else{
+			//input the text if it isn't already present, after the section name
+			console.log('text NOT present')
+			$('.sectionname').after('<div id="assessmentPenaltyText"><p>Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:</p><p><em>You will receive a penalty of 10 per cent for late submission, and a further 10 per cent penalty will be applied for each additional day (24-hour period), or part thereof, that the assessment task is overdue. Assessment tasks submitted more than seven days late will not be accepted and will receive a zero mark.</em></p></div>')
+		}
+	}
+	else{
+		console.log('not Assessment Section')
+	}
+	$('#inst3494068 div.card-text div.no-overflow p').remove();
+	$('#inst3494068 div.card-text div.no-overflow').prepend('<div class="pb-0 pt-1 px-2 preambleAssessment mt-0"><p>Meet with an adviser for learning and English language support by clicking below.</p><p><a href="https://www.monash.edu/students/study-support/learning" class="btn btn-default btn-block w-50 mx-auto btn-secondary" target="_blank" title="Learning and English Language support">Go <i class="fa fa-arrow-right aria-hidden="true"></i></a></p></div>');
+	//Next Moodle modification needs to start on the line above. Leave this comment in place for future modifications.
 //Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
 /*	var currentURL = window.location.href;

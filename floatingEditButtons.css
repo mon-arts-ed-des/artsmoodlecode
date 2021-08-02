@@ -1,0 +1,50 @@
+.header-button button {
+   vertical-align: middle;
+   font-weight: 500;
+   border: 2px solid transparent;
+   color: white !important;
+   text-decoration: none !important;
+   background: #006dae;
+   padding: 0.25rem 0.4rem !important;
+   white-space: nowrap;
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+   border-radius: 60%;
+   font-size: 1rem !important;
+   position: fixed !important;
+   top: 70px;
+   right: 53px;
+   width: 42px;
+   margin-top: 70px !important;
+   z-index: 1;
+   line-height: 2rem;
+}
+.header-button button:hover {
+   background: #3d90c2;
+   color: white !important;
+   cursor: pointer;
+   border-color: #3d90c2 !important;
+}
+.header-button button:focus {
+   background: #3d90c2 !important;
+   color: white !important;
+   border-color: #3d90c2 !important;
+   box-shadow: none;
+   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+   text-decoration: none !important;
+}
+.header-button button:active {
+   background: #3d90c2 !important;
+   color: white !important;
+   box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
+   border: 2px solid #3d90c2 !important;
+   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+.section-modchooser-link {
+ position: fixed;
+ top: 545px;
+ width: 42px;
+ border-radius:60% !important;
+ right:510px;
+ z-index: 1;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+}

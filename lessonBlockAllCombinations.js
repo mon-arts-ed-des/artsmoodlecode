@@ -1,3 +1,22 @@
+window.addEventListener('DOMContentLoaded', (event) => {
+var urlLastNine = window.location.href.slice(-9);
+var firstLessonPage = window.location.href.indexOf('lesson/edit');	
+if(window.location.href.indexOf('lesson') > -1){
+if (urlLastNine.indexOf("pageid=-9") != -1 || urlLastNine.indexOf("/view.php") != -1 || firstLessonPage != -1){
+//do nothing
+}
+	else{
+	link=document.createElement('link');
+		link.rel='stylesheet';
+		link.href='https://mon-arts-ed-des.github.io/artsmoodlecode/lessonBlock.css';
+		link.type="text/css"
+		document.getElementsByTagName('head')[0].appendChild(link);
+	}
+}
+else{
+//do nothing
+}
+});
 //When the window loads carry out the following script
 window.addEventListener('load', (event) => {
 	//get the last 9 digits of the URL to confirm it is the unique URL for the end of lesson page and that you have come from a content page
@@ -27,6 +46,7 @@ window.addEventListener('load', (event) => {
 	//check that we are on the end of lesson page (url has unique identifier of pageid=-9) + text is present + grades are present
 	//OR check that you have come from a question page (/view.php) + text is present + grades are present
 	if (urlLastNine == "pageid=-9" && $(checkEndOfLesson).text() == 'Congratulations - end of lesson reached' && lessonButtonText.indexOf('grades') != -1 || urlLastNine == "/view.php" && $(checkEndOfLesson).text() == 'Congratulations - end of lesson reached' && lessonButtonText.indexOf('grades') != -1){
+
 		//add a rounded border box that goes around all the end of lesson text and buttons
 		$('.boxaligncenter').addClass('border border-dark px-3 rounded');
 		//make the links on the page into bootstrap buttons
