@@ -18,6 +18,42 @@ h1,h2,h3,h4,h5{margin-bottom: 1.5rem;}
 
 
 
+.aus-journey-link-box{
+    text-align: center;
+    border: 1px solid #016CAC;
+    margin: 10px;
+    /*padding: 10px;*/
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(242,242,242,1);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(242,242,242,1);
+    box-shadow: 5px 5px 5px 0px rgba(242,242,242,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -76,15 +112,7 @@ h1,h2,h3,h4,h5{margin-bottom: 1.5rem;}
 
 
 
-.icc-link-box{
-    text-align: center;
-    border: 1px solid #016CAC;
-    margin: 10px;
-    /*padding: 10px;*/
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(242,242,242,1);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(242,242,242,1);
-    box-shadow: 5px 5px 5px 0px rgba(242,242,242,1);
-}
+
 .icc-link-box2{
     text-align: center;
     border: 1px solid #016CAC;
