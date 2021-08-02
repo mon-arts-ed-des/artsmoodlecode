@@ -41,7 +41,6 @@ function startJS(){
 			//e.relatedTarget // previous active tab
 
 			try{
-
 				//console.log(e.target);
 				//console.log(e.relatedTarget);
 				var prevId="#"+$(e.relatedTarget).attr('id')+"-content";
@@ -68,24 +67,20 @@ function startJS(){
 }
 
 
-function highlight(obj,num){
-	$(".slider-text").eq(num).find("span").removeClass("slider-highlight");
-	if(obj>0)$(".slider-text").eq(num).find("span:eq("+obj+")").addClass("slider-highlight");
-}
 
 
 function changeLinks(){
-  	
+
 	var sec=getParameterByName("section");
 	var id=getParameterByName("id");
   	var alist=$(".arts-nav a[href]");
 	var menunum=$(".arts-nav").attr("data-menu-num");
 	var url=window.location.href.split('?')[0];
-	
-	
+
+
 
 	//if(sec==null&&menunum==undefined){location.href=url+"?id="+id+"&section=1";}
-	
+
  	if(menunum==undefined){
 		$(".arts-nav a[href]").each(function(i){if(sec==(i+1))$(this).addClass("arts-nav-active");});
 	}else{
