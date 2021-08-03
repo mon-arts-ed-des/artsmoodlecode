@@ -6,10 +6,8 @@
 #page-header a, #page-content a{color:#016CAC;}
 .modified{display:none;}
 .activity-navigation{display:none;}
-.section-navigation .mdl-left, .section-navigation .mdl-right, .jumpmenu{display: none !important;}
-.container{max-width: 100% !important;padding-bottom:3rem;}
-.container-no-bottom-padding{padding-bottom:0;}
-.section-navigation .container {padding-bottom: 0;}
+.jumpmenu{display: none !important;}
+.section-navigation{display: none;}
 .content > .container{padding-bottom: .5rem;}
 h3.sectionname{color:#016CAC;text-align:left !important;margin-left:3.5rem;font-weight:300;}
 .activityinstance{margin-left:2rem;}
