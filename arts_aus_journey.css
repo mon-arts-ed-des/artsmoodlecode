@@ -7,7 +7,7 @@
 .modified{display:none;}
 .activity-navigation{display:none;}
 .jumpmenu{display: none !important;}
-.section-navigation{display: none;}
+.section-navigation{display: none !important;}
 .content > .container{padding-bottom: .5rem;}
 h3.sectionname{color:#016CAC;text-align:left !important;margin-left:3.5rem;font-weight:300;}
 .activityinstance{margin-left:2rem;}
