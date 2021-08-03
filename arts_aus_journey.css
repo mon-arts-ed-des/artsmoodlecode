@@ -14,14 +14,14 @@
 h3.sectionname{color:#016CAC;text-align:left !important;margin-left:1.5rem;font-weight:300;}
 .activityinstance{margin-left:2rem;}
 
-h1,h2,h3,h4,h5{margin-bottom: 1.5rem;}
+h1,h2,h3,h4,h5{margin-bottom: 1.5rem;color:#016CAC;}
 
 
 
 .aus-journey-link-box{text-align:center;border:1px solid #016CAC;margin:10px;-webkit-box-shadow:5px 5px 5px 0px rgba(242,242,242,1);-moz-box-shadow: 5px 5px 5px 0px rgba(242,242,242,1); box-shadow: 5px 5px 5px 0px rgba(242,242,242,1);}
 .aus-journey-link-box a{display:block;width:100%;height:100%;padding:10px;}
-.aus-journey-link-box:hover{background-color:#016CAC;}
-.aus-journey-link-box a:hover{color:#fff !important;text-decoration:none;}
+.aus-journey-link-box:hover,.aus-journey-link-box:focus{background-color:#016CAC;}
+.aus-journey-link-box a:hover,.aus-journey-link-box a:focus{{color:#fff !important;text-decoration:none;}
 
 
 
