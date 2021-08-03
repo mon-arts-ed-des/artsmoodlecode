@@ -24,7 +24,7 @@ h1,h2,h3,h4,h5{margin-bottom: 1.5rem;color:#016CAC;}
 
 
 
-.arts-nav {overflow: hidden;margin-left:3rem !important;}
+.arts-nav {overflow: hidden;margin-left:1.5rem !important;}
 .arts-nav a{float:left;font-size:1.2em;color:#777 !important;text-align: center;padding:14px 2px 0 2px;text-decoration:none;font-weight:400;margin-right:20px;}
 .arts-nav a::after, .arts-dropdown .arts-dropdown-btn::after{content:'';display:block;width:100%;height:3px;margin-top:6px;background:#fff;border-bottom:3px solid #ccc;}
 .arts-nav a.arts-nav-active{color:#016CAC !important;}
