@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function(){
-	if(location.search.match("&")==-1){
+	if(location.search.indexOf("&")==-1){
 //		window.stop();
 		if(document.getElementById("page-course-view-topics")!=null){
 			document.querySelector(".topics").remove();
