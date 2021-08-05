@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		document.getElementsByTagName('head')[0].appendChild(stickNav);
 		artsNavCSS=document.createElement('link');
 		artsNavCSS.rel='stylesheet';
-		artsNavCSS.href='https://liberatelms.com/_boot/monash/art/banner/arts_banner.css';
+		artsNavCSS.href='https://mon-arts-ed-des.github.io/artsmoodlecode/artsAutoNav.css';
 		artsNavCSS.type="text/css"
 		document.getElementsByTagName('head')[0].appendChild(artsNavCSS);
 })
