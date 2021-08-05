@@ -20,13 +20,9 @@ window.addEventListener('load', function(){
   //create a text attribute
         t.type = "text/javascript";
   //create a src attribute
-        t.src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js";
-  //create an integrity attribute
-        t.integrity = "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q";
-  //create a crossorigin attribute
-        t.crossorigin = "anonymous";
+        t.src = "https://unpkg.com/@popperjs/core@2.9.3/dist/umd/popper.min.js";
   //append the popperJS script to the body
-        $("body").append(t);
+        $("head").append(t);
   //once page has loaded run the checkPopper function
         t.onload=checkPopper();
       }
