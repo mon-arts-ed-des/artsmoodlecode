@@ -1,10 +1,12 @@
 window.addEventListener('DOMContentLoaded', function(){
 	if(location.search.indexOf("&")==-1){
-//		window.stop();
+//		;
 		if(document.getElementById("page-course-view-topics")!=null){
+			window.stop();
 			document.querySelector(".topics").remove();
 		}
 		else if(document.getElementById("page-course-view-topcoll")!=null){
+			window.stop()
 			document.querySelector(".topics").remove();
 			document.querySelector("#toggle-all").remove();
 			document.querySelector("#topcoll-display-instructions").remove();
