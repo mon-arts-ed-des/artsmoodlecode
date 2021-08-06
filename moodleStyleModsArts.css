@@ -1,0 +1,358 @@
+/*inst3234586 is the Administration Menu all references affect the design of the Admin Block*/
+/*Changes the colour of the text and controls of the Admin Block to white*/
+#inst3234586 .action-menu, #inst3234586 .dropdown-toggle, #inst3234586 .moodle-core-dragdrop-draghandle, #inst484478 .action-menu,#inst484478 .dropdown-toggle, #inst484478 .moodle-core-dragdrop-handle {
+color: #4a4a4a !important;
+}
+/*Changes the margin of the links within the block to 0, reducing space*/
+#inst3234586 .card-text{
+margin: 0 !important;
+}
+/*Changes the colour and size of the links within the block while also removing the underline of the links*/
+#inst3234586 li a, #inst3343846 li a, li.breadcrumb-item a {
+color: #006DAE !important;
+text-decoration: none !important;
+font-size: 1.1rem !important;
+}
+/* adds padding left and right of the link and a radius to the edges of the link to resemble a button on hover*/
+li.breadcrumb-item a{
+padding: 0 5px;
+border-radius: 5px;
+}
+/*removes the initial styling of Moodle so that no outline appears at the top and bottom of the breadcrumb, and also removes the background.*/
+li.breadcrumb-item a:focus{
+  box-shadow: none;
+  background: none;
+}
+/*inverts the colour of the text and the background when you hover over a breadcrumb link so users can more effectively see where they are clicking*/
+li.breadcrumb-item a:hover{
+  color: #fff !important;
+  background: #3D90C2 !important;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+content: ">";
+font-family: 'FontAwesome';
+}
+/*currently not used.
+#inst3343846 ul {
+  list-style: none !important;
+  padding: 0px !important;
+}*/
+/*Changes the colour of the links within the block on hover to be slightly lighter, so people can see which link they're about to click*/
+#inst3234586 li a:hover, #inst3343846 li a:hover, li.breadcrumb-item a {
+color: #3D90C2 !important;
+text-decoration: none !important;
+}
+/*Changes the size and colour of the text in the sub menus of the block to match other links*/
+#inst3234586 p.tree_item {
+font-size: 1.1rem !important;
+color: #006DAE !important;
+}
+/*Changes the size and colour of the text on hover in the sub menus of the block to match other links*/
+#inst3234586 p.tree_item:hover {
+color: #3D90C2 !important;
+text-decoration: none !important;
+}
+/*Changes the colour of the background of the block header*/
+#instance-3234586-header {
+background: #f0f0f0 !important;
+color: #4a4a4a !important;
+}
+
+/*This adds a border the same colour as the header around the links*/
+div#settingsnav {
+border: 2px solid #f0f0f0 !important;
+border-radius: 5px !important;
+padding: 5px 0px 5px 0px !important;
+}
+/*style the back to top button to match the nav colours and position it in away from the blocks column*/
+#goto-top-link a {
+ line-height: 2rem !important;
+  background: #006DAE;
+  color: white;
+  padding: 10px 10px 10px 16px;
+  margin: 10px;
+  text-align: center;
+  position: fixed ;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1;
+  border: 3px solid #3d90c2;
+  border-radius:10px;
+  box-shadow: 1px 1px 8px grey;
+}
+/*style the back to top button hover change*/
+#goto-top-link a:hover{
+  background: #3d90c2;
+  border: 3px solid #006DAE;
+}
+/*the following three sets of styling hide this block that contains styling for the Admin block so that it isn't visible unless altered in the browser's inspector. Block instance-3098311. This also hides inst3242994 which refers to the logged in user block at category level*/
+#inst3098311, #inst3243453 {
+box-shadow: none !important;
+height: 0px !important;
+margin: 0px !important;
+}
+#inst3098311 .action-menu, #inst3098311 .dropdown-toggle, #inst3098311 i, #inst3243453 .action-menu, #inst3243453 .dropdown-toggle, #inst3243453 i {
+background: #fff !important;
+color: #fff !important;
+}
+#inst3098311 .card-title, #inst3098311 .card-body, #inst3243453 .card-title, #inst3243453 .card-body {
+background: #fff !important;
+color: #fff !important;
+  height: 0px !important;
+}
+#inst3243453 .card-text{
+font-size: 1px !important;
+}
+/*instance-484478 refers to the SETU block*/
+
+/*This changes the colour of the SETU block header and text*/
+#instance-484478-header {
+background: #f0f0f0 !important;
+color: #4a4a4a !important;
+}
+/*This adds a border the same colour as the header*/
+#inst484478 .card-text {
+border: 2px solid #f0f0f0 !important;
+border-radius: 5px !important;
+padding: 5px 0px 5px 0px !important;
+margin: 0.7rem !important;
+}
+/*This hides the navigation auto generated in Moodle to jump between sections to stop the space at the top and bottom or the screen getting cluttered. It also removes the navigation between activites to achieve the same purpose in activites*/
+#section-0 .addresourcemodchooser, #section-0 .addresourcedropdown, .activity-navigation, section#inst3454332 {
+display: none !important;
+box-shadow: none !important;
+background: none !important;
+}
+
+/*make enough white space between the footer and the white blocks*/
+footer {
+margin-top: 80px !important;
+}
+/*this styles the add an activity/resource button*/
+.section-modchooser-link {
+display: inline-flex !important;
+float: right !important;
+line-height: 1.5rem !important;
+vertical-align: middle;
+text-align: center;
+white-space: nowrap;
+font-weight: 500;
+border: 2px solid transparent;
+margin-bottom: 1.5rem;
+color: white !important;
+text-decoration: none !important;
+background: #006DAE;
+padding: .5rem .75rem;
+white-space: nowrap;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.5); 
+border-radius: 2px;
+}
+/*this styles the add an activity/resource button when you hover over it*/
+.section-modchooser-link:hover {
+background: #3d90c2;
+color: white !important;
+cursor: pointer;
+}
+/*this styles the add an activity/resource button when you click on it*/
+.section-modchooser-link:focus {
+background: #3d90c2 !important;
+color: white !important;
+border-color: #3d90c2 !important;
+box-shadow: none;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/*this styles the add an activity/resource button after the click*/
+.section-modchooser-link:active {
+background: #3d90c2 !important;
+color: white !important;
+box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
+border: 2px solid #3d90c2 !important;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/*this styles the add an activity/resource button icon to ensure it sits on the same alignment as the text*/
+.section-modchooser-link i {
+line-height: 1.5rem !important;
+}
+
+/* This styles the turn editing on button
+
+.header-button button {
+line-height: 1.5rem !important;
+vertical-align: middle;
+font-weight: 500;
+border: 2px solid transparent;
+color: white !important;
+text-decoration: none !important;
+background: #006DAE;
+padding: .25rem .4rem;
+white-space: nowrap;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.5); 
+border-radius: 2px;
+}
+.header-button button:hover {
+background: #3d90c2;
+color: white !important;
+cursor: pointer;
+border-color: #3d90c2 !important;
+}
+.header-button button:focus {
+background: #3d90c2 !important;
+color: white !important;
+border-color: #3d90c2 !important;
+box-shadow: none;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+text-decoration: none !important;
+}
+.header-button button:active {
+background: #3d90c2 !important;
+color: white !important;
+box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
+border: 2px solid #3d90c2 !important;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}*/
+#section-0 .section-modchooser-link, .section-navigation .mdl-right, .section-navigation .mdl-left, .addresourcedropdown, .jumpmenu {
+display: none !important;
+color: #fff !important;
+}
+/*This changes the colour of the options in the nav drawer on the left*/
+.list-group-item-action:hover, .list-group-item-action:focus, .list-group-item.active {
+background: #006dae !important;
+border-color: #006dae !important;
+  color: #fff !important;
+}
+/*This changes the colour of the options in the nav drawer on the left*/
+.list-group-item-action {
+  color: #006dae !important;
+}
+/*This is the styling for a Bootstrap button that contains the colours used in the Arts Navigation Banner. It should be used in conjunction with the classes .btn and .btn-default to work similarly to Bootstrap buttons.*/
+.btn-arts, .btn-mu {
+background: #006DAE;
+color: white !important;
+font-size: 1rem;
+line-height: 1.5;
+padding: .375rem .75rem;
+vertical-align: middle;
+text-align: center;
+white-space: nowrap;
+border-radius: 2px;
+font-weight: 500;
+border: 2px solid transparent;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+text-decoration: none;
+margin: .25rem;
+}
+/*This is the styling for a Bootstrap button that contains the colours used in the Arts Navigation Banner when you hover.*/
+.btn-arts:hover, .btn-mu:hover {
+background: #3d90c2;
+color: white !important;
+cursor: pointer;
+}
+/*This is the styling for a Bootstrap button that contains the colours used in the Arts Navigation Banner when you click.*/
+.btn-arts:focus, .btn-mu:focus {
+background: #3d90c2 !important;
+color: white !important;
+border-color: #3d90c2 !important;
+box-shadow: none;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/*This is the styling for a Bootstrap button that contains the colours used in the Arts Navigation Banner after you click.*/
+.btn-arts:active, .btn-mu:active {
+background: #3d90c2 !important;
+color: white !important;
+box-shadow: 0 0 0 0.2rem rgba(61, 144, 194, .5);
+border: 2px solid #3d90c2 !important;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/*This is the styling for a Bootstrap large button for when you want to make the Monash themed button above a large button*/
+.btn-lg {
+padding:.5rem 1rem !important;
+font-size:1.25rem !important;
+line-height:1.5 !important;
+border-radius:.3rem !important;
+}
+/*This is the styling for a Bootstrap small button for when you want to make the Monash themed button above a small button*/
+.btn-sm {
+padding:.25rem .5rem !important;
+font-size:.875rem !important;
+line-height:1.5 !important;
+border-radius:.2rem !important;
+}
+/*This is the styling for a Bootstrap outline button for when you want to make the Monash themed button above a button that has an outline, and on hover the colours invert*/
+.btn-outline-mu {
+color:#006dae;
+background-color:transparent;
+background-image:none;
+border-color:#006dae;
+}
+.btn-outline-mu:hover {
+color:#fff;
+background-color:#006dae;
+border-color:#006dae;
+}
+.btn-outline-mu.focus,.btn-outline-mu:focus { 
+box-shadow:0 0 0 .2rem rgba(0,123,255,1);
+}
+.btn-outline-mu.disabled,.btn-outline-mu:disabled {
+color:#006dae;
+background-color:transparent;
+}
+.btn-outline-mu:not(:disabled):not(.disabled).active,.btn-outline-mu:not(:disabled):not(.disabled):active,.show>.btn-outline-mu.dropdown-toggle {
+color:#fff;
+-color:#006dae;
+border-color:#006dae;
+}
+.btn-outline-mu:not(:disabled):not(.disabled).active:focus,.btn-outline-mu:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-mu.dropdown-toggle:focus {
+box-shadow:0 0 0 .2rem rgba(0,109,174, 1);
+}
+/*This is the styling for a Bootstrap background that uses the Monash colours*/
+.bg-arts, .bg-mu {
+background: #006DAE !important;
+color: white !important;
+}
+/*This is the styling for a Bootstrap alert that uses the Monash colours*/
+.alert-arts, .alert-mu {
+background: rgba(0, 109, 174, .25);
+border: 1px solid #006DAE;
+color: #000 !important;
+}
+/*This is the styling for a Bootstrap border that uses the Monash colours*/
+.border-arts, .border-mu {
+border: 1px solid #006DAE;
+}
+.border-arts-3, .border-mu-3 {
+border: 3px solid #006dae;
+}
+/*This is the styling for a thick horizontal rule in place of the thin default 1px line*/
+.hr-3, .hr3 {
+height: 3px; 
+background-color: #000;
+}
+.hr2 {
+background-color: #000; 
+height:2px; 
+}
+/*This is the styling for a Bootstrap text that uses the Monash colours*/
+.text-arts, .text-mu {
+color: #006DAE !important;
+}
+/*This ensures the tinyMCE takes up 100% of the width of the container it sits in.*/
+.mceLayout {
+  width:100% !important;
+}
+/*This ensures there is no space at the top of the blocks on the right*/
+.block .content {
+  margin-top: 0px !important;
+}
+/*This ensures there is no space at the bottom of alerts*/
+.alert p:last-of-type {
+margin-bottom: 0px !important;
+}
+/*This places a curved border around the HTML blocks on the right including the Admin block, Library block, Spec Con, Arts assessment and others.*/
+.preambleSpecCon, .preambleAssessment {
+border: 2px solid #f0f0f0 !important;
+border-radius: 5px !important;
+}
+/*This is a class that can be added to a list item to double space its dot points for easy reading*/
+.ulDblSpaced {
+line-height: 2rem;
+}
