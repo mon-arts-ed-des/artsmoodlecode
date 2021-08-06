@@ -149,6 +149,7 @@ window.onload=function(){
 			$('.section_action_menu .editing_delete').css('display','block');
 			$('#inst3407551 .action-menu-trigger').css('display','block');
 			$('#inst3407542 .action-menu-trigger').css('display','block');
+			var turnEditingOnBtnText = document.querySelector('.header-button button').innerText;
 			if (turnEditingOnBtnText == "Turn editing off"){
 				document.querySelector('#section-0 .summary .fa-cog').closest('a').style.display = "inline-block";
 				console.log('editing is on');
