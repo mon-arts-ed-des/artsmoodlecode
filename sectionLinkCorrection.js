@@ -94,26 +94,33 @@ window.onload=function(){
 //Look for the text Recycle bin to check it's a tutor or above.
 		if($(this).text().match(/Recycle bin/)){
 			//link to how to's in the uni wide banner and nav drawer
-					$( ".header-right" ).prepend('<div class="custom-menus my-auto"><a href="http://bit.ly/artshowtos" target="_blank" class="border border-dark rounded-circle text-dark p-2" role="button" title="Ed Tech how tos"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></a></div>');
-	    				$( "#nav-drawer .list-group" ).prepend('<a class="list-group-item list-group-item-action" href="http://bit.ly/artshowtos" target="_blank" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0"><div class="ml-0"><div class="media"><span class="media-left"><i class="icon fa fa-bolt fa-fw " aria-hidden="true"></i></span><span class="media-body ">Ed Tech how tos</span></div></div></a>');
-					$('.section_action_menu .editing_delete').css('display','none');
-					$('#inst3407551 .action-menu-trigger').css('display','none');
-					$('#inst3407542 .action-menu-trigger').css('display','none');
-					document.querySelector('#section-0 .summary .fa-cog').closest('a').style.display = "none";
-					$("#nav-drawer .list-group a").each(function(){
-						if($(this).text().match(/Staff resources/)){
-
-//make a variable of the Moodle section name
-							var moodleSectionName = $('.sectionname').text();
-//check the variable for the text Staff resources. Make sure the section you are on is the staff resources section.
+			var turnEditingOnBtnText = document.querySelector('.header-button button').innerText;
+			if (turnEditingOnBtnText == "Turn editing off"){
+				document.querySelector('#section-0 .summary .fa-cog').closest('a').style.display = "none";
+				console.log('editing is on');
+			}
+			else {
+				console.log('editing is off');
+			}		
+			$( ".header-right" ).prepend('<div class="custom-menus my-auto"><a href="http://bit.ly/artshowtos" target="_blank" class="border border-dark rounded-circle text-dark p-2" role="button" title="Ed Tech how tos"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></a></div>');
+			$( "#nav-drawer .list-group" ).prepend('<a class="list-group-item list-group-item-action" href="http://bit.ly/artshowtos" target="_blank" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0"><div class="ml-0"><div class="media"><span class="media-left"><i class="icon fa fa-bolt fa-fw " aria-hidden="true"></i></span><span class="media-body ">Ed Tech how tos</span></div></div></a>');
+			$('.section_action_menu .editing_delete').css('display','none');
+			$('#inst3407551 .action-menu-trigger').css('display','none');
+			$('#inst3407542 .action-menu-trigger').css('display','none');
+			document.querySelector('#section-0 .summary .fa-cog').closest('a').style.display = "none";
+			$("#nav-drawer .list-group a").each(function(){
+				if($(this).text().match(/Staff resources/)){
+					//make a variable of the Moodle section name
+					var moodleSectionName = $('.sectionname').text();
+					//check the variable for the text Staff resources. Make sure the section you are on is the staff resources section.
 							if(moodleSectionName.indexOf("Staff resources") > -1){
-							if(window.location.href.indexOf('section-0') > -1 || window.location.href.indexOf('section=0') > -1) {	
-//If you are on the staff resources section, remove the ability to hide/show the section to students. Ensuring it is not accidentally shown to students.
-							//do nothing						      
+							if(window.location.href.indexOf('section-0') > -1 || window.location.href.indexOf('section=0') > -1) {
+								//If you are on the staff resources section, remove the ability to hide/show the section to students. Ensuring it is not accidentally shown to students.
+								//do nothing						      
 							}
-							else{
-							$('.section-actions .editing_showhide').remove();
-							} 
+								else{
+									$('.section-actions .editing_showhide').remove();
+								}
 							}
 //Search the left hand nav for the link to the Staff resources section, and make a variable out of that link.
 							var SRSectionLink=$("nav .list-group-item:contains('Staff resources')").attr('href');
@@ -142,7 +149,7 @@ window.onload=function(){
 			$('.section_action_menu .editing_delete').css('display','block');
 			$('#inst3407551 .action-menu-trigger').css('display','block');
 			$('#inst3407542 .action-menu-trigger').css('display','block');
-			document.querySelector('#section-0 .summary .fa-cog').closest('a').style.display = "inline-block";
+			//document.querySelector('#section-0 .summary .fa-cog').closest('a').style.display = "inline-block";
 //Query the logged in user block and find the user's name
 			var userName = document.querySelector('.myprofileitem.fullname')
 			? document.querySelector('.myprofileitem.fullname').innerText
