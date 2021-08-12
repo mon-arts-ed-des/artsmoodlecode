@@ -231,7 +231,7 @@ function get_topics(){
 
 	$.each(tmpArray,function(i,val){tmp+='<a href="'+val.href+'">'+val.name+'</a>';});
 
-	var full='<div id="arts-dropdown" class="arts-banner-dropdown-one"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-one" class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+	var full='<div id="arts-dropdown" class="arts-banner-dropdown arts-banner-dropdown-one"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-one" class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
 	nav_array.push(full);
 }
@@ -276,7 +276,7 @@ function get_dd2(){
 
 	$.each(tmpArray,function(i,val){tmp2+='<a href="'+val.href+'">'+val.name+'</a>';});
 
-	var full2='<div id="arts-dropdown" class="arts-banner-dropdown-two"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-two" class="arts-banner-dropdown-content">'+tmp2+'</div></div>';
+	var full2='<div id="arts-dropdown" class="arts-banner-dropdown arts-banner-dropdown-two"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-two" class="arts-banner-dropdown-content">'+tmp2+'</div></div>';
 
 	nav_array.push(full2);
 }
@@ -374,29 +374,29 @@ var dropdownText1 = $('#arts-dropdown-one a').text()
 			$('.arts-banner-dropdown-one .arts-banner-dropdown-link').html('Topics <i class="fa fa-caret-down"></i>')
 		}
 		else if(dropdownText1.indexOf("Week") != -1){
-			$('arts-banner-dropdown-one .arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
+			$('.arts-banner-dropdown-one .arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
        		}
 		else if(dropdownText1.indexOf("Block") != -1){
-			$('arts-banner-dropdown-one .arts-banner-dropdown-link').html('Blocks <i class="fa fa-caret-down"></i>')
+			$('.arts-banner-dropdown-one .arts-banner-dropdown-link').html('Blocks <i class="fa fa-caret-down"></i>')
             	}
 		else if(dropdownText1.indexOf("Module") != -1){
-			$('arts-banner-dropdown-one .arts-banner-dropdown-link').html('Modules <i class="fa fa-caret-down"></i>')
+			$('.arts-banner-dropdown-one .arts-banner-dropdown-link').html('Modules <i class="fa fa-caret-down"></i>')
             	}
 		else if(dropdownText1.indexOf("Day") != -1){
-			$('arts-banner-dropdown-one .arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
+			$('.arts-banner-dropdown-one .arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
 	        }
 		else if(dropdownText1.indexOf("Session") != -1){
-			$('arts-banner-dropdown-one .arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>');
-			$('arts-banner-dropdown-one .arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
+			$('.arts-banner-dropdown-one .arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>');
+			$('.arts-banner-dropdown-one .arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
 	        }
 }
 function dropdownParent2(){
 var dropdownText2 = $('#arts-dropdown-two a').text()
 		if(dropdownText2.indexOf("Assessment Task") != -1){
-			$('arts-banner-dropdown-two .arts-banner-dropdown-link').html('Assessment tasks <i class="fa fa-caret-down"></i>')
+			$('.arts-banner-dropdown-two .arts-banner-dropdown-link').html('Assessment tasks <i class="fa fa-caret-down"></i>')
 		}
 		else if(dropdownText2.indexOf("Discipline") != -1){
-			$('arts-banner-dropdown-two .arts-banner-dropdown-link').html('Discipline <i class="fa fa-caret-down"></i>')
+			$('.arts-banner-dropdown-two .arts-banner-dropdown-link').html('Discipline <i class="fa fa-caret-down"></i>')
        		}
 }
 
