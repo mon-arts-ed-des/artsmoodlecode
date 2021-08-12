@@ -59,7 +59,7 @@ var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
 var topics_array=["topic","week","module","day","block","session"];
-var second_dd_array=["assessment task","discipline", "at"];	
+var second_dd_array=["assessment task","discipline", "asst task"];	
 var zoom_array=["zoom","zoom sessions","zoom (online only)","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
@@ -117,6 +117,7 @@ function get_nav(){
 	build_nav();
 	set_click();
 	dropdownParent();
+	dropdownParent2();
 
 }
 
