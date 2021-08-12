@@ -234,12 +234,7 @@ function get_topics(){
 	var full='<div id="arts-dropdown" class="arts-banner-dropdown arts-banner-dropdown-one"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-one" class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
 	nav_array.push(full);
-if($('#arts-dropdown-one a').length == 0){
-$('div.arts-banner-dropdown-one').remove()
-}
-else{
-	//do nothing
-}
+
 }
 function makeArrayUnique(tmpArr1){
 	var tmpArr2=[];
@@ -251,6 +246,12 @@ function makeArrayUnique(tmpArr1){
 		if(exists==false){tmpArr2.push(value);}
 	});
 	return tmpArr2;
+	if($('#arts-dropdown-one a').length == 0){
+$('div.arts-banner-dropdown-one').remove()
+}
+else{
+	//do nothing
+}
 }
 
 function sortBySection(tmpArr1){
@@ -284,12 +285,6 @@ function get_dd2(){
 	var full2='<div id="arts-dropdown" class="arts-banner-dropdown arts-banner-dropdown-two"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-two" class="arts-banner-dropdown-content">'+tmp2+'</div></div>';
 
 	nav_array.push(full2);
-	if($('#arts-dropdown-two a').length == 0){
-$('div.arts-banner-dropdown-two').remove()
-}
-else{
-	//do nothing
-}
 }
 
 function makeArrayUnique(tmpArr1){
@@ -302,6 +297,12 @@ function makeArrayUnique(tmpArr1){
 		if(exists==false){tmpArr2.push(value);}
 	});
 	return tmpArr2;
+if($('#arts-dropdown-two a').length == 0){
+$('div.arts-banner-dropdown-two').remove()
+}
+else{
+	//do nothing
+}
 }
 
 function sortBySection(tmpArr1){
