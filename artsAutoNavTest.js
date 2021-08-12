@@ -63,7 +63,8 @@ var second_dd_array=["assessment task","discipline", "asst task"];
 var zoom_array=["zoom","zoom sessions","zoom (online only)","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
-var dropdownText;
+var dropdownText1;
+var dropdownText2;
 
 
 set_start();
@@ -116,7 +117,7 @@ function get_nav(){
 	get_grades();
 	build_nav();
 	set_click();
-	dropdownParent();
+	dropdownParent1();
 	dropdownParent2();
 
 }
@@ -368,7 +369,7 @@ function set_click(){
 	
 }
 function dropdownParent1(){
-var dropdownText = $('#arts-dropdown-one a').text()
+var dropdownText1 = $('#arts-dropdown-one a').text()
 		if(dropdownText.indexOf("Topic") != -1){
 			$('.arts-banner-dropdown-link').html('Topics <i class="fa fa-caret-down"></i>')
 		}
