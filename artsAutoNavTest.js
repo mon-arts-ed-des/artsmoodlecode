@@ -509,6 +509,10 @@ function set_sticky_nav(){
     navbar.classList.remove("sticky");
   }
 }
+	$('.arts-banner-dropdown-one .arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
+}
+$('.arts-banner-dropdown-two .arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
+}
 	if($('#arts-dropdown-one a').length == 0){
 $('div.arts-banner-dropdown-one').remove()
 }
@@ -521,4 +525,5 @@ $('div.arts-banner-dropdown-two').remove()
 else{
 	//do nothing
 }
+
 });
