@@ -59,6 +59,7 @@ var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
 var topics_array=["topic","week","module","day","block","session"];
+var second_dd_array=["assessment tasks","disciplines"];	
 var zoom_array=["zoom","zoom sessions","zoom (online only)","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
@@ -107,6 +108,7 @@ function get_nav(){
 	//run all functions to sort arrays and build nav
 	get_home();
 	get_topics();
+	get_dd2();
 	get_assessment();
 	get_forum();
 	get_resources();
@@ -209,6 +211,51 @@ function get_topics(){
 	var tmpArray=[];
 	var tmp="";
 	$.each(topics_array,function(i,word){
+		$.each(orig_array,function(x,obj){
+			
+			if(obj.name.toLowerCase().indexOf(word)!=-1){
+				if(log_this)console.log("FOUND "+word+" AT "+x);
+				tmpArray.push({href:obj.href,name:obj.name,section:obj.section});
+			}
+		});	
+	});
+
+	if(log_this)console.log(tmpArray);
+	tmpArray=makeArrayUnique(tmpArray);
+	if(log_this)console.log(tmpArray);
+	tmpArray=sortBySection(tmpArray);
+	if(log_this)console.log(tmpArray);
+
+
+	$.each(tmpArray,function(i,val){tmp+='<a href="'+val.href+'">'+val.name+'</a>';});
+
+	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+
+	nav_array.push(full);
+}
+
+function makeArrayUnique(tmpArr1){
+	var tmpArr2=[];
+	$.each(tmpArr1,function(i,value){
+		var exists=false;
+		$.each(tmpArr2,function(j,value2){
+			if(value.name==value2.name){exists=true};
+		});
+		if(exists==false){tmpArr2.push(value);}
+	});
+	return tmpArr2;
+}
+
+function sortBySection(tmpArr1){
+	tmpArr1.sort(function(a,b){return a.section-b.section;});
+	return tmpArr1;
+}
+function get_dd2(){
+	if(log_this)console.log("------------------------ get second dropdown ------------------------");
+
+	var tmpArray=[];
+	var tmp="";
+	$.each(second_dd_array,function(i,word){
 		$.each(orig_array,function(x,obj){
 			
 			if(obj.name.toLowerCase().indexOf(word)!=-1){
