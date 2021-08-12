@@ -273,12 +273,16 @@ function get_dd2(){
 	tmpArray=sortBySection(tmpArray);
 	if(log_this)console.log(tmpArray);
 
-
+if (tmpArray == undefined){
+$('div.arts-banner-dropdown-two').remove();
+}
+else{
 	$.each(tmpArray,function(i,val){tmp2+='<a href="'+val.href+'">'+val.name+'</a>';});
 
 	var full2='<div id="arts-dropdown" class="arts-banner-dropdown arts-banner-dropdown-two"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-two" class="arts-banner-dropdown-content">'+tmp2+'</div></div>';
 
 	nav_array.push(full2);
+}
 }
 
 function makeArrayUnique(tmpArr1){
