@@ -398,10 +398,6 @@ var dropdownText2 = $('#arts-dropdown-two a').text()
 		else if(dropdownText2.indexOf("Discipline") != -1){
 			$('arts-banner-dropdown-two .arts-banner-dropdown-link').html('Discipline <i class="fa fa-caret-down"></i>')
        		}
-		else if(dropdownText2.indexOf("Session") != -1){
-			$('arts-banner-dropdown-two .arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>');
-			$('arts-banner-dropdown-two .arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
-	        }
 }
 
 
