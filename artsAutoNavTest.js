@@ -254,7 +254,7 @@ function get_dd2(){
 	if(log_this)console.log("------------------------ get second dropdown ------------------------");
 
 	var tmpArray=[];
-	var tmp="";
+	var tmp2="";
 	$.each(second_dd_array,function(i,word){
 		$.each(orig_array,function(x,obj){
 			
@@ -274,9 +274,9 @@ function get_dd2(){
 
 	$.each(tmpArray,function(i,val){tmp+='<a href="'+val.href+'">'+val.name+'</a>';});
 
-	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+	var full2='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp2+'</div></div>';
 
-	nav_array.push(full);
+	nav_array.push(full2);
 }
 
 function makeArrayUnique(tmpArr1){
