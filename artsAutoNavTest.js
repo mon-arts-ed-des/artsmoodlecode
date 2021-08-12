@@ -272,7 +272,7 @@ function get_dd2(){
 	if(log_this)console.log(tmpArray);
 
 
-	$.each(tmpArray,function(i,val){tmp+='<a href="'+val.href+'">'+val.name+'</a>';});
+	$.each(tmpArray,function(i,val){tmp2+='<a href="'+val.href+'">'+val.name+'</a>';});
 
 	var full2='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp2+'</div></div>';
 
