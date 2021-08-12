@@ -59,7 +59,7 @@ var resources_array=["study resources","resources"];
 var assessment_array=["assessment","exam","test"];
 var forum_array=["forum","communication","communication/faqs"];
 var topics_array=["topic","week","module","day","block","session"];
-var second_dd_array=["assessment tasks","disciplines"];	
+var second_dd_array=["assessment task","discipline", "at"];	
 var zoom_array=["zoom","zoom sessions","zoom (online only)","zoom workshops","zoom tutorials","zoom links"]
 var stick_height, navbar;
 var start_section;
@@ -229,7 +229,7 @@ function get_topics(){
 
 	$.each(tmpArray,function(i,val){tmp+='<a href="'+val.href+'">'+val.name+'</a>';});
 
-	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp+'</div></div>';
+	var full='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-one" class="arts-banner-dropdown-content">'+tmp+'</div></div>';
 
 	nav_array.push(full);
 }
@@ -274,7 +274,7 @@ function get_dd2(){
 
 	$.each(tmpArray,function(i,val){tmp2+='<a href="'+val.href+'">'+val.name+'</a>';});
 
-	var full2='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div class="arts-banner-dropdown-content">'+tmp2+'</div></div>';
+	var full2='<div id="arts-dropdown" class="arts-banner-dropdown"><a href="javascript:void(0);"><i class="fa fa-chevron-circle-down fa-fw" aria-hidden="true"></i> <span class="arts-banner-dropdown-link"> <i class="fa fa-caret-down"></i></span></a><div id="arts-dropdown-two" class="arts-banner-dropdown-content">'+tmp2+'</div></div>';
 
 	nav_array.push(full2);
 }
@@ -366,8 +366,8 @@ function set_click(){
 	});
 	
 }
-function dropdownParent(){
-var dropdownText = $('.arts-banner-dropdown-content a').text()
+function dropdownParent1(){
+var dropdownText = $('#arts-dropdown-one a').text()
 		if(dropdownText.indexOf("Topic") != -1){
 			$('.arts-banner-dropdown-link').html('Topics <i class="fa fa-caret-down"></i>')
 		}
@@ -388,7 +388,15 @@ var dropdownText = $('.arts-banner-dropdown-content a').text()
 			$('.arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
 	        }
 }
-
+function dropdownParent2(){
+var dropdownText2 = $('#arts-dropdown-two a').text()
+		if(dropdownText.indexOf("Assessment Task") != -1){
+			$('.arts-banner-dropdown-link').html('Assessment tasks <i class="fa fa-caret-down"></i>')
+		}
+		else if(dropdownText.indexOf("Discipline") != -1){
+			$('.arts-banner-dropdown-link').html('Discipline <i class="fa fa-caret-down"></i>')
+       		}
+}
 
 
 
