@@ -11,10 +11,9 @@
    border-radius: 60%;
    font-size: 1rem !important;
    position: fixed !important;
-   top: 70px;
-   right: 53px;
+   top: 170px;
+   right: 90px;
    width: 42px;
-   margin-top: 70px !important;
    z-index: 1;
    line-height: 2rem;
 }
@@ -41,10 +40,10 @@
 }
 .section-modchooser-link {
  position: fixed;
- top: 545px;
+ top: 170px;
  width: 42px;
  border-radius:60% !important;
- right:510px;
+ right:150px;
  z-index: 1;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
 }
