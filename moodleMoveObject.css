@@ -45,3 +45,9 @@ ul.dragdrop-keyboard-drag li a:focus{
   backgroud:#3d90c2;
   box-shadow: none;
 }
+.moodle-dialogue-bd > span{
+  position:absolute;
+  right:30px;
+  top:20px;
+  color:#fff;
+}
