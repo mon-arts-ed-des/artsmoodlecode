@@ -1,0 +1,47 @@
+div.moodle-dialogue{
+  width:60%;
+  left:20%;
+  top: 225px
+}
+div.moodle-dialogue-hd{
+  background-color: #006dae !important;
+  border: none;
+  color: #fff !important;
+  font-size: 20px !important;
+  white-space: normal !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  padding:10px;
+}
+div.moodle-dialogue-hd button{
+  background-color: #006dae !important;
+  color: #fff !important;
+  font-size: 18px !important;
+  
+}
+div.moodle-dialogue-hd button:hover{
+      color: white;
+    background: #006dae;
+    cursor: pointer;
+}
+ul.dragdrop-keyboard-drag li{
+    padding: 10px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid #006dae;
+    margin: 0px 10px;
+    width: 97%
+}
+ul.dragdrop-keyboard-drag li:hover{
+    color: white;
+    background: #006dae;
+    cursor: pointer;
+}
+ul.dragdrop-keyboard-drag li a{ 
+  margin: 10px;
+}
+ul.dragdrop-keyboard-drag li a:focus{
+  backgroud:#3d90c2;
+  box-shadow: none;
+}
