@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded',function(){
 	document.getElementById("inst3098311").classList.add("d-none");
+	document.getElementById("inst3243453").classList.add("d-none");
 });
 // directs the function to work once the page has loaded.
 window.addEventListener('load',function(){
