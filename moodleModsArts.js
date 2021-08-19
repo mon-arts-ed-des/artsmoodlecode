@@ -1,5 +1,8 @@
+window.addEventListener('DOMContentLoaded',function(){
+	document.getElementById("inst3098311").classList.add("d-none");
+});
 // directs the function to work once the page has loaded.
-window.onload=function(){
+window.addEventListener('load',function(){
 	//temporarily remove liberate's CSS to fix nav issue until Nigel can help resolve the changes with best practice
 	var libLink = $( 'link[href*="https://liberatelms.com/_boot/monash/art/banner/arts_banner.css"]' );
 	libLink.remove();
@@ -195,5 +198,5 @@ window.onload=function(){
 	/*	var currentURL = window.location.href;
 	var blockTitles = $('aside section .card-title').text();
 	var returnToSectionLink = $('.breadcrumb-item:nth-last-child(2) > a').attr('href');*/
-	//Close window.onload function	
-};
+	//Close load function	
+});
