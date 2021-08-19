@@ -177,7 +177,7 @@ window.addEventListener('load',function(){
 	//make a variable of the section name
 	var assessmentSectionName=$('.sectionname').text();
 	//check if we are on the assessments section
-	if (assessmentSectionName.indexOf('Assessment')!=-1){
+	if (assessmentSectionName.match(/Assessment/).length == 1 && window.location.href.slice(-10) != "&section=0"{
 		//check if the assessment text already exists
 		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
 			console.log('text present')
@@ -189,7 +189,7 @@ window.addEventListener('load',function(){
 		}
 	}
 	else{
-		console.log('not Assessment Section')
+		console.log('not Assessment Section or section 0')
 	}
 	$('#inst3494068 div.card-text div.no-overflow p').remove();
 	$('#inst3494068 div.card-text div.no-overflow').prepend('<div class="pb-0 pt-1 px-2 preambleAssessment mt-0"><p>Meet with an adviser for learning and English language support by clicking below.</p><p><a href="https://www.monash.edu/students/study-support/learning" class="btn btn-default btn-block w-50 mx-auto btn-secondary" target="_blank" title="Learning and English Language support">Go <i class="fa fa-arrow-right aria-hidden="true"></i></a></p></div>');
