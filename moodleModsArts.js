@@ -210,10 +210,11 @@ window.addEventListener('load',function(){
         $('div.moodle-dialogue-hd').text($('div.moodle-dialogue-hd').text().slice(0,70));
         $('div.moodle-dialogue-hd').append('&#8230;');
         $('.moodle-dialogue-bd span button').prepend('Close ');
-        console.log('truncating function worked');
+       // console.log('truncating function worked');
         }
         else{
-          console.log('truncating function did not work')
+		//do nothing
+        //  console.log('truncating function did not work')
         }
       }, 100);
   });
