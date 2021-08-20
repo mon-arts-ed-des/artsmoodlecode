@@ -193,6 +193,38 @@ window.addEventListener('load',function(){
 	}
 	$('#inst3494068 div.card-text div.no-overflow p').remove();
 	$('#inst3494068 div.card-text div.no-overflow').prepend('<div class="pb-0 pt-1 px-2 preambleAssessment mt-0"><p>Meet with an adviser for learning and English language support by clicking below.</p><p><a href="https://www.monash.edu/students/study-support/learning" class="btn btn-default btn-block w-50 mx-auto btn-secondary" target="_blank" title="Learning and English Language support">Go <i class="fa fa-arrow-right aria-hidden="true"></i></a></p></div>');
+	$('li.activity').on('click',function(){
+    setTimeout(function(){
+      var popupActive=$('body').find('.moodle-dialogue-base');
+      if (popupActive.length != 0){
+        $('ul.dragdrop-keyboard-drag li a').first().blur();
+        var moodleMoveObjectCSS =document.createElement('link');
+        moodleMoveObjectCSS.rel='stylesheet';
+        moodleMoveObjectCSS.href='https://mon-arts-ed-des.github.io/artsmoodlecode/moodleMoveObject.css';
+        moodleMoveObjectCSS.type="text/css";
+        document.getElementsByTagName('head')[0].appendChild(moodleMoveObjectCSS);
+        $('html, body').animate({scrollTop: '0px'}, 300);
+        $('ul.dragdrop-keyboard-drag li').prepend('&nbsp;&#x2022;'); 
+        $('.moodle-dialogue-hd > span').prependTo('.moodle-dialogue-bd');
+        $('.moodle-dialogue-bd span button').addClass('text-white h6 p-2 border border-white rounded');
+        $('div.moodle-dialogue-hd').text($('div.moodle-dialogue-hd').text().slice(0,70));
+        $('div.moodle-dialogue-hd').append('&#8230;');
+        $('.moodle-dialogue-bd span button').prepend('Close ');
+        console.log('truncating function worked');
+        }
+        else{
+          console.log('truncating function did not work')
+        }
+      }, 100);
+  });
+	if(window.location.href.match(/grader/) != null){
+    $('.fa-eye-slash').closest('a').before('<span class="badge badge-warning rounded">hidden</span> ')
+    $('.fa-eye').closest('a').before('<span class="badge badge-success rounded">visible</span> ')
+    console.log('on the grader page')
+  }
+  else{
+    console.log('not on the grader page')
+  }
 	//Next Moodle modification needs to start on the line above. Leave this comment in place for future modifications.
 	//Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
