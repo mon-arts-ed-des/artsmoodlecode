@@ -39,6 +39,7 @@ ul.dragdrop-keyboard-drag li:hover{
 }
 ul.dragdrop-keyboard-drag li a{ 
   margin: 10px;
+  padding: 7px 100% 9px 0px;
 }
 ul.dragdrop-keyboard-drag li a:focus{
   backgroud:#3d90c2;
