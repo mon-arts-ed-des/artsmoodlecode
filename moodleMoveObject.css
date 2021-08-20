@@ -25,13 +25,12 @@ div.moodle-dialogue-hd button:hover{
     cursor: pointer;
 }
 ul.dragdrop-keyboard-drag li{
-    padding: 10px 0px;
+    padding: 5px 0px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    border-bottom: 1px solid #006dae;
-    margin: 0px 10px;
-    width: 97%
+    border-bottom: 1px solid #006dae;    
+    width: 97%;
 }
 ul.dragdrop-keyboard-drag li:hover{
     color: white;
