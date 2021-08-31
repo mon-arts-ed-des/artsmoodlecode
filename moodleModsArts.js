@@ -196,7 +196,7 @@ window.addEventListener('load',function(){
 	$('li.activity').on('click',function(){
     setTimeout(function(){
       var popupActive=$('body').find('.moodle-dialogue-base');
-      if (popupActive.length != 0){
+      if (popupActive.length != 0 && window.location.href.slice(-10).indexOf('section') != -1){
         $('ul.dragdrop-keyboard-drag li a').first().blur();
         var moodleMoveObjectCSS =document.createElement('link');
         moodleMoveObjectCSS.rel='stylesheet';
