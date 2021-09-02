@@ -5,10 +5,10 @@ window.addEventListener("load", function(){
         copyTextToClipboard(htmlSnippet);
         var originalHtmlBtn = $('.copyHTML').clone().html()        
         htmlBtn.html('<i class="fa fa-check" aria-hidden="true"></i> HTML copied');
+        htmlBtn.toggleClass('btn-success btn-primary');
         window.setTimeout(function() {
                 htmlBtn.html(originalHtmlBtn);
-            htmlBtn.toggleClass('btn-success btn-primary');
-            htmlBtn.toggleClass('btn-success btn-primary');
+                htmlBtn.toggleClass('btn-success btn-primary');
         }, 150);
         /* Act on the event */
     });
@@ -18,10 +18,11 @@ window.addEventListener("load", function(){
         copyTextToClipboard(moodleSnippet);
         var originalMoodleBtn = $('.copyMoodle').clone().html()        
         moodleBtn.html('<i class="fa fa-check" aria-hidden="true"></i> Moodle code copied');
+        moodleBtn.toggleClass('btn-success btn-info');
         window.setTimeout(function() {
                 moodleBtn.html(originalMoodleBtn);
-            moodleBtn.toggleClass('btn-success btn-info');
-            moodleBtn.toggleClass('btn-success btn-info')    
+                moodleBtn.toggleClass('btn-success btn-info');
+ 
         }, 150);
         /* Act on the event */
     });
