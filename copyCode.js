@@ -13,7 +13,7 @@ window.addEventListener("load", function(){
     });
   $('.copyMoodle').on('click', function(event) {
         var moodleBtn = $(this);
-        var moodleSnippet = btn.closest('span').text();
+        var moodleSnippet = moodleBtn.closest('span').text();
         copyTextToClipboard(moodleSnippet);
         var originalMoodleBtn = $('.copyMoodle').clone().html()        
         moodleBtn.html('<i class="fa fa-check" aria-hidden="true"></i> Moodle code copied');
