@@ -2,7 +2,7 @@ window.addEventListener("load", function(){
         $('.copyHTML').on('click', function(event) {
         var htmlBtn = $(this);
         var htmlSnippet = htmlBtn.closest('i').html();
-        copyTextToClipboard(snippet);
+        copyTextToClipboard(htmlSnippet);
         var originalHtmlBtn = $('.copyHTML').clone().html()        
         htmlBtn.html('<i class="fa fa-check" aria-hidden="true"></i> HTML copied');
         window.setTimeout(function() {
@@ -14,7 +14,7 @@ window.addEventListener("load", function(){
   $('.copyMoodle').on('click', function(event) {
         var moodleBtn = $(this);
         var moodleSnippet = btn.closest('span').text();
-        copyTextToClipboard(snippet);
+        copyTextToClipboard(moodleSnippet);
         var originalMoodleBtn = $('.copyMoodle').clone().html()        
         moodleBtn.html('<i class="fa fa-check" aria-hidden="true"></i> Moodle code copied');
         window.setTimeout(function() {
