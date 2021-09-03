@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       for (const tableCell of searchableCells) {
         const row = tableCell.closest("tr");
-        const value = tableCell.textContent.toLowerCase().replace(",", "");
+        const value = tableCell.textContent.toLowerCase().replace("-", " ");
 
         row.style.visibility = null;
 
