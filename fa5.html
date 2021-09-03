@@ -17,6 +17,11 @@
   <link rel="stylesheet" href="https://mon-arts-ed-des.github.io/fontAwesomeFive/css/all.css" /> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css" />
   <script src="https://mon-arts-ed-des.github.io/artsmoodlecode/searchTable.js"></script>
+  <style>
+    input:focus::placeholder {
+  color: transparent;
+}
+  </style>
   </head>
   <body>
     <div class="container mt-2">
@@ -25,8 +30,8 @@
 
       <h3 class="text-center">Search for your icon</h3>
       <p>Use the search box below to search for your icon's name and the table will automatically reduce your options to match with the name you search. E.g. search for <strong>eye</strong> and the table will only display the icons with eye in the name.</p>
-      <div class="border border-dark rounded my-2 text-center">
-        <input type="text" class="search-input p-2 h5" placeholder="Search icon name">
+      <div class="my-2 text-center w-50 mx-auto">
+        <input type="text" class="search-input p-2 h4 border border-dark rounded" placeholder="Search icon name">
       </div>  
       <table class="table table-hover table-bordered w-75 mx-auto text-center table-sm">
       <thead class="thead-dark h5">
