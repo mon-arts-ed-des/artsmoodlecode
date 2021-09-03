@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".search-input").forEach((inputField) => {
     const tableRows = inputField
-      .next("table")
+      .nextElementSibling("table")
       .querySelectorAll("tbody > tr");
     const headerCell = inputField.closest("th");
     const otherHeaderCells = headerCell.closest("tr").children;
