@@ -1,5 +1,4 @@
 window.addEventListener("load", function(){
-        $('tr td:first-child i').addClass('fa-2x');
         $('.copyHTML').on('click', function(event) {
         var htmlBtn = $(this);
         var htmlSnippet = htmlBtn.prev('span').html();
