@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
           //$('table').removeClass('table-bordered');
         }
         else{
-          $('tbody').css('visibility','visible')
+          $('tbody').removeClass('d-none');
           row.style.visibility = "visible";
          // $('table').addClass('table-bordered');
         }
