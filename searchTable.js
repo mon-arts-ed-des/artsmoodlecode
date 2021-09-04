@@ -18,11 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
 
         row.style.visibility = null;
-        row.style.visibility = "hidden";
+        
 
-        if (value.search(searchQuery) != -1) {
-          row.style.visibility = "visibile";
+        if (value.search(searchQuery) === 0) {
+          row.style.visibility = "visible";
         }
+        else{
+          row.style.visibility = "hidden";
+        }
+        
       }
     });
   });
