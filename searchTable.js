@@ -17,11 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const row = tableCell.closest("tr");
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
      //   row.style.visibility = "hidden";
-        if (value.search(searchQuery) === 0) {
-          row.style.visibility = "visible";
+        if (value.search(searchQuery) === -1 || value.search(searchQuery) === null || value.search(searchQuery) === undefined) {
+          row.style.visibility = "collapse";
+          $('table').removeClass('table-bordered')
         }
         else{
-          row.style.visibility = "collapse";
+          row.style.visibility = "visible";
+          $('table').addClass('table-bordered')
         }
         
       }
@@ -30,4 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 window.addEventListener("load",function(){
 $('tbody tr').css('visibility','hidden');
+$('td').css('border','none');
 })
