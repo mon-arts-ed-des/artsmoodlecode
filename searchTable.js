@@ -18,18 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
      //   row.style.visibility = "hidden";
         if (value.search(searchQuery) === -1 || $('input').val().length == 0) {
           row.style.visibility = "collapse";
-          $('table').removeClass('table-bordered');
+          //$('table').removeClass('table-bordered');
         }
         else{
           $('tbody').css('visibility','visible')
           row.style.visibility = "visible";
-          $('table').addClass('table-bordered');
+         // $('table').addClass('table-bordered');
         }
       }
     });
   });
-  $('tbody').css('visibility','hidden');
-  $('td').css('border','none');
+ // $('tbody').css('visibility','hidden');
+ // $('td').css('border','none');
 });
 /*window.addEventListener("load",function(){
 
