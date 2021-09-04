@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const columnIndex = Array.from(otherHeaderCells).indexOf(headerCell);
     const searchableCells = Array.from(tableRows).map(
       (row) => row.querySelectorAll("td")[columnIndex]
+      row.style.visibility="
     );
 
     inputField.addEventListener("input", () => {
@@ -16,10 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       for (const tableCell of searchableCells) {
         const row = tableCell.closest("tr");
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
-
-        row.style.visibility = "hidden";
-        
-
+     //   row.style.visibility = "hidden";
         if (value.search(searchQuery) === 0) {
           row.style.visibility = "visible";
         }
@@ -31,3 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.addEventListener("load",function(){
+$('tr').css('visibility','hidden');
+})
