@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const columnIndex = Array.from(otherHeaderCells).indexOf(headerCell);
     const searchableCells = Array.from(tableRows).map(
       (row) => row.querySelectorAll("td")[columnIndex]
-      row.style.visibility="
     );
 
     inputField.addEventListener("input", () => {
