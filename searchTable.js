@@ -18,9 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
 
         row.style.visibility = null;
+        row.style.visibility = "hidden";
 
-        if (value.search(searchQuery) === -1) {
-          row.style.visibility = "collapse";
+        if (value.search(searchQuery) != -1) {
+          row.style.visibility = "visibile";
         }
       }
     });
