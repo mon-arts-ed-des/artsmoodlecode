@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const row = tableCell.closest("tr");
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
      //   row.style.visibility = "hidden";
-        if (value.search(searchQuery) === -1 || value.search(searchQuery) === "" || value.search(searchQuery) === undefined) {
+        if (value.search(searchQuery) === -1 || value.search(searchQuery) === "" || value.search(searchQuery) === undefined || $('input').val().length == 0) {
           row.style.visibility = "collapse";
           $('table').removeClass('table-bordered')
         }
