@@ -29,5 +29,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 window.addEventListener("load",function(){
-$('tr').attr('visibility','hidden');
+$('tbody tr').css('visibility','hidden');
 })
