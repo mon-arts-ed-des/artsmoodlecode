@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else{
           row.style.visibility = "visible";
           $('table').addClass('table-bordered');
+          $('td').css('border-bottom','1px solid #dee2e6');
         }
       }
     });
