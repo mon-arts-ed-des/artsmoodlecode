@@ -28,6 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-document.addEventListener("load",function(){
+window.addEventListener("load",function(){
 $('tr').attr('visibility','hidden');
 })
