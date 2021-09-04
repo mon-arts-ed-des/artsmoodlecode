@@ -16,19 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const row = tableCell.closest("tr");
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
      //   row.style.visibility = "hidden";
-        if (value.search(searchQuery) === -1 || value.search(searchQuery) === "" || value.search(searchQuery) === undefined || $('input').val().length == 0) {
+        if (value.search(searchQuery) === -1 || $('input').val().length == 0) {
           row.style.visibility = "collapse";
           $('table').removeClass('table-bordered');
         }
         else{
+          $('tbody').css('visibility','visible')
           row.style.visibility = "visible";
           $('table').addClass('table-bordered');
-          $('td').css('border-bottom','1px solid #dee2e6');
         }
       }
     });
   });
-  $('tbody tr').css('visibility','hidden');
+  $('tbody').css('visibility','hidden');
   $('td').css('border','none');
 });
 /*window.addEventListener("load",function(){
