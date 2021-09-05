@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function searchTable() {
   document.querySelectorAll(".search-input").forEach((inputField) => {
     const tableRows = inputField
       .closest("table")
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchableCells = Array.from(tableRows).map(
       (row) => row.querySelectorAll("td")[columnIndex]
     );
-    inputField.addEventListener("input", () => {
+    inputField.addEventListener("change", () => {
       const searchQuery = inputField.value.toLowerCase();
 
       for (const tableCell of searchableCells) {
