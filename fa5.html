@@ -24,12 +24,28 @@
   </style>
   </head>
   <body>
+    <script>
+      window.addEventListener('load',function(){
+$('#viewAllIcons').on('click',function(){
+    if (document.getElementById('viewAllIcons').checked == true) {
+      $('tbody').removeClass('d-none');
+      $('tr').removeAttr('style');
+          console.log('viewAllIcons Checked')
+                } 
+                else {
+                  searchTable();
+                }
+                                  }); 
+                                });
+    </script>
     <div class="container mt-2">
 <table class="table table-hover w-100 mx-auto text-center table-sm">
        <thead>
          <tr>
            <th colspan="3" class="border border-white">
         <input type="text" class="search-input p-2 small border border-dark rounded text-center" placeholder="Search icon name">
+        <input type="checkbox" id="viewAllIcons" name="viewAllIcons" value="viewAllIcons">
+          <label for="viewAllIcons"> View all icons</label>
            </th>
         </tr>
         </thead>

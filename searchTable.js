@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (row) => row.querySelectorAll("td")[columnIndex]
     );
     inputField.addEventListener("input", () => {
+      function searchTable(){
       const searchQuery = inputField.value.toLowerCase();
 
       for (const tableCell of searchableCells) {
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           row.style.visibility = "visible";
          // $('table').addClass('table-bordered');
         }
+      }
       }
     });
   });
