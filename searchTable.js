@@ -15,18 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
       for (const tableCell of searchableCells) {
         const row = tableCell.closest("tr");
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
-   
-        if (value.search(searchQuery) === -1 || $('input').val().length == 0) {
-          row.style.visibility = "visible";
-        }
-        else {
-          $('tbody').removeClass('d-none');
+        row.style.visibility = null;
+        if (value.search(searchQuery) === -1) {
           row.style.visibility = "collapse";
         }
           $('#addBorder').on('click',function(){
               if (document.getElementById('addBorder').checked == true) {
                 $('i').addClass('fa-border');
-                
                     console.log('border added')
                           } 
                           else if (document.getElementById('viewAllIcons').checked == false) {
