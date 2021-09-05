@@ -15,18 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
       for (const tableCell of searchableCells) {
         const row = tableCell.closest("tr");
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
-     //   row.style.visibility = "hidden";
-     function searchTable(){
+   
         if (value.search(searchQuery) === -1 || $('input').val().length == 0) {
           row.style.visibility = "collapse";
-          //$('table').removeClass('table-bordered');
         }
-        else{
+        else {
           $('tbody').removeClass('d-none');
           row.style.visibility = "visible";
-         // $('table').addClass('table-bordered');
         }
-      }
           $('#viewAllIcons').on('click',function(){
               if (document.getElementById('viewAllIcons').checked == true) {
                 $('tbody').removeClass('d-none');
@@ -37,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             console.log('viewAllIcons Unchecked')
                            // $('tbody').addClass('d-none');
                            // $('tr').css('visibility','inherit');
-                           searchTable();
+                          // searchTable();
                           }
                                             }); 
                                           };
