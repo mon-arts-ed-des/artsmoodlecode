@@ -17,20 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const value = tableCell.textContent.toLowerCase().replace("-", " ");
    
         if (value.search(searchQuery) === -1 || $('input').val().length == 0) {
-          row.style.visibility = "collapse";
+          row.style.visibility = "visible";
         }
         else {
           $('tbody').removeClass('d-none');
-          row.style.visibility = "visible";
+          row.style.visibility = "collapse";
         }
-          $('#viewAllIcons').on('click',function(){
-              if (document.getElementById('viewAllIcons').checked == true) {
-                $('tbody').removeClass('d-none');
-                $('tr').css('visibility','visible');
-                    console.log('viewAllIcons Checked')
+          $('#addBorder').on('click',function(){
+              if (document.getElementById('addBorder').checked == true) {
+                $('i').addClass('fa-border');
+                
+                    console.log('border added')
                           } 
                           else if (document.getElementById('viewAllIcons').checked == false) {
-                            console.log('viewAllIcons Unchecked')
+                            $('i').removeClass('fa-border');
+                            console.log('borders removed')
                            // $('tbody').addClass('d-none');
                            // $('tr').css('visibility','inherit');
                           // searchTable();
