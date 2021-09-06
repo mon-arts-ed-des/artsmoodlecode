@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
           console.log('border added')
                 } 
-                else if (document.getElementById('viewAllIcons').checked == false) {
+                else {
                   $('i').removeClass('fa-border');
                   $('.moodleCode').each(function(){
                     $(this).text($(this).text().slice(0,-11)+"]");
