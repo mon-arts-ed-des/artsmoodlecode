@@ -230,10 +230,11 @@ window.addEventListener('load',function(){
   else{
     console.log('not on the grader page')
   }
-	//in gradebook center the trash can to delete items once selected and add the text Delete next to the trash can to make this more obvious for users
+	//in gradebook center the trash can to delete items once selected and add the text 'delete' next to the trash can to make this more obvious for users
 	$('#toolbar-delete').closest('ul').addClass('w-50 mx-auto');
-	$('#toolbar-delete').prepend('<span style="position:relative;top: 15px;color: white; text-decoration:none;">Delete </span>');
+	$('#toolbar-delete').append('<span style="position:relative;top: 15px;color: white; text-decoration:none;">Delete </span>');
 	$('#toolbar-delete').css('text-decoration','none');
+	$('#toolbar-delete img').addClass('mr-1');
 	//Next Moodle modification needs to start on the line above. Leave this comment in place for future modifications.
 	//Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
