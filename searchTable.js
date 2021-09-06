@@ -19,29 +19,31 @@ document.addEventListener("DOMContentLoaded", () => {
         if (value.search(searchQuery) === -1) {
           row.style.visibility = "collapse";
         }
-          $('#addBorder').on('click',function(){
-              if (document.getElementById('addBorder').checked == true) {
-                $('i').addClass('fa-border');
-                $('.moodleCode').each(function(){
-                  $(this).text($(this).text().slice(0,-1)+" fa-border]");
-                  });
-                    console.log('border added')
-                          } 
-                          else if (document.getElementById('viewAllIcons').checked == false) {
-                            $('i').removeClass('fa-border');
-                            $('.moodleCode').each(function(){
-                              $(this).text($(this).text().slice(0,-11)+"]");
-                              });
-                            console.log('borders removed')
-                           // $('tbody').addClass('d-none');
-                           // $('tr').css('visibility','inherit');
-                          // searchTable();
-                          }
-                                            }); 
                                           };
       });
     });
   });
+  window.addEventListener('load',function(){
+  $('#addBorder').on('click',function(){
+    if (document.getElementById('addBorder').checked == true) {
+      $('i').addClass('fa-border');
+      $('.moodleCode').each(function(){
+        $(this).text($(this).text().slice(0,-1)+" fa-border]");
+        });
+          console.log('border added')
+                } 
+                else if (document.getElementById('viewAllIcons').checked == false) {
+                  $('i').removeClass('fa-border');
+                  $('.moodleCode').each(function(){
+                    $(this).text($(this).text().slice(0,-11)+"]");
+                    });
+                  console.log('borders removed')
+                 // $('tbody').addClass('d-none');
+                 // $('tr').css('visibility','inherit');
+                // searchTable();
+                }
+                                  });
+                                }); 
  // $('tbody').css('visibility','hidden');
  // $('td').css('border','none');
 /*window.addEventListener("load",function(){
