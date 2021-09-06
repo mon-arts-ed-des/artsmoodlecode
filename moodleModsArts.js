@@ -191,8 +191,11 @@ window.addEventListener('load',function(){
 	else{
 		console.log('not Assessment Section or section 0')
 	}
+	//remove text from Student support block put in by MEI
 	$('#inst3494068 div.card-text div.no-overflow p').remove();
+	//replace the student support block with the same text and styling as other blocks in Arts
 	$('#inst3494068 div.card-text div.no-overflow').prepend('<div class="pb-0 pt-1 px-2 preambleAssessment mt-0"><p>Meet with an adviser for learning and English language support by clicking below.</p><p><a href="https://www.monash.edu/students/study-support/learning" class="btn btn-default btn-block w-50 mx-auto btn-secondary" target="_blank" title="Learning and English Language support">Go <i class="fa fa-arrow-right aria-hidden="true"></i></a></p></div>');
+	//Change the popup that appears when crosshairs are clicked next to a Moodle activity or resource to be more user friendly. This includes truncating text of the heading plus list of items on the screen, highlighting the options as you hover over them, redesigning the close button in the top right, and putting a bullet point and bottom border on each item to indicate it is a list.
 	$('li.activity').on('click',function(){
     setTimeout(function(){
       var popupActive=$('body').find('.moodle-dialogue-base');
@@ -218,6 +221,7 @@ window.addEventListener('load',function(){
         }
       }, 100);
   });
+	//create badges on the grade report page to indicate that grades are visible or hidden that sit beside the eye icons.
 	if(window.location.href.match(/grader/) != null){
     $('.fa-eye-slash').closest('a').before('<span class="badge badge-warning rounded">hidden</span> ')
     $('.fa-eye').closest('a').before('<span class="badge badge-success rounded">visible</span> ')
@@ -226,11 +230,15 @@ window.addEventListener('load',function(){
   else{
     console.log('not on the grader page')
   }
+	//in gradebook center the trash can to delete items once selected and add the text 'delete' next to the trash can to make this more obvious for users
+	$('#toolbar-delete').closest('ul').addClass('w-50 mx-auto');
+	$('#toolbar-delete').append('<span style="position:relative;top: 15px;color: white; text-decoration:none;">Delete </span>');
+	$('#toolbar-delete').css('text-decoration','none');
+	$('#toolbar-delete img').addClass('mr-1');
 	//Next Moodle modification needs to start on the line above. Leave this comment in place for future modifications.
 	//Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
 	setup_beest(match_lect,{button:true,iFrame:true});
-	/*	var currentURL = window.location.href;
-	var blockTitles = $('aside section .card-title').text();
-	var returnToSectionLink = $('.breadcrumb-item:nth-last-child(2) > a').attr('href');*/
+
+	//Next modification should start on the empty line above
 	//Close load function	
 });
