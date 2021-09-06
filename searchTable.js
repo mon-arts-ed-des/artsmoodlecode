@@ -22,10 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
           $('#addBorder').on('click',function(){
               if (document.getElementById('addBorder').checked == true) {
                 $('i').addClass('fa-border');
+                $('.moodleCode').each(function(){
+                  $(this).text($(this).text().slice(0,-1)+" fa-border]");
+                  });
                     console.log('border added')
                           } 
                           else if (document.getElementById('viewAllIcons').checked == false) {
                             $('i').removeClass('fa-border');
+                            $('.moodleCode').each(function(){
+                              $(this).text($(this).text().slice(0,-11)+"]");
+                              });
                             console.log('borders removed')
                            // $('tbody').addClass('d-none');
                            // $('tr').css('visibility','inherit');
