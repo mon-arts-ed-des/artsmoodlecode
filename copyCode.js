@@ -1,5 +1,4 @@
-window.addEventListener("load", function copyCode(){
-    
+window.addEventListener("load", function(){
         $('.copyHTML').on('click', function(event) {
         var htmlBtn = $(this);
         var htmlSnippet = htmlBtn.prev('span').html();
@@ -23,7 +22,6 @@ window.addEventListener("load", function copyCode(){
         window.setTimeout(function() {
                 moodleBtn.html(originalMoodleBtn);
                 moodleBtn.toggleClass('btn-success btn-info');
- 
         }, 1500);
         /* Act on the event */
     });

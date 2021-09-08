@@ -22,8 +22,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css" />
   <script src="https://mon-arts-ed-des.github.io/artsmoodlecode/searchTable.js"></script>
   <script>
-    window.addEventListener("load", function copyCode(){
-  
+    window.addEventListener("load", function(){
     $('.copyHTML').on('click', function(event) {
     var htmlBtn = $(this);
     var htmlSnippet = htmlBtn.prev('span').html();
@@ -47,7 +46,6 @@ $('.copyMoodle').on('click', function(event) {
     window.setTimeout(function() {
             moodleBtn.html(originalMoodleBtn);
             moodleBtn.toggleClass('btn-success btn-info');
-
     }, 1500);
     /* Act on the event */
 });
@@ -57,27 +55,20 @@ textArea.value = text;
 document.body.appendChild(textArea);
 textArea.focus();
 textArea.select();
-
 try {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
-
 } catch (err) {
-
 }
-
 document.body.removeChild(textArea);
 }
-
 function copyTextToClipboard(text) {
 if (!navigator.clipboard) {
     fallbackCopyTextToClipboard(text);
     return;
 }
 navigator.clipboard.writeText(text).then(function() {
-
 }, function(err) {
-
 });
 }
 });
@@ -129,7 +120,7 @@ navigator.clipboard.writeText(text).then(function() {
       <tbody>
         <tr>
           <td class="align-middle"><span class="d-none">500px</span><i class="fab fa-500px" aria-hidden="true"></i></td>
-          <td><span class="d-none"><i class="fab fa-500px" aria-hidden="true"></i></span><input value="Copy HTML" onclick=copyCode() class="text-white btn btn-sm btn-primary rounded copyHTML"></td>
+          <td><span class="d-none"><i class="fab fa-500px" aria-hidden="true"></i></span><a value="Copy HTML" class="text-white btn btn-sm btn-primary rounded copyHTML text-white"></td>
           <td><span class="d-none moodleCode">[fab fa-500px]</span><a href="#" class="btn btn-sm btn-info rounded copyMoodle">Copy Moodle Code</a></td>          
         </tr>
         <tr>
