@@ -1,5 +1,5 @@
   window.addEventListener('load',function(){
-    $("#region-main").append('<div id="faSearchFrame" class="d-none" style="max-width: 50% !important; position:fixed;top:130px;right:20px; z-index: 10000;"><object data="https://mon-arts-ed-des.github.io/artsmoodlecode/fa5.html" width="400" height="400"></object></div>');
+    $("#region-main").append('<div id="faSearchFrame" class="d-none" style="max-width: 50% !important; position:fixed;top:130px;right:20px; z-index: 10000;"><iframe src="https://mon-arts-ed-des.github.io/artsmoodlecode/fa5.html" width="400px" height="400px" allow="clipboard-read; clipboard-write self ${URL}"></object></div>');
     $(".header-right").prepend('<div class="custom-menus my-auto"><a type="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="Icon Search" style="width:38px; height: 38px;" data-toggle="modal" data-target=".faSearch-modal" id="faSearch"><i style="font-size:1.25rem;" class="fa fa-icons" aria-hidden="true"></i></a>');
     $('#faSearch').on('click',function(){
     $('#faSearchFrame').toggleClass('d-none');
