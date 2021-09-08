@@ -7,30 +7,80 @@
     <meta name="description" content="A simple font aweesome icon search tool">
     <meta name="author" content="T&M">
     <title>FA Icon Search</title>
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
   <!--copy code to clipboard script-->
   <!--<script src="https://mon-arts-ed-des.github.io/artsmoodlecode/copyCode.js" type="text/javascript"></script>-->
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384n5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384n5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://mon-arts-ed-des.github.io/fontAwesomeFive/css/all.css" /> 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css" />
-  <script src="https://mon-arts-ed-des.github.io/artsmoodlecode/searchTable.js"></script>
-  <script>
-    window.addEventListener("load", function(){
-    $('.copyHTML').on('click', function(event) {
-    var htmlBtn = $(this);
-    var htmlSnippet = htmlBtn.prev('span').html();
-    copyTextToClipboard(htmlSnippet);
-    var originalHtmlBtn = $('.copyHTML').clone().html()        
-    htmlBtn.html('<i class="fa fa-check" aria-hidden="true"></i> HTML copied');
-    htmlBtn.toggleClass('btn-success btn-primary');
-    window.setTimeout(function() {
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css" />-->
+  <!--<script src="https://mon-arts-ed-des.github.io/artsmoodlecode/searchTable.js"></script>-->
+  <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".search-input").forEach((inputField) => {
+    const tableRows = inputField
+      .closest("table")
+      .querySelectorAll("tbody > tr");
+    const headerCell = inputField.closest("th");
+    const otherHeaderCells = headerCell.closest("tr").children;
+    const columnIndex = Array.from(otherHeaderCells).indexOf(headerCell);
+    const searchableCells = Array.from(tableRows).map(
+      (row) => row.querySelectorAll("td")[columnIndex]
+    );
+    inputField.addEventListener("input", () => {
+      const searchQuery = inputField.value.toLowerCase();
+
+      for (const tableCell of searchableCells) {
+        const row = tableCell.closest("tr");
+        const value = tableCell.textContent.toLowerCase().replace("-", " ");
+        row.style.visibility = null;
+        if (value.search(searchQuery) === -1) {
+          row.style.visibility = "collapse";
+        }
+                                          };
+      });
+    });
+  });
+  window.addEventListener('load',function(){
+  $('#addBorder').on('click',function(){
+    if (document.getElementById('addBorder').checked == true) {
+      $('i').addClass('fa-border');
+      $('.moodleCode').each(function(){
+        $(this).text($(this).text().slice(0,-1)+" fa-border]");
+        });
+          console.log('border added')
+                } 
+                else {
+                  $('i').removeClass('fa-border');
+                  $('.moodleCode').each(function(){
+                    $(this).text($(this).text().slice(0,-11)+"]");
+                    });
+                  console.log('borders removed')
+                 // $('tbody').addClass('d-none');
+                 // $('tr').css('visibility','inherit');
+                // searchTable();
+                }
+                                  });
+                                }); 
+ // $('tbody').css('visibility','hidden');
+ // $('td').css('border','none');
+/*window.addEventListener("load",function(){
+
+})*/
+
+  $('.copyHTML').on('click', function(event) {
+        var htmlBtn = $(this);
+        var htmlSnippet = htmlBtn.prev('span').html();
+        copyTextToClipboard(htmlSnippet);
+        var originalHtmlBtn = $('.copyHTML').clone().html()        
+        htmlBtn.html('<i class="fa fa-check" aria-hidden="true"></i> HTML copied');
+        htmlBtn.toggleClass('btn-success btn-primary');
+        window.setTimeout(function() {
             htmlBtn.html(originalHtmlBtn);
             htmlBtn.toggleClass('btn-success btn-primary');
     }, 1500);
@@ -71,8 +121,7 @@ navigator.clipboard.writeText(text).then(function() {
 }, function(err) {
 });
 }
-});
-    $(function(){
+   /* $(function(){
       $('[data-toggle="tooltip"]').tooltip();
       $('.copyHTML').on('click',function(){
     var btnTooltip = $(this)
@@ -81,13 +130,13 @@ navigator.clipboard.writeText(text).then(function() {
       btnTooltip.tooltip('hide');
     }, 2000);
 });
-    });
+    });*/
   </script>
   <style>
     input:focus::placeholder {
   color: transparent;
 }
-.tooltip-inner {
+/*.tooltip-inner {
   text-align: left;
   padding: 15px;
   font-size: 1.05rem;
@@ -95,7 +144,7 @@ navigator.clipboard.writeText(text).then(function() {
 }
 .modal-backdrop {
       z-index: 0 !important;
-    }
+    }*/
   </style>
   </head>
   <body>
