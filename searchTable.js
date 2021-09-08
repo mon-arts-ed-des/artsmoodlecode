@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('load',function(){
   $('#addBorder').on('click',function(){
     if (document.getElementById('addBorder').checked == true) {
-      $('i').addClass('fa-border');
+      $('#faSearchTable i').addClass('fa-border');
       $('.moodleCode').each(function(){
         $(this).text($(this).text().slice(0,-1)+" fa-border]");
         });
