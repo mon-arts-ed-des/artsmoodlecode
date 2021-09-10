@@ -1,5 +1,5 @@
   window.addEventListener('load',function(){
-    $("#region-main").append('<div id="faSearchFrame" class="d-none" style="max-width: 500px !important; position:fixed;top:130px;right:20px; z-index: 2000; background:#fff;overflow:auto; height:400px;"></div>');
+    $("#region-main").append('<div id="faSearchFrame" class="d-none" style="width: 500px !important; position:fixed;top:130px;right:20px; z-index: 2000; background:#fff;overflow:auto; height:400px;"></div>');
     $(".header-right").prepend('<div class="custom-menus my-auto"><a role="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="Icon Search" data-toggle="modal" data-target=".faSearch-modal" id="faSearch"><i style="font-size:1.1rem; width:18px;"" class="fa fa-icons fa-fw" aria-hidden="true"></i></a>');
     $("#faSearchFrame").load("https://mon-arts-ed-des.github.io/artsmoodlecode/fa5.html"); 
 	  $('#faSearch').on('click',function(){
