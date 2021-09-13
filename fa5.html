@@ -7,8 +7,10 @@
     <meta name="description" content="A simple font aweesome icon search tool">
     <meta name="author" content="T&M">
     <title>FA Icon Search</title>
-  <!-- Optional JavaScript used when testing changes 
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!--Optional JavaScript used when testing changes 
+    <input type="checkbox" id="addBorder" name="addBorder" value="addBorder" class="ml-2">
+          <label for="addBorder"><small>Add border to icon</small></label>-->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -18,7 +20,7 @@
   <script src="https://mon-arts-ed-des.github.io/artsmoodlecode/copyCode.js" type="text/javascript"></script>
   <script src="https://mon-arts-ed-des.github.io/artsmoodlecode/searchTable.js"></script>-->
   <script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", () => {
+  //document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".search-input").forEach((inputField) => {
     const tableRows = inputField
       .closest("table")
@@ -42,7 +44,7 @@
                                           };
       });
     });
-  });
+ // });
   //window.addEventListener('load',function(){
   $('#addBorder').on('click',function(){
     if (document.getElementById('addBorder').checked == true) {
@@ -160,8 +162,7 @@ $('.copyMoodle').on('click', function(event) {
          <tr>
            <th colspan="3" class="border border-white">
         <input type="text" class="search-input p-2 small border border-dark rounded text-center" placeholder="Search icon name">
-        <!--<input type="checkbox" id="addBorder" name="addBorder" value="addBorder" class="ml-2">
-          <label for="addBorder"><small>Add border to icon</small></label>-->
+        
            </th>
         </tr>
         </thead>
