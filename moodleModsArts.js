@@ -152,10 +152,10 @@ window.addEventListener('load',function(){
 			var turnEditingOnBtnText = $('.header-button button').text();
 			if (turnEditingOnBtnText == "Turn editing off"){
 				$('#section-0 .summary .fa-cog').closest('a').hide();
-				console.log('editing is on');
+				//console.log('editing is on');
 			}
 			else {
-				console.log('editing is off or button does not exist');
+				//console.log('editing is off or button does not exist');
 			}		
 			$( ".header-right" ).prepend('<div class="custom-menus my-auto"><a href="http://bit.ly/artshowtos" target="_blank" class="border border-dark rounded-circle text-dark p-2" role="button" title="Ed Tech how tos"><i class="fa fa-bolt fa-fw" aria-hidden="true"></i></a></div>');
 			$( "#nav-drawer .list-group" ).prepend('<a class="list-group-item list-group-item-action" href="http://bit.ly/artshowtos" target="_blank" data-key="coursehome" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0"><div class="ml-0"><div class="media"><span class="media-left"><i class="icon fa fa-bolt fa-fw " aria-hidden="true"></i></span><span class="media-body ">Ed Tech how tos</span></div></div></a>');
@@ -206,10 +206,10 @@ window.addEventListener('load',function(){
 			var turnEditingOnBtnText = $('.header-button button').text();
 			if (turnEditingOnBtnText == "Turn editing off"){
 				$('#section-0 .summary .fa-cog').closest('a').show();
-				console.log('editing is on');
+				//console.log('editing is on');
 			}
 			else {
-				console.log('editing is off or button does not exist');
+				//console.log('editing is off or button does not exist');
 			}
 			//Query the logged in user block and find the user's name
 			var userName = document.querySelector('.myprofileitem.fullname')
@@ -241,16 +241,16 @@ window.addEventListener('load',function(){
 	if (assessmentSectionName.match(/Assessment/) != null && window.location.href.slice(-10) != "&section=0"){
 		//check if the assessment text already exists
 		if ($('.label:contains("Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:")').length!=0){
-			console.log('text present')
+			//console.log('text present')
 		}
 		else{
 			//input the text if it isn't already present, after the section name
-			console.log('text NOT present')
+			//console.log('text NOT present')
 			$('.sectionname').after('<div id="assessmentPenaltyText"><p>Please be aware that the following penalties apply if you submit your assessment task after the due date and time without an approved extension or special consideration:</p><p><em>You will receive a penalty of 10 per cent for late submission, and a further 10 per cent penalty will be applied for each additional day (24-hour period), or part thereof, that the assessment task is overdue. Assessment tasks submitted more than seven days late will not be accepted and will receive a zero mark.</em></p></div>')
 		}
 	}
 	else{
-		console.log('not Assessment Section or section 0')
+		//console.log('not Assessment Section or section 0')
 	}
 	//remove text from Student support block put in by MEI
 	$('#inst3494068 div.card-text div.no-overflow p').remove();
@@ -286,10 +286,10 @@ window.addEventListener('load',function(){
 	if(window.location.href.match(/grader/) != null){
     $('.fa-eye-slash').closest('a').before('<span class="badge badge-warning rounded">hidden</span> ')
     $('.fa-eye').closest('a').before('<span class="badge badge-success rounded">visible</span> ')
-    console.log('on the grader page')
+    //console.log('on the grader page')
   }
   else{
-    console.log('not on the grader page')
+    //console.log('not on the grader page')
   }
 	//in gradebook center the trash can to delete items once selected and add the text 'delete' next to the trash can to make this more obvious for users
 	$('#toolbar-delete').closest('ul').addClass('w-50 mx-auto');
