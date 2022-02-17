@@ -274,7 +274,7 @@ window.addEventListener('load',function(){
 	$('#toolbar-delete img').addClass('mr-1');
 	//Next Moodle modification needs to start on the line above. Leave this comment in place for future modifications.
 	//Setup the BEEST if the correct javascript file is present for lecturers. This is so we can give access in individual units for S1 2021.	
-	setup_beest(match_lect,{button:true,iFrame:true});
+	try{setup_beest(match_lect,{button:true,iFrame:true});}catch(ex){}
 
 	//Next modification should start on the empty line above
 	//Close load function	
