@@ -6,10 +6,17 @@ window.addEventListener('DOMContentLoaded',function(){
 window.addEventListener('load',function(){
 
 
+	/* temp fixes for student services - FEB 2022 */
 	if($(".breadcrumb-item").text().indexOf("Student support services")>0){
-		var tmptxt='<hr/><h4><span>Learning and language support</span></h4><p>Learning advisers can help you with general study, assessment or academic writing skills, or with English language support. They can give you immediate assistance for your assessments, or refer you to the right person for specialist advice when you need it. Book in below with a learning adviser for a 25 minute Zoom consultation.<br/><br/><a href="https://www.monash.edu/students/study-support/learning" title="Opens in a new window" target="_blank"	className="btn btn-arts">Go [fa-arrow-right]</a></p>';
+		var tmptxt='<hr/><h4><span>Learning and language support</span></h4><p>Learning advisers can help you with general study, assessment or academic writing skills, or with English language support. They can give you immediate assistance for your assessments, or refer you to the right person for specialist advice when you need it. Book in below with a learning adviser for a 25 minute Zoom consultation.<br/><br/><a href="https://www.monash.edu/students/study-support/learning" title="Opens in a new window" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p>';
 		$(".generalbox .no-overflow").append(tmptxt);
 	}
+
+
+
+
+
+
 
 
 	//temporarily remove liberate's CSS to fix nav issue until Nigel can help resolve the changes with best practice
