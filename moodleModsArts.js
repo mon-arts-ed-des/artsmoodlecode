@@ -26,6 +26,12 @@ window.addEventListener('load',function(){
 		$(".breadcrumb-item:last-child").text("Library research skills");
 	}
 
+	if(breadcrumbTmp==="Familiarise yourself with learning technology at Monash"){
+		tmptxt='<hr/><h4>Accessing student learning systems</h4><p>Locate information on how to access and use various Monash University education platforms and tools needed for your online studies, including Monash VPN (allowing you secure access to the Monash network when you are not on campus), Moodle, Panopto, Zoom, Allocate+ and more.</p><p><a class="btn btn-arts" href="https://www.monash.edu/esolutions/students/systems-guide" target="_blank">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>';
+
+		$(".generalbox .no-overflow .btn:first-child").attr("href","https://www.monash.edu/__data/assets/pdf_file/0010/1041220/student-it-brochure.pdf").after(tmptxt);
+	}
+
 
 
 
