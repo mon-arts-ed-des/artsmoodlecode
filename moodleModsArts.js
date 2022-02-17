@@ -25,6 +25,9 @@ window.addEventListener('load',function(){
 		$(".modtype_page:eq(1) li:last-child").remove();
 
 		$(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");
+
+		$("#industryResources").prev().hide();
+		$("#industryResources").hide();
 	}
 
 
