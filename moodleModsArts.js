@@ -6,25 +6,24 @@ window.addEventListener('DOMContentLoaded',function(){
 window.addEventListener('load',function(){
 
 
+
+
 	/* temp fixes for Study resources - FEB 2022 */
-	if($(".breadcrumb-item").text().indexOf("Student support services")>0){
-		var tmptxt='<hr/><h4><span>Learning and language support</span></h4><p>Learning advisers can help you with general study, assessment or academic writing skills, or with English language support. They can give you immediate assistance for your assessments, or refer you to the right person for specialist advice when you need it. Book in below with a learning adviser for a 25 minute Zoom consultation.<br/><br/><a href="https://www.monash.edu/students/study-support/learning" title="Opens in a new window" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p>';
+
+	var breadcrumbTmp=$(".breadcrumb-item:last-child").text();
+	var tmptxt="";
+
+	if(breadcrumbTmp==="Student support services"){
+		tmptxt='<hr/><h4><span>Learning and language support</span></h4><p>Learning advisers can help you with general study, assessment or academic writing skills, or with English language support. They can give you immediate assistance for your assessments, or refer you to the right person for specialist advice when you need it. Book in below with a learning adviser for a 25 minute Zoom consultation.<br/><br/><a href="https://www.monash.edu/students/study-support/learning" title="Opens in a new window" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p>';
 		$(".generalbox .no-overflow").append(tmptxt);
 	}
 
-	if($(".breadcrumb-item").text().indexOf("Library research and learning skills")>0){
+	if(breadcrumbTmp==="Library research and learning skills"){
+		tmptxt='<h4>Help with research for assignments</h4><p>Expertly designed programs, resources and activities to develop students\' skills for university and beyond.</p><p><a href="https://www.monash.edu/library/skills" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Citing and referencing</h4><p>The Library\'s citing and referencing site contains a number of excellent resources. We strongly suggest that you visit the site and complete some of the tutorials which explain the why, what and how of referencing.</p><p><a href="https://www.monash.edu/rlo/research-writing-assignments/referencing-and-academic-integrity/citing-and-referencing" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Academic integrity</h4><p>There are a number of responsibilities that you have as a Monash student. To learn more about academic integrity at Monash, please consult the Academic Integrity Policy.</p><p><a href="https://www.monash.edu/students/academic/policies/academic-integrity" target="_blank" class="btn btn-arts">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Research and learning online</h4><p>The Monash Research &amp; Learning Online portal houses many support resources to help you during your time as a student at Monash.</p><p><a href="https://www.monash.edu/rlo" target="_blank" class="btn btn-arts">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>';
 
-
-
-
-
-
-		var tmptxt='<hr/><h4><span>Learning and language support</span></h4><p>Learning advisers can help you with general study, assessment or academic writing skills, or with English language support. They can give you immediate assistance for your assessments, or refer you to the right person for specialist advice when you need it. Book in below with a learning adviser for a 25 minute Zoom consultation.<br/><br/><a href="https://www.monash.edu/students/study-support/learning" title="Opens in a new window" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p>';
-
-
-		var tmptxt='<h4>Help with research for assignments</h4><p>Expertly designed programs, resources and activities to develop students\' skills for university and beyond.</p><p><a href="https://www.monash.edu/library/skills" target="_blank" className="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Citing and referencing</h4><p>The Library\'s citing and referencing site contains a number of excellent resources. We strongly suggest that you visit the site and complete some of the tutorials which explain the why, what and how of referencing.</p><p><a	href="https://www.monash.edu/rlo/research-writing-assignments/referencing-and-academic-integrity/citing-and-referencing" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Academic integrity</h4><p>There are a number of responsibilities that you have as a Monash student. To learn more about academic integrity at Monash, please consult the Academic Integrity Policy.</p><p><a href="https://www.monash.edu/students/academic/policies/academic-integrity" target="_blank" class="btn btn-arts">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Research and learning online</h4><p>The Monash Research &amp; Learning Online portal houses many support resources to help you during your time as a student at Monash.</p><p><a href="https://www.monash.edu/rlo" target="_blank" class="btn btn-arts">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>';
-
+		$("h2").html("Library research skills");
 		$(".generalbox .no-overflow").html(tmptxt);
+		$(".breadcrumb-item:last-child").text("Library research skills");
 	}
 
 
