@@ -10,7 +10,7 @@ window.addEventListener('load',function(){
 
 	/* temp fixes for Study resources - FEB 2022 */
 
-	var breadcrumbTmp=$(".breadcrumb-item:last-child").text();
+	var breadcrumbTmp=$(".breadcrumb-item:last-child").text().trim();
 	var tmptxt="";
 
 	if(breadcrumbTmp==="Student support services"){
