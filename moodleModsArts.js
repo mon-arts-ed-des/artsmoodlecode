@@ -16,7 +16,7 @@ window.addEventListener('load',function(){
 
 
 
-	if(breadcrumbTmp==="Student resources"){
+	if(breadcrumbTmp==="Study resources"){
 
 		$(".modtype_page:eq(0) li:last-child").after("<li>Learning and language support</li>");
 
