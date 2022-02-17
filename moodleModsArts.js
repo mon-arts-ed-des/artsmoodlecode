@@ -13,6 +13,21 @@ window.addEventListener('load',function(){
 	var breadcrumbTmp=$(".breadcrumb-item:last-child").text().trim();
 	var tmptxt="";
 
+
+
+
+	if(breadcrumbTmp==="Student resources"){
+
+		$(".modtype_page:eq(0) li:last-child").after("<li>Learning and language support</li>");
+
+		$(".modtype_page:eq(1) li:eq(0)").text("Help with research for assignments");
+		$(".modtype_page:eq(1) li:eq(1)").text("Citing and referencing");
+		$(".modtype_page:eq(1) li:last-child").remove();
+
+		$(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");
+	}
+
+
 	if(breadcrumbTmp==="Student support services"){
 		tmptxt='<hr/><h4><span>Learning and language support</span></h4><p>Learning advisers can help you with general study, assessment or academic writing skills, or with English language support. They can give you immediate assistance for your assessments, or refer you to the right person for specialist advice when you need it. Book in below with a learning adviser for a 25 minute Zoom consultation.<br/><br/><a href="https://www.monash.edu/students/study-support/learning" title="Opens in a new window" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p>';
 		$(".generalbox .no-overflow").append(tmptxt);
@@ -23,7 +38,7 @@ window.addEventListener('load',function(){
 
 		$("h2").html("Library research skills");
 		$(".generalbox .no-overflow").html(tmptxt);
-		$(".breadcrumb-item:last-child").text("Library research skills");
+		$(".breadcrumb-item:last-child").html("<a href='https://lms.monash.edu/mod/page/view.php?id=8976318&section=16'/>Library research skills</a>");
 	}
 
 	if(breadcrumbTmp==="Familiarise yourself with learning technology at Monash"){
