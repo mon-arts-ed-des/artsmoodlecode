@@ -108,7 +108,7 @@ window.addEventListener('load',function(){
 	}
 	// attendance notification
 	// define expiration duration as 144 hours
-	const expirationDuration = 1000 * 60 * 60 * 144;
+	/*const expirationDuration = 1000 * 60 * 60 * 144;
 	// save the time of the current login to localStorage
 	const savedTime = localStorage.getItem('savedTime');
 	// get the time of the current login
@@ -140,7 +140,7 @@ window.addEventListener('load',function(){
 	else{
 	//Do nothing
 	}
-	}
+	}*/
 	//add material to our FoA category if you are a tutor, lect, non-primary lect, designer or admin
 	//check the role level. Tutor and above have access to the recycle bin link. So the material that follows will not display to students.
 	//Check the admin block. Check each link in the block.
