@@ -129,33 +129,52 @@ window.addEventListener('load',function(){
 	console.log(AcceptedExpired);
 
 
+	let shownAttendance = localStorage.getItem('shownAttendance');
+	let showAttendance=false;
+	//use this to get the numbers below - https://www.unixtimestamp.com/index.php
+	let wk1=1645966801; // this is 28-2-2022
+	let wk2=1646571601; // this is 7-3-2022
+	let wk3=1647176401; // this is 14-3-2022
+	let wk4=1648994401; // this is 4-4-2022
+
+	if(currentTime>wk1&&shownAttendance!=undefined&&shownAttendance<1){
+		showAttendance=true;
+		localStorage.setItem("shownAttendance", shownAttendance++);
+	}
+	if(currentTime>wk2&&shownAttendance!=undefined&&shownAttendance<2){
+		showAttendance=true;
+		localStorage.setItem("shownAttendance", shownAttendance++);
+	}
+	if(currentTime>wk3&&shownAttendance!=undefined&&shownAttendance<3){
+		showAttendance=true;
+		localStorage.setItem("shownAttendance", shownAttendance++);
+	}
+	if(currentTime>wk4&&shownAttendance!=undefined&&shownAttendance<4){
+		showAttendance=true;
+		localStorage.setItem("shownAttendance", shownAttendance++);
+	}
 
 
 /*
-
-	$('.sectionname').before('<div class="container"><div class="modal fade" id="attNotification" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Attendance expectations</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><p>The Arts Faculty has an expectation that you attend all scheduled workshops and tutorials, and participate in all learning activities. All the evidence suggests that student success is greatly impacted by class attendance and participation.</p><p>If you are unable to attend a scheduled workshop or tutorial, please contact your tutor or unit coordinator, and ensure you have strategies in place to catch up on any missed work.</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div></div>');
-	// Malaysian attendance requirements notification
-	$('.sectionname').before('<div class="container"><div class="modal fade" id="attNotificationMalaysia" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Attendance expectations</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><p>The Monash Arts Faculty, and within that your School \'SASS\', have an expectation that you attend all scheduled workshops and tutorials, and participate in all learning activities. All the evidence suggests that student success is greatly impacted by class attendance and participation. This is true of online and face-to-face learning.</p><p>If you are unable to attend a scheduled workshop or tutorial, please contact your tutor or unit coordinator, and work with them to ensure you have strategies in place to catch up on any missed work.</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div></div>');
-	// if the unit is a Malaysia unit, display the Malaysia modal
-	if(headerTitle.indexOf("AMU") >= 1 || headerTitle.indexOf("AMG") >= 1){
-	if(notAccepted || AcceptedExpired){
-	$('#attNotificationMalaysia').modal('show');
-	localStorage.setItem("savedTime", currentTime);
+	if(showAttendance){
+		$('.sectionname').before('<div class="container"><div class="modal fade" id="attNotification" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Attendance expectations</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><p>The Arts Faculty has an expectation that you attend all scheduled workshops and tutorials, and participate in all learning activities. All the evidence suggests that student success is greatly impacted by class attendance and participation.</p><p>If you are unable to attend a scheduled workshop or tutorial, please contact your tutor or unit coordinator, and ensure you have strategies in place to catch up on any missed work.</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div></div>');
+		// Malaysian attendance requirements notification
+		$('.sectionname').before('<div class="container"><div class="modal fade" id="attNotificationMalaysia" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Attendance expectations</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><p>The Monash Arts Faculty, and within that your School \'SASS\', have an expectation that you attend all scheduled workshops and tutorials, and participate in all learning activities. All the evidence suggests that student success is greatly impacted by class attendance and participation. This is true of online and face-to-face learning.</p><p>If you are unable to attend a scheduled workshop or tutorial, please contact your tutor or unit coordinator, and work with them to ensure you have strategies in place to catch up on any missed work.</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div></div>');
+		// if the unit is a Malaysia unit, display the Malaysia modal
+		if(headerTitle.indexOf("AMU") >= 1 || headerTitle.indexOf("AMG") >= 1){
+			if(notAccepted || AcceptedExpired){
+				$('#attNotificationMalaysia').modal('show');
+				localStorage.setItem("savedTime", currentTime);
+			}
+		}else if (headerTitle.indexOf("APG") >= 1 || headerTitle.indexOf("ATS") >= 1){
+		// if the unit is an Australian unit, display the Australian modal
+			if(notAccepted || AcceptedExpired){
+				$('#attNotification').modal('show');
+				localStorage.setItem("savedTime", currentTime);
+			}
+		}
 	}
-	else{
-	//Do nothing
-	}
-	}
-	// if the unit is an Australian unit, display the Australian modal
-	else if (headerTitle.indexOf("APG") >= 1 || headerTitle.indexOf("ATS") >= 1){
-	if(notAccepted || AcceptedExpired){
-	$('#attNotification').modal('show');
-	localStorage.setItem("savedTime", currentTime);
-	}
-	else{
-	//Do nothing
-	}
-	}*/
+	*/
 	//add material to our FoA category if you are a tutor, lect, non-primary lect, designer or admin
 	//check the role level. Tutor and above have access to the recycle bin link. So the material that follows will not display to students.
 	//Check the admin block. Check each link in the block.
