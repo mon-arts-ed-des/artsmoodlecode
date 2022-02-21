@@ -122,6 +122,8 @@ window.addEventListener('load',function(){
 
 	console.log("-----------------------");
 	console.log(expirationDuration);
+	console.log(currentTime);
+	console.log(currentTime - savedTime);
 	console.log(AcceptedExpired);
 
 
