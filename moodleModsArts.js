@@ -109,11 +109,12 @@ window.addEventListener('load',function(){
 	// attendance notification
 	// define expiration duration as 144 hours
 
-	const expirationDuration = 1000 * 60 * 60 * 144;
+	const expirationDuration = 1000 * 60 * 60 * 168;
 	// save the time of the current login to localStorage
 	const savedTime = localStorage.getItem('savedTime');
 	// get the time of the current login
 	const currentTime = new Date().getTime();
+	const currentDate = new Date();
 	// make a constant that refers to when there is no record of a login
 	const notAccepted = savedTime == undefined;
 	// make a constant that refers to when the login has a history, and meets the requirements to display the notification again
@@ -123,8 +124,11 @@ window.addEventListener('load',function(){
 	console.log("-----------------------");
 	console.log(expirationDuration);
 	console.log(currentTime);
+	console.log(currentDate);
 	console.log(currentTime - savedTime);
 	console.log(AcceptedExpired);
+
+
 
 
 /*
