@@ -22,7 +22,7 @@ window.addEventListener('load',function(){
 			if(this.innerText.indexOf("Student support services")>0){
 				var obj=$(this).find("ul");
 				$(obj[0]).find("li:last-child").after("<li>Learning and language support</li>");
-				console.log("first",obj[0]);
+				//console.log("first",obj[0]);
 			}
 
 			if(this.innerText.indexOf("Library research and learning skills")>0){
@@ -31,13 +31,13 @@ window.addEventListener('load',function(){
 				$(obj[0]).find("li:eq(0)").text("Help with research for assignments");
 				$(obj[0]).find("li:eq(1)").text("Citing and referencing");
 				$(obj[0]).find("li:last-child").remove();
-				console.log("second",obj[0]);
+				//console.log("second",obj[0]);
 			}
 
 			if(this.innerText.indexOf("Familiarise yourself with learning technology at Monash")>0){
 				var obj=$(this).find("ul");
 				$(obj[0]).find("li:first-child").after("<li>Accessing student learning systems</li>");
-				console.log("third",obj[0]);
+				//console.log("third",obj[0]);
 			}
 		});
 
