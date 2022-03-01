@@ -18,14 +18,40 @@ window.addEventListener('load',function(){
 
 	if(breadcrumbTmp==="Study resources"){
 
-		$(".modtype_page:eq(0) li:last-child").after("<li>Learning and language support</li>");
+		$(".modtype_page").each(function(){
+			if(this.innerText.indexOf("Student support services")>0){
+				var obj=$(this).find("ul");
+				$(obj[0]).find("li:last-child").after("<li>Learning and language support</li>");
+				console.log("first",obj[0]);
+			}
+
+			if(this.innerText.indexOf("Library research and learning skills")>0){
+				$(this).find(".aalink").html("<img src=\"https://lms.monash.edu/theme/image.php/monash/page/1645043438/icon\" class=\"iconlarge activityicon\" alt=\"\" role=\"presentation\" aria-hidden=\"true\">Library research skills");
+				var obj=$(this).find("ul");
+				$(obj[0]).find("li:eq(0)").text("Help with research for assignments");
+				$(obj[0]).find("li:eq(1)").text("Citing and referencing");
+				$(obj[0]).find("li:last-child").remove();
+				console.log("second",obj[0]);
+			}
+
+			if(this.innerText.indexOf("Familiarise yourself with learning technology at Monash")>0){
+				var obj=$(this).find("ul");
+				$(obj[0]).find("li:first-child").after("<li>Accessing student learning systems</li>");
+				console.log("third",obj[0]);
+			}
+		});
+
+
+
+
+		/*$(".modtype_page:eq(0) li:last-child").after("<li>Learning and language support</li>");
 
 		$(".modtype_page:eq(1) .aalink").html("<img src=\"https://lms.monash.edu/theme/image.php/monash/page/1645043438/icon\" class=\"iconlarge activityicon\" alt=\"\" role=\"presentation\" aria-hidden=\"true\">Library research skills");
 		$(".modtype_page:eq(1) li:eq(0)").text("Help with research for assignments");
 		$(".modtype_page:eq(1) li:eq(1)").text("Citing and referencing");
 		$(".modtype_page:eq(1) li:last-child").remove();
 
-		$(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");
+		$(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");*/
 
 		//$("#industryResources").prev().hide();
 		//$("#industryResources").hide();
