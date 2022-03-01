@@ -27,8 +27,8 @@ window.addEventListener('load',function(){
 
 		$(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");
 
-		$("#industryResources").prev().hide();
-		$("#industryResources").hide();
+		//$("#industryResources").prev().hide();
+		//$("#industryResources").hide();
 	}
 
 
@@ -109,6 +109,7 @@ window.addEventListener('load',function(){
 	// attendance notification
 	// define expiration duration as 144 hours
 
+	/*
 	const expirationDuration = 1000 * 60 * 60 * 168;
 	// save the time of the current login to localStorage
 	const savedTime = localStorage.getItem('savedTime');
@@ -155,7 +156,7 @@ window.addEventListener('load',function(){
 	}
 
 
-/*
+
 	if(showAttendance){
 		$('.sectionname').before('<div class="container"><div class="modal fade" id="attNotification" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 class="modal-title">Attendance expectations</h4><button type="button" class="close" data-dismiss="modal">&times;</button></div><div class="modal-body"><p>The Arts Faculty has an expectation that you attend all scheduled workshops and tutorials, and participate in all learning activities. All the evidence suggests that student success is greatly impacted by class attendance and participation.</p><p>If you are unable to attend a scheduled workshop or tutorial, please contact your tutor or unit coordinator, and ensure you have strategies in place to catch up on any missed work.</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div></div>');
 		// Malaysian attendance requirements notification
