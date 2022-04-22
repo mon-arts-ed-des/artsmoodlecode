@@ -275,6 +275,7 @@ window.addEventListener('load',function(){
 			var userName = document.querySelector('.myprofileitem.fullname')
 			? document.querySelector('.myprofileitem.fullname').innerText
 			: null;
+			console.log("userName",userName);
 			//If you are part of the educational designer team, add the BEEST link			
 			if(userName == "Sajjad Hossain" || userName == "Andrew Junor" || userName == "Carmen Sapsed" || userName == "Josephine Hook" || userName=="Nigel Thorne"){
 				$(".header-right").prepend('<div class="custom-menus my-auto"><a role="button" target="_blank" class="border border-dark rounded-circle p-2 text-dark" role="button" title="BEEST" style="width:38px; height: 38px;" data-toggle="modal" data-target=".beest-home-modal" id="beestDropdown"><img src="https://mon-arts-ed-des.github.io/BEEST/img/dragon-solid-black.png" width="20px" height="20px" style="margin-bottom: 4px;" /></a>');
