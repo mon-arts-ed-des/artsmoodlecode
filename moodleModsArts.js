@@ -14,71 +14,71 @@ window.addEventListener('load',function(){
 	var tmptxt="";
 
 
+	var mainTitle=$(".header-title").text().trim();
+	if(mainTitle.indexOf(" S2 ")==-1) {
 
 
-	if(breadcrumbTmp==="Study resources"){
+		if (breadcrumbTmp === "Study resources") {
 
-		$(".modtype_page").each(function(){
-			if(this.innerText.indexOf("Student support services")>0){
-				var obj=$(this).find("ul");
-				$(obj[0]).find("li:last-child").after("<li>Learning and language support</li>");
-				//console.log("first",obj[0]);
-			}
+			$(".modtype_page").each(function () {
+				if (this.innerText.indexOf("Student support services") > 0) {
+					var obj = $(this).find("ul");
+					$(obj[0]).find("li:last-child").after("<li>Learning and language support</li>");
+					//console.log("first",obj[0]);
+				}
 
-			if(this.innerText.indexOf("Library research and learning skills")>0){
-				$(this).find(".aalink").html("<img src=\"https://lms.monash.edu/theme/image.php/monash/page/1645043438/icon\" class=\"iconlarge activityicon\" alt=\"\" role=\"presentation\" aria-hidden=\"true\">Library research skills");
-				var obj=$(this).find("ul");
-				$(obj[0]).find("li:eq(0)").text("Help with research for assignments");
-				$(obj[0]).find("li:eq(1)").text("Citing and referencing");
-				$(obj[0]).find("li:last-child").remove();
-				//console.log("second",obj[0]);
-			}
+				if (this.innerText.indexOf("Library research and learning skills") > 0) {
+					$(this).find(".aalink").html("<img src=\"https://lms.monash.edu/theme/image.php/monash/page/1645043438/icon\" class=\"iconlarge activityicon\" alt=\"\" role=\"presentation\" aria-hidden=\"true\">Library research skills");
+					var obj = $(this).find("ul");
+					$(obj[0]).find("li:eq(0)").text("Help with research for assignments");
+					$(obj[0]).find("li:eq(1)").text("Citing and referencing");
+					$(obj[0]).find("li:last-child").remove();
+					//console.log("second",obj[0]);
+				}
 
-			if(this.innerText.indexOf("Familiarise yourself with learning technology at Monash")>0){
-				var obj=$(this).find("ul");
-				$(obj[0]).find("li:first-child").after("<li>Accessing student learning systems</li>");
-				//console.log("third",obj[0]);
-			}
-		});
-
-
+				if (this.innerText.indexOf("Familiarise yourself with learning technology at Monash") > 0) {
+					var obj = $(this).find("ul");
+					$(obj[0]).find("li:first-child").after("<li>Accessing student learning systems</li>");
+					//console.log("third",obj[0]);
+				}
+			});
 
 
-		/*$(".modtype_page:eq(0) li:last-child").after("<li>Learning and language support</li>");
+			/*$(".modtype_page:eq(0) li:last-child").after("<li>Learning and language support</li>");
 
-		$(".modtype_page:eq(1) .aalink").html("<img src=\"https://lms.monash.edu/theme/image.php/monash/page/1645043438/icon\" class=\"iconlarge activityicon\" alt=\"\" role=\"presentation\" aria-hidden=\"true\">Library research skills");
-		$(".modtype_page:eq(1) li:eq(0)").text("Help with research for assignments");
-		$(".modtype_page:eq(1) li:eq(1)").text("Citing and referencing");
-		$(".modtype_page:eq(1) li:last-child").remove();
+            $(".modtype_page:eq(1) .aalink").html("<img src=\"https://lms.monash.edu/theme/image.php/monash/page/1645043438/icon\" class=\"iconlarge activityicon\" alt=\"\" role=\"presentation\" aria-hidden=\"true\">Library research skills");
+            $(".modtype_page:eq(1) li:eq(0)").text("Help with research for assignments");
+            $(".modtype_page:eq(1) li:eq(1)").text("Citing and referencing");
+            $(".modtype_page:eq(1) li:last-child").remove();
 
-		$(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");*/
+            $(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");*/
 
-		//$("#industryResources").prev().hide();
-		//$("#industryResources").hide();
+			//$("#industryResources").prev().hide();
+			//$("#industryResources").hide();
+		}
+
+
+		if (breadcrumbTmp === "Student support services") {
+			tmptxt = '<hr/><h4><span>Learning and language support</span></h4><p>Learning advisers can help you with general study, assessment or academic writing skills, or with English language support. They can give you immediate assistance for your assessments, or refer you to the right person for specialist advice when you need it. Book in below with a learning adviser for a 25 minute Zoom consultation.<br/><br/><a href="https://www.monash.edu/students/study-support/learning" title="Opens in a new window" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p>';
+			$(".generalbox .no-overflow").append(tmptxt);
+		}
+
+		if (breadcrumbTmp === "Library research and learning skills") {
+			tmptxt = '<h4>Help with research for assignments</h4><p>Expertly designed programs, resources and activities to develop students\' skills for university and beyond.</p><p><a href="https://www.monash.edu/library/skills" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Citing and referencing</h4><p>The Library\'s citing and referencing site contains a number of excellent resources. We strongly suggest that you visit the site and complete some of the tutorials which explain the why, what and how of referencing.</p><p><a href="https://www.monash.edu/rlo/research-writing-assignments/referencing-and-academic-integrity/citing-and-referencing" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Academic integrity</h4><p>There are a number of responsibilities that you have as a Monash student. To learn more about academic integrity at Monash, please consult the Academic Integrity Policy.</p><p><a href="https://www.monash.edu/students/academic/policies/academic-integrity" target="_blank" class="btn btn-arts">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Research and learning online</h4><p>The Monash Research &amp; Learning Online portal houses many support resources to help you during your time as a student at Monash.</p><p><a href="https://www.monash.edu/rlo" target="_blank" class="btn btn-arts">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>';
+
+			$("h2").html("Library research skills");
+			$(".generalbox .no-overflow").html(tmptxt);
+			$(".breadcrumb-item:last-child").html("<a href='https://lms.monash.edu/mod/page/view.php?id=8976318&section=16'/>Library research skills</a>");
+		}
+
+		if (breadcrumbTmp === "Familiarise yourself with learning technology at Monash") {
+			tmptxt = '<hr/><h4>Accessing student learning systems</h4><p>Locate information on how to access and use various Monash University education platforms and tools needed for your online studies, including Monash VPN (allowing you secure access to the Monash network when you are not on campus), Moodle, Panopto, Zoom, Allocate+ and more.</p><p><a class="btn btn-arts" href="https://www.monash.edu/esolutions/students/systems-guide" target="_blank">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>';
+
+			$(".generalbox .no-overflow .btn:eq(0)").attr("href", "https://www.monash.edu/__data/assets/pdf_file/0010/1041220/student-it-brochure.pdf").after(tmptxt);
+		}
+
+
 	}
-
-
-	if(breadcrumbTmp==="Student support services"){
-		tmptxt='<hr/><h4><span>Learning and language support</span></h4><p>Learning advisers can help you with general study, assessment or academic writing skills, or with English language support. They can give you immediate assistance for your assessments, or refer you to the right person for specialist advice when you need it. Book in below with a learning adviser for a 25 minute Zoom consultation.<br/><br/><a href="https://www.monash.edu/students/study-support/learning" title="Opens in a new window" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p>';
-		$(".generalbox .no-overflow").append(tmptxt);
-	}
-
-	if(breadcrumbTmp==="Library research and learning skills"){
-		tmptxt='<h4>Help with research for assignments</h4><p>Expertly designed programs, resources and activities to develop students\' skills for university and beyond.</p><p><a href="https://www.monash.edu/library/skills" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Citing and referencing</h4><p>The Library\'s citing and referencing site contains a number of excellent resources. We strongly suggest that you visit the site and complete some of the tutorials which explain the why, what and how of referencing.</p><p><a href="https://www.monash.edu/rlo/research-writing-assignments/referencing-and-academic-integrity/citing-and-referencing" target="_blank" class="btn btn-arts">Go <i class=" fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Academic integrity</h4><p>There are a number of responsibilities that you have as a Monash student. To learn more about academic integrity at Monash, please consult the Academic Integrity Policy.</p><p><a href="https://www.monash.edu/students/academic/policies/academic-integrity" target="_blank" class="btn btn-arts">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p><hr/><h4>Research and learning online</h4><p>The Monash Research &amp; Learning Online portal houses many support resources to help you during your time as a student at Monash.</p><p><a href="https://www.monash.edu/rlo" target="_blank" class="btn btn-arts">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>';
-
-		$("h2").html("Library research skills");
-		$(".generalbox .no-overflow").html(tmptxt);
-		$(".breadcrumb-item:last-child").html("<a href='https://lms.monash.edu/mod/page/view.php?id=8976318&section=16'/>Library research skills</a>");
-	}
-
-	if(breadcrumbTmp==="Familiarise yourself with learning technology at Monash"){
-		tmptxt='<hr/><h4>Accessing student learning systems</h4><p>Locate information on how to access and use various Monash University education platforms and tools needed for your online studies, including Monash VPN (allowing you secure access to the Monash network when you are not on campus), Moodle, Panopto, Zoom, Allocate+ and more.</p><p><a class="btn btn-arts" href="https://www.monash.edu/esolutions/students/systems-guide" target="_blank">Go <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>';
-
-		$(".generalbox .no-overflow .btn:eq(0)").attr("href","https://www.monash.edu/__data/assets/pdf_file/0010/1041220/student-it-brochure.pdf").after(tmptxt);
-	}
-
-
-
 
 
 
