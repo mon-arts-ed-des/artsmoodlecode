@@ -14,6 +14,7 @@ window.addEventListener('load',function(){
 	var tmptxt="";
 
 
+	//filter out S2
 	var mainTitle=$(".header-title").text().trim();
 	if(mainTitle.indexOf(" S2 ")==-1) {
 
