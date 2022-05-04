@@ -16,7 +16,7 @@ window.addEventListener('load',function(){
 
 	//filter out S2
 	var mainTitle=$(".header-title").text().trim();
-	if(mainTitle.indexOf(" S2 ")==-1) {
+	if(mainTitle.indexOf(" S2 ")==-1&&mainTitle.indexOf("Arts template 2022 - 6 Topics - Pre-in-post structure")==-1&&&&mainTitle.indexOf("Arts template 2022 - 12 Wks - Pre-in-post structure")==-1) {
 
 
 		if (breadcrumbTmp === "Study resources") {
