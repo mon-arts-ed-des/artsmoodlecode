@@ -14,6 +14,9 @@ window.addEventListener('load',function(){
 	var tmptxt="";
 
 
+	//add filter for T2-58 courses
+	if(breadcrumbTmp.indexOf("T2-58")!=-1)breadcrumbTmp = "Study resources";
+
 	//filter out S2
 	var mainTitle=$(".header-title").text().trim();
 	if(mainTitle.indexOf(" S2 ")==-1&&mainTitle.indexOf("Arts template 2022 - 6 Topics - Pre-in-post structure")==-1&&mainTitle.indexOf("Arts template 2022 - 12 Wks - Pre-in-post structure")==-1) {
