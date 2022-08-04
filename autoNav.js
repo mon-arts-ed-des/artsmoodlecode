@@ -328,22 +328,22 @@ function dropdownParent(){
 	if(log_this)console.log(dropdownText.indexOf("Module"));
 
 
-		if(dropdownText.indexOf("Topic") != -1){
+		if(dropdownText.indexOf("topic") != -1){
 			$('.arts-banner-dropdown-link').html('Topics <i class="fa fa-caret-down"></i>')
 		}
-		else if(dropdownText.indexOf("Week") != -1){
+		else if(dropdownText.indexOf("week") != -1){
 			$('.arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
        		}
-		else if(dropdownText.indexOf("Block") != -1){
+		else if(dropdownText.indexOf("block") != -1){
 			$('.arts-banner-dropdown-link').html('Blocks <i class="fa fa-caret-down"></i>')
             	}
-		else if(dropdownText.indexOf("Module") != -1){
+		else if(dropdownText.indexOf("module") != -1){
 			$('.arts-banner-dropdown-link').html('Modules <i class="fa fa-caret-down"></i>')
             	}
-		else if(dropdownText.indexOf("Day") != -1){
+		else if(dropdownText.indexOf("day") != -1){
 			$('.arts-banner-dropdown-link').html('Days <i class="fa fa-caret-down"></i>')
 	        }
-		else if(dropdownText.indexOf("Session") != -1){
+		else if(dropdownText.indexOf("session") != -1){
 			$('.arts-banner-dropdown-link').html('Sessions <i class="fa fa-caret-down"></i>');
 			$('.arts-banner-dropdown-content a:contains("Zoom sessions")').remove();
 	        }
