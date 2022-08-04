@@ -322,7 +322,7 @@ function set_click(){
 function dropdownParent(){
 	if(log_this)console.log("------------------------ dropdownParent ------------------------");
 
-	var dropdownText = $('.arts-banner-dropdown-content a').text()
+	var dropdownText = $('.arts-banner-dropdown-content a').text().toLowerCase();
 
 	if(log_this)console.log("dropdownText",dropdownText);
 	if(log_this)console.log(dropdownText.indexOf("Module"));
