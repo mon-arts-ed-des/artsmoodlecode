@@ -320,10 +320,13 @@ function set_click(){
 	
 }
 function dropdownParent(){
-var dropdownText = $('.arts-banner-dropdown-content a').text()
+	if(log_this)console.log("------------------------ dropdownParent ------------------------");
 
-	console.log("dropdownText",dropdownText);
-	console.log(dropdownText.indexOf("Module"));
+	var dropdownText = $('.arts-banner-dropdown-content a').text()
+
+	if(log_this)console.log("dropdownText",dropdownText);
+	if(log_this)console.log(dropdownText.indexOf("Module"));
+
 
 		if(dropdownText.indexOf("Topic") != -1){
 			$('.arts-banner-dropdown-link').html('Topics <i class="fa fa-caret-down"></i>')
