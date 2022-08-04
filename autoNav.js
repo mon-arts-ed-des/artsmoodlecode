@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', function(){
 window.addEventListener('load', function(){
 
 //Create arrays to obtains all the required names and links and sort them into their various buckets.
-var log_this=false;
+var log_this=true;
 var orig_array=[];
 var nav_array=[];
 var home_array=["welcome","overview","home"];
