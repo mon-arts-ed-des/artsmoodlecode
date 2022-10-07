@@ -10,7 +10,7 @@ window.addEventListener('load',function(){
 
 	/* temp fixes for Study resources - FEB 2022 */
 
-	var breadcrumbTmp=$(".breadcrumb-item:last-child").text().trim();
+	/*var breadcrumbTmp=$(".breadcrumb-item:last-child").text().trim();
 	var tmptxt="";
 
 
@@ -48,14 +48,14 @@ window.addEventListener('load',function(){
 			});
 
 
-			/*$(".modtype_page:eq(0) li:last-child").after("<li>Learning and language support</li>");
+			//$(".modtype_page:eq(0) li:last-child").after("<li>Learning and language support</li>");
 
-            $(".modtype_page:eq(1) .aalink").html("<img src=\"https://lms.monash.edu/theme/image.php/monash/page/1645043438/icon\" class=\"iconlarge activityicon\" alt=\"\" role=\"presentation\" aria-hidden=\"true\">Library research skills");
-            $(".modtype_page:eq(1) li:eq(0)").text("Help with research for assignments");
-            $(".modtype_page:eq(1) li:eq(1)").text("Citing and referencing");
-            $(".modtype_page:eq(1) li:last-child").remove();
+            //$(".modtype_page:eq(1) .aalink").html("<img src=\"https://lms.monash.edu/theme/image.php/monash/page/1645043438/icon\" class=\"iconlarge activityicon\" alt=\"\" role=\"presentation\" aria-hidden=\"true\">Library research skills");
+            //$(".modtype_page:eq(1) li:eq(0)").text("Help with research for assignments");
+            //$(".modtype_page:eq(1) li:eq(1)").text("Citing and referencing");
+            //$(".modtype_page:eq(1) li:last-child").remove();
 
-            $(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");*/
+            //$(".modtype_page:eq(2) li:first-child").after("<li>Accessing student learning systems</li>");
 
 			//$("#industryResources").prev().hide();
 			//$("#industryResources").hide();
@@ -82,7 +82,7 @@ window.addEventListener('load',function(){
 		}
 
 
-	}
+	}*/
 
 
 
