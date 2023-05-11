@@ -1,8 +1,8 @@
 /*Hides all HTML blocks on the page where this is linked*/
 .block_html {
-box-shadow: none !important;
+/*box-shadow: none !important;
 height: 0px !important;
-margin: 0px !important;
+margin: 0px !important;*/
 }
 .block_html i {
 color: #fff !important;
