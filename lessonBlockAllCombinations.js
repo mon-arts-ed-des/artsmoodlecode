@@ -16,6 +16,9 @@ if (urlLastNine.indexOf("pageid=-9") != -1 || urlLastNine.indexOf("/view.php") !
 else{
 //do nothing
 }
+
+	hideLessonBlock();
+
 });
 //When the window loads carry out the following script
 window.addEventListener('load', (event) => {
@@ -145,3 +148,19 @@ window.addEventListener('load', (event) => {
 		}
 	}
 });
+
+
+function hideLessonBlock(){
+	var x=document.getElementsByClassName("block_html");
+
+	//find correct block based on h5 title and add class to hide it
+	for (var i = 0; i < x.length; i++) {
+		if(x[i].innerHTML.indexOf("lessonBlock")!== -1){
+			x[i].classList.add("lessonBlock_hide");
+		}
+	}
+}
+
+
+
+
