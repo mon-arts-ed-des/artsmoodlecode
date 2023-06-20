@@ -334,6 +334,9 @@ function dropdownParent(){
 		else if(dropdownText.indexOf("week") != -1){
 			$('.arts-banner-dropdown-link').html('Weeks <i class="fa fa-caret-down"></i>')
        		}
+			else if(dropdownText.indexOf("reading") != -1){
+			$('.arts-banner-dropdown-link').html('Readings <i class="fa fa-caret-down"></i>')
+       		}
 		else if(dropdownText.indexOf("block") != -1){
 			$('.arts-banner-dropdown-link').html('Blocks <i class="fa fa-caret-down"></i>')
             	}
