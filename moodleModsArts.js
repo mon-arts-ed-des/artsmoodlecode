@@ -265,12 +265,12 @@ window.addEventListener('load',function(){
 	$(".block-region .type_course a").each(function(){
 
 		// temp for Nigel
-		var userName = document.querySelector('.myprofileitem.fullname')? document.querySelector('.myprofileitem.fullname').innerText: null;
+		//var userName = document.querySelector('.myprofileitem.fullname')? document.querySelector('.myprofileitem.fullname').innerText: null;
 
 
 
 
-		if($(this).text().match(/Restore/) || userName=="Nigel Thorne"){
+		if($(this).text().match(/Restore/)){
 			$('.section_action_menu .editing_delete').css('display','block');
 			$('#inst3407551 .action-menu-trigger').css('display','block');
 			$('#inst3407542 .action-menu-trigger').css('display','block');
