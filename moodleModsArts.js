@@ -263,7 +263,14 @@ window.addEventListener('load',function(){
 	});
 	//Check the admin block links for the Restore link, which, if present means the staff member is an administrator	
 	$(".block-region .type_course a").each(function(){
-		if($(this).text().match(/Restore/)){
+
+		// temp for Nigel
+		var userName = document.querySelector('.myprofileitem.fullname')? document.querySelector('.myprofileitem.fullname').innerText: null;
+
+
+
+
+		if($(this).text().match(/Restore/) || userName=="Nigel Thorne"){
 			$('.section_action_menu .editing_delete').css('display','block');
 			$('#inst3407551 .action-menu-trigger').css('display','block');
 			$('#inst3407542 .action-menu-trigger').css('display','block');
